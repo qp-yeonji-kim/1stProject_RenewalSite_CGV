@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* tag reset */
+body, ul{margin: 0;padding: 0;}
+ul{list-style: none;}
+select{font-family: inherit;font-size: inherit;color: inherit;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+
+body{font-family: "Noto Sans KR";font-size: 16px;color: #666666;}
+
+/* header */
+#skip{}
+
+/* footer */
+.family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
+.family > a, .family #familysite{border: 1px solid #999;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
+.family > a{float: left;}
+.family .fsite{margin-right: 10px;}
+.family .fsite, .family #familysite{width: 200px;}
+.family #familysite{display: none;position: absolute;top: 34px;left: 0;}
+.family #familysite a{display: block;padding-left: 10px;}

@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>영화 그 이상의 감동, CGV</title>
+    <link rel="stylesheet" href="common.css">
+    <script src="jquery-1.12.4.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script src="footer_select.js"></script>
 </head>
 <body>
     <div id="skip">
@@ -24,39 +28,40 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="">영화</a>
+                    <a href="">예매</a>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">빠른예매</a></li>
+                        <li><a href="">상영시간표</a></li>
                         <li><a href=""></a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">영화</a>
+                    <a href="">극장</a>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">CGV 극장</a></li>
+                        <li><a href="">특별관</a></li>
+                        <li><a href="">CLUB 서비스</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">영화</a>
+                    <a href="">이벤트&컬쳐</a>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">CGV샵</a></li>
+                        <li><a href="">매거진</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="">영화</a>
+                    <a href="">고객센터</a>
                     <ul>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
-                        <li><a href=""></a></li>
+                        <li><a href="">자주 찾는 질문</a></li>
+                        <li><a href="">CGV공지/뉴스</a></li>
+                        <li><a href="">문의하기</a></li>
+                        <li><a href="">서비스가이드</a></li>
                     </ul>
                 </li>
             </ul>
-            <a href="" class=" all_menu_btn"></a>
+            <a href="" class="all_menu_btn"></a>
             <div class="all_menu">
                 <ul>
                     <li>
@@ -69,39 +74,36 @@
                         </ul>
                     </li>
                     <li>
-                        <a href=""></a>
+                        <a href="">예매</a>
                         <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">빠른예매</a></li>
+                            <li><a href="">상영시간표</a></li>
                             <li><a href=""></a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href=""></a>
+                        <a href="">극장</a>
                         <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">CGV 극장</a></li>
+                            <li><a href="">특별관</a></li>
+                            <li><a href="">CLUB 서비스</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href=""></a>
+                        <a href="">이벤트&컬쳐</a>
                         <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">CGV샵</a></li>
+                            <li><a href="">매거진</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href=""></a>
+                        <a href="">고객센터</a>
                         <ul>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">자주 찾는 질문</a></li>
+                            <li><a href="">CGV공지/뉴스</a></li>
+                            <li><a href="">문의하기</a></li>
+                            <li><a href="">서비스가이드</a></li>
                         </ul>
                     </li>
                     <li>
@@ -236,12 +238,52 @@
                 <li></li>
                 <li></li>
             </ul>
-            <div class="family_list">
-                <a href="" role="button" class="btn_fam">계열사 바로가기</a>
-                <ul>
-                    <li>CJ그룹
+            <div class="family">
+                <a href="" class="fsite">계열사 바로가기</a>
+                <ul id="familysite">
+                    <li>
+                        <strong>CJ그룹</strong>
                         <ul>
                             <li><a href="">CJ주식회사</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>엔터테인먼트 & 미디어</strong>
+                        <ul>
+                            <li><a href="">CJ ENM (E&M)</a></li>
+                            <li><a href="">CJ CGV</a></li>
+                            <li><a href="">CJ파워캐스트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>식품 & 식품서비스</strong>
+                        <ul>
+                            <li><a href="">CJ제일제당 (식품)</a></li>
+                            <li><a href="">CJ프레시웨이</a></li>
+                            <li><a href="">CJ푸드빌</a></li>
+                            <li><a href="">CJ엠디원</a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <strong>생명공학</strong>
+                        <ul>
+                            <li><a href="">CJ제일제당 (바이오)</a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <strong>신유통</strong>
+                        <ul>
+                            <li><a href="">CJ ENM (오쇼핑)</a></li>
+                            <li><a href="">CJ대한통운</a></li>
+                            <li><a href="">CJ텔레닉스</a></li>
+                            <li><a href="">CJ올리브영</a></li>
+                        </ul>
+                    </li>                    
+                    <li>
+                        <strong>인프라</strong>
+                        <ul>
+                            <li><a href="">CJ대한통운 (건설)</a></li>
+                            <li><a href="">CJ올리브네트웍스</a></li>
                         </ul>
                     </li>
                     <li>엔터테인먼트 &amp; 미디어</li>
@@ -250,6 +292,7 @@
                     <li></li>
                     <li></li>
                 </ul>
+                <a href="" target="_blank" class="btn_submit">GO</a>
                 <p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
             </div>
         </div>
