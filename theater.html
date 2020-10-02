@@ -2,57 +2,86 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>탭패널 어케할거신가</title>
-    <script src="jquery-1.12.4.min.js"></script>
-    <script src="tab.js"></script>
+	<meta charset="UTF-8">
+	<title>탭패널 어케할거신가</title>
+	<script src="jquery-1.12.4.min.js"></script>
+	<script src="tab.js"></script>
 </head>
 <style>
-    body, ul{margin: 0;padding: 0;}
-    ul{list-style: none;}
+	body, ul{margin: 0;padding: 0;}
+	ul{list-style: none;}
 
-    body{font-size: 16px;font-weight: 400;color: #555;}
+	body{font-size: 16px;font-weight: 400;color: #555;}
 
-    /* #infraTab */
-    /* 1). 탭크기 설정 */
-    #infraTab{width: 1200px;margin: 100px auto;border: 1px solid tomato;}
-    /* 2). 탭그룹 */
-    #infraTab .tablist{height: 70px;margin-bottom: 55px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-    /* 3). 탭버튼 */
-    #infraTab .tab{float: left;width: 25%;height: 70px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; border: 1px solid #e1e1e1;text-align: center;line-height: 68px;}
-    #infraTab .tab + .tab{border-left: none;}
-    /* 4). 탭패널 - 오버, 포커스, 활성화 (li.active) */
-    #infraTab .tab:hover, #infraTab .tab:focus, #infraTab .tab.active{background: #222;color: #fff;cursor: pointer;}
-    #infraTab2 .tab:hover, #infraTab2 .tab:focus, #infraTab2 .tab.active{background: #222;color: #fff;cursor: pointer;}
-    /* 5). 탭패널 - 모두 숨기고 활성화된(div. tabpanel.active) 하나만 보여지게 함. */
-    #infraTab .tabpannel{display: none;}
-    #infraTab .tabpannel.active{display: block;}
-    #infraTab2 .tabpannel{display: none;}
-    #infraTab2 .tabpannel.active{display: block;}
+	/* #infraTab */
+	/* 1). 탭크기 설정 */
+	#infraTab{width: 1200px;margin: 100px auto;border: 1px solid tomato;}
+	/* 2). 탭그룹 */
+	#infraTab > .tablist{height: 70px;margin-bottom: 55px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+	/* 3). 탭버튼 */
+	#infraTab > .tablist > .tab{float: left;width: 25%;height: 70px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; border: 1px solid #e1e1e1;text-align: center;line-height: 68px;}
+	#infraTab > .tablist > .tab + .tab{border-left: none;}
+	/* 4). 탭패널 - 오버, 포커스, 활성화 (li.active) */
+	#infraTab > .tablist > .tab:hover, #infraTab > .tablist > .tab:focus, #infraTab > .tablist > .tab.active{background: #222;color: #fff;cursor: pointer;}
+	/* 5). 탭패널 - 모두 숨기고 활성화된(div. tabpanel.active) 하나만 보여지게 함. */
+	#infraTab .tabpanel{display: none;}
+	#infraTab .tabpanel.active{display: block;}
+	/* #infraTab .tabpannel 오타 있었어요 */
+
+	/* depth2 tab */
+	.dep2 .tablist{margin-left: 500px;background: pink;}
+	.dep2 .tablist::after{content:"";display: block;clear:both;}
+	.dep2 .tablist li{float: left;width: calc(100% / 3);}
+	.dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{background: #222;color: #fff;cursor: pointer;}
+	.dep2 .tabpanel{height: 190px;background: yellow;}
 </style>
 
 <body>
-    <div id="infraTab">
-        <ul role="tablist" class="tablist" aria-label="지역">
-            <li role="tab" class="tab first" id="tab1-1" aria-controls="tabpanel1">서울</li>
-            <li role="tab" class="tab" id="tab1-2" aria-controls="tabpanel2">경기</li>
-            <li role="tab" class="tab last" id="tab1-3" aria-controls="tabpanel3">충청</li>
-        </ul>
-    </div>
-    <div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1-1">
-        <div id="infraTab2">
-            <ul role="tablist" class="tablist" aria-label="대도시">
-                <li role="tab" class="tab first" id="tab1-1-1" aria-controls="tabpanel1-1">강남</li>
-                <li role="tab" class="tab" id="tab1-1-2" aria-controls="tabpanel1-2">강북</li>
-                <li role="tab" class="tab last" id="tab1-1-3" aria-controls="tabpanel1-3">강서</li>
-            </ul>
-        </div>
-        <div role="tabpanel" class="tabpanel" id="tabpanel1-1" aria-labelledby="tab1-1-1">강남내용</div>
-        <div role="tabpanel" class="tabpanel" id="tabpanel1-2" aria-labelledby="tab1-1-2">강북내용</div>
-        <div role="tabpanel" class="tabpanel" id="tabpanel1-3" aria-labelledby="tab1-1-3">강서내용</div>
-    </div>
-    <div role="tabpanel" class="tabpanel" id="tabpanel2" aria-labelledby="tab1-2">경기의 도시</div>
-    <div role="tabpanel" class="tabpanel" id="tabpanel3" aria-labelledby="tab1-3">충청의 도시</div>
+	<!-- 마크업 종료 </div> 묶음이 안맞었구요 -->
+	<div id="infraTab">
+		<ul role="tablist" class="tablist" aria-label="지역">
+			<li role="tab" class="tab first" id="tab1" aria-controls="tabpanel1">서울</li>
+			<li role="tab" class="tab" id="tab2" aria-controls="tabpanel2">경기</li>
+			<li role="tab" class="tab last" id="tab3" aria-controls="tabpanel3">충청</li>
+		</ul>
+
+		<div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1">
+			<div class="dep2">
+				<ul role="tablist" class="tablist" aria-label="대도시">
+					<li role="tab" class="tab first" id="tab1-1" aria-controls="tabpanel1-1">강남</li>
+					<li role="tab" class="tab" id="tab1-2" aria-controls="tabpanel1-2">강북</li>
+					<li role="tab" class="tab last" id="tab1-3" aria-controls="tabpanel1-3">강서</li>
+				</ul>
+				<div role="tabpanel" class="tabpanel" id="tabpanel1-1" aria-labelledby="tab1-1">강남내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel1-2" aria-labelledby="tab1-2">강북내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel1-3" aria-labelledby="tab1-3">강서내용</div>
+			</div>
+		</div>
+		<div role="tabpanel" class="tabpanel" id="tabpanel2" aria-labelledby="tab2">
+			<div class="dep2">
+				<ul role="tablist" class="tablist" aria-label="대도시">
+					<li role="tab" class="tab first" id="tab2-1" aria-controls="tabpanel2-1">인천</li>
+					<li role="tab" class="tab" id="tab2-2" aria-controls="tabpanel2-2">수원</li>
+					<li role="tab" class="tab last" id="tab2-3" aria-controls="tabpanel2-3">성남</li>
+				</ul>
+				<div role="tabpanel" class="tabpanel" id="tabpanel2-1" aria-labelledby="tab2-1">인천내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel2-2" aria-labelledby="tab2-2">수원내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel2-3" aria-labelledby="tab2-3">성남내용</div>
+			</div>
+		</div>
+		<div role="tabpanel" class="tabpanel" id="tabpanel3" aria-labelledby="tab3">
+			<div class="dep2">
+				<ul role="tablist" class="tablist" aria-label="대도시">
+					<li role="tab" class="tab first" id="tab3-1" aria-controls="tabpanel3-1">대전</li>
+					<li role="tab" class="tab" id="tab3-2" aria-controls="tabpanel3-2">천안</li>
+					<li role="tab" class="tab last" id="tab3-3" aria-controls="tabpanel3-3">아산</li>
+				</ul>
+				<div role="tabpanel" class="tabpanel" id="tabpanel3-1" aria-labelledby="tab3-1">대전내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel3-2" aria-labelledby="tab3-2">천안내용</div>
+				<div role="tabpanel" class="tabpanel" id="tabpanel3-3" aria-labelledby="tab3-3">아산내용</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
