@@ -13,6 +13,9 @@ body{font-family: "Noto Sans KR";font-size: 16px;color: inherit;}
 #gnb{border: 1px solid hotpink;}
 
 /* footer */
+#footer {height: 350px;}
+#fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+
 .family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
 .family > a, .family #familysite{border: 1px solid #999;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
 .family > a{float: left;}
