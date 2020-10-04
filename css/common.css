@@ -1,16 +1,68 @@
 @charset "utf-8";
+@font-face{
+    font-family: JGothic;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../font/JejuGothic.eot");
+    src: url("../font/JejuGothic.eot#iefix") format("embedded-opentype"),
+    url("../font/JejuGothic.woff") format("woff"),
+    url("../font/JejuGothic.woff2") format("woff2"),
+    url("../font/JejuGothic.otf") format("opentype");
+}
+@font-face{
+    font-family: NtSansKR;
+    font-weight: 300;
+    font-style: normal;
+    src: url("../font/NotoSansKR-Regular.eot");
+    src: url("../font/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"),
+    url("../font/NotoSansKR-Regular.woff") format("woff"),
+    url("../font/NotoSansKR-Regular.woff2") format("woff2"),
+    url("../font/NotoSansKR-Regular.otf") format("opentype");
+}
+@font-face{
+    font-family: NtSansKR;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../font/NotoSansKR-Bold.eot");
+    src: url("../font/NotoSansKR-Bold.eot#iefix") format("embedded-opentype"),
+    url("../font/NotoSansKR-Bold.woff") format("woff"),
+    url("../font/NotoSansKR-Bold.woff2") format("woff2"),
+    url("../font/NotoSansKR-Bold.otf") format("opentype");
+}
 /* tag reset */
-body, ul{margin: 0;padding: 0;}
-ul{list-style: none;}
+body, ul, h1{margin: 0;padding: 0;}
+h1{font-size: 100%;}
+ul, nav{list-style: none;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
+/* 으잉? */
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+header, nav, section, footer{display: block;}
 
-body{font-family: "Noto Sans KR";font-size: 16px;color: inherit;}
-#skip a{position: absolute;left: -9999px;top: 0px;width: 0px;height: 0px;z-index: 100;}
-#skip a:focus{left: 0px;width: 100%;height: 50px;text-align: center;line-height: 50px;font-size: 16px;color: #ed1c24;background-color: #bcbcbc;}
+body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
+#skip a{position: absolute;left: -9999px;top: 0;width: 0;height: 0;z-index: 100;}
+#skip a:focus{left: 0;width: 100%;height: 33px;text-align: center;line-height: 33px;font-size: 16px;color: #ed1c24;background-color: #bcbcbc;}
 
 /* header - index만 fixed */
-#header{position: fixed;left: 0;top: 0;width: 100%;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);}
+#headerwrap{position: fixed;left: 0;top: 0;z-index: 100;}
+#header{position: relative;width: 100%;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);z-index: 100;}
+#header .nav{width: 1200px;margin: 0 auto;}
+#header .nav > *{float: left;}
+
+#header .nav h1 a{display: inline-block;box-sizing: border-box;width: 77px;height: 65px;line-height: 65px;margin-left: 78px;margin-right: 48px;}
+#header .nav h1 img{width: 77px;height: 32px;vertical-align: middle;}
+
+#header .main_menu{position: relative;width: 928px;font-family: "JGothic";}
+#header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
+
+#header .main_menu li ul{position: absolute;left: 0;top: 65px;width: 928px;}
+#header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
+
+/* main_menu 활성화 */
+#header .main_menu li:hover>a, #header .main_menu li>a:focus,#header .main_menu li.on>a{color: #ed1c24;}
+
+
+#header .all_menu{display: none;}
+
 
 /* footer */
 #footer {height: 350px;}
