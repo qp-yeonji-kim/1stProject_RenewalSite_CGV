@@ -59,20 +59,29 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 /* 이 방법이 옳은지 모르겠다. */
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
-/* 가상요소 */
-
+/* 가상요소 - 붉은 점 */
+#header .main_menu li a{position: relative;}
+#header .main_menu li a::after{content: "";position: absolute;right: -15px;top: -5px;}
 
 /* main_menu 활성화 */
 #header .main_menu li:hover > a, #header .main_menu li > a:focus, #header .main_menu li.on > a{color: #ed1c24;}
+#header .main_menu li a:hover::after, #header .main_menu li a:focus::after,#header .main_menu li.on > a::after{width: 5px;height: 5px;border-radius: 50%;background: #ed1c24;}
 
-
-/* all_menu */
+/* all_menu_btn */
+#header .all_menu_btn{position: absolute;top: 20px;width: 28px;height: 33px;}
 #header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
-#header .nav .all_menu_btn span:nth-child(1){top: 23px;}
-#header .nav .all_menu_btn span:nth-child(2){top: 33px;}
-#header .nav .all_menu_btn span:nth-child(3){top: 43px;}
+#header .nav .all_menu_btn span:nth-child(1){top: 3px;}
+#header .nav .all_menu_btn span:nth-child(2){top: 13px;}
+#header .nav .all_menu_btn span:nth-child(3){top: 23px;}
+
+#header .all_menu_btn:hover span, #header .all_menu_btn:focus span{background: #ed1c24;}
 
 
+/* 활성화된 버튼 
+#header .nav .all_menu_btn span:nth-child(1){transform: transition}
+#header .nav .all_menu_btn span:nth-child(2){display: none;}
+#header .nav .all_menu_btn span:nth-child(3){top: 23px;}
+*/
 #header .all_menu{display: none;}
 
 
