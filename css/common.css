@@ -44,21 +44,33 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 /* header - index만 fixed */
 #headerwrap{position: fixed;left: 0;top: 0;z-index: 100;}
-#header{position: relative;width: 100%;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);z-index: 100;}
+#header{position: relative;width: 100vw;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);z-index: 100;}
+/* 100%는 안돼고 왜 100vw는 되는가? %는 계속 자식 요소 너비의 영향을 받음. */
 #header .nav{width: 1200px;margin: 0 auto;}
 #header .nav > *{float: left;}
 
 #header .nav h1 a{display: inline-block;box-sizing: border-box;width: 77px;height: 65px;line-height: 65px;margin-left: 78px;margin-right: 48px;}
 #header .nav h1 img{width: 77px;height: 32px;vertical-align: middle;}
 
-#header .main_menu{position: relative;width: 928px;font-family: "JGothic";}
+#header .main_menu{position: relative;font-family: "JGothic";margin-right: 447px;}
 #header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
 
-#header .main_menu li ul{position: absolute;left: 0;top: 65px;width: 928px;}
+#header .main_menu li ul{position: absolute;left: -1920px;padding-left: 1920px;top: 67px;width: 100vw;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
+/* 이 방법이 옳은지 모르겠다. */
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
+/* 가상요소 */
+
+
 /* main_menu 활성화 */
-#header .main_menu li:hover>a, #header .main_menu li>a:focus,#header .main_menu li.on>a{color: #ed1c24;}
+#header .main_menu li:hover > a, #header .main_menu li > a:focus, #header .main_menu li.on > a{color: #ed1c24;}
+
+
+/* all_menu */
+#header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
+#header .nav .all_menu_btn span:nth-child(1){top: 23px;}
+#header .nav .all_menu_btn span:nth-child(2){top: 33px;}
+#header .nav .all_menu_btn span:nth-child(3){top: 43px;}
 
 
 #header .all_menu{display: none;}
