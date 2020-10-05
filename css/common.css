@@ -30,8 +30,8 @@
     url("../font/NotoSansKR-Bold.otf") format("opentype");
 }
 /* tag reset */
-body, ul, h1{margin: 0;padding: 0;}
-h1{font-size: 100%;}
+body, ul, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
@@ -45,21 +45,25 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .blind-i, .blind-b{width: 1px;height: 1px;overflow: hidden;border: 0px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%)}
 .blind-i{margin-left: -1px;display: inline-block;}
 .blind-b{position: absolute;}
+.area{width: 1200px;margin: 0 auto;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.clearfix::after{content: "";display: block;clear: both;}
 
 /* header - index만 fixed */
-#headerwrap{position: fixed;left: 0;top: 0;z-index: 100;}
-#header{position: relative;width: 100vw;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);font-family: "JGothic";background: rgba(0, 0, 0, 0.6);z-index: 100;}
+#headerwrap{position: fixed;width: 100%;left: 0;top: 0;z-index: 100;}
+#header{position: relative;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);font-family: "JGothic";background: rgba(0, 0, 0, 0.6);z-index: 100;}
 /* 100%는 안돼고 왜 100vw는 되는가? %는 계속 자식 요소 너비의 영향을 받음. */
-#header > *{float: left;}
-#header .gnb{position: relative;width: 500px;height: 100%;border: 1px solid pink;padding-right: }
+#header.active::before{content: "";position: absolute;top: 67px;left: 0;width: 100%;height: 65px;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
+.logo{float: left;margin-right: 78px;padding-top: 20px;}
+#gnb{float: left;position: relative;width: 500px;height: 100%;border: 1px solid pink;}
 
-#header h1 a{display: inline-block;box-sizing: border-box;width: 77px;height: 65px;line-height: 65px;margin-left: 410px;margin-right: 78px;}
-#header h1 img{width: 77px;height: 32px;vertical-align: middle;}
 
-#header .main_menu{position: relative;margin-right: 447px;}
+
+#header .main_menu{position: relative;}
 #header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
 
-#header .main_menu li ul{position: absolute;left: -1920px;padding-left: 1920px;top: 67px;width: 100vw;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
+#header .main_menu li ul{position: absolute;top: 67px;width: 550px;}
 /* 이 방법이 옳은지 모르겠다. */
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
@@ -72,7 +76,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header .main_menu li a:hover::after, #header .main_menu li a:focus::after,#header .main_menu li.on > a::after{width: 5px;height: 5px;border-radius: 50%;background: #ed1c24;}
 
 /* all_menu_btn */
-#header .all_menu_btn{position: absolute;top: 20px;width: 28px;height: 33px;}
+#header .all_menu_btn{position: absolute;top: 20px;right: 40px;width: 28px;height: 33px;}
 #header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
 #header .all_menu_btn span:nth-child(1){top: 3px;}
 #header .all_menu_btn span:nth-child(2){top: 13px;}
@@ -85,7 +89,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header .all_menu_btn span:nth-child(2){opacity: 0;}
 #header .all_menu_btn span:nth-child(3){transform: rotateX(-45deg);} */
 
-#header .all_menu{position: absolute;top: 67px;left: 360px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
+#header .all_menu{display: none;position: absolute;top: 67px;left: 360px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
 #header .all_menu > ul > li{float: left;width: 168px;height: 215px;margin-left: 50px;}
 #header .all_menu > ul > li > a{display: inline-block;padding-bottom: 12px;color: #ed1c24;font-size: 18px;}
 #header .all_menu li > ul > li > a{display: inline-block;padding-bottom: 8px;color: #fff;font-size: 16px;}
