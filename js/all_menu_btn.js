@@ -2,13 +2,13 @@ $(document).ready(function () {
   //전체메뉴 열기와 닫기
   $('.all_menu_btn').on('click', function () {
     if ($(this).hasClass('close')) { //닫기
-      $('#gnb').animate({opacity: 0}, 300, function () {
+      $('.all_menu').animate({opacity: 0}, 300, function () {
         $(this).css({display: 'none', top: 150}).removeClass('active');
-        $('.btn_all').removeClass('close').children('.blind-b').text('전체메뉴 열기');
+        $('.all_menu_btn').removeClass('close').children('.blind-b').text('전체메뉴 열기');
       });
     } else {  //열기
       $(this).toggleClass('close').children('.blind-b').text('전체메뉴 닫기');
-      $('#gnb').addClass('active').css('display', 'block').delay(500).animate({opacity: 1, top: 100}, 500);
+      $('.all_menu').addClass('active').css('display', 'block').delay(500).animate({opacity: 1, top: 100}, 500);
 		}
 		
 		//메뉴가 열린 채로 회원가입과 예약하기에서 포커스가 나가면 메뉴를 닫아주자
