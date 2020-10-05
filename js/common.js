@@ -1,5 +1,5 @@
-//1. 전체 nav
 $(document).ready(function () {
+	//1. 전체 nav
 	var $gnb = $(".nav > ul");
 
 	$gnb.find("li ul").hide(); //depth2의 ul 태그는 자동으로 숨기고 시작
@@ -54,16 +54,14 @@ $(document).ready(function () {
 				opacity: 0
 			}, 300, function () {
 				$(this).css({
-					display: 'none',
-					top: 150
+					display: 'none'
 				}).removeClass('active');
 				$('.all_menu_btn').removeClass('close').children('.blind-b').text('전체메뉴 열기');
 			});
 		} else { //열기
 			$(this).toggleClass('close').children('.blind-b').text('전체메뉴 닫기');
 			$('.all_menu').addClass('active').css('display', 'block').delay(500).animate({
-				opacity: 1,
-				top: 100
+				opacity: 1
 			}, 500);
 		}
 
