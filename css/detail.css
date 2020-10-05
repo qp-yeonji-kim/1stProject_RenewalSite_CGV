@@ -1,10 +1,11 @@
 @charset "utf-8";
 
-#detail1 {position: relative;height: 808px;background: url("../images/movie/테넷.jpg") no-repeat;color: #ffffff;font-family: JGothic;text-align: right;}
+body{font-family: JGothic;color: #ffffff;background: #000;}
+#detail1 {position: relative;height: 808px;background: url("../images/movie/테넷.jpg") no-repeat;text-align: right;}
 #detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);padding-left: 5%;padding-right: 15%;box-sizing: border-box;}
 
-#detail1 a{position: absolute;bottom: 5%;right: 15%;width: 180px;height: 50px;}
-#detail1 a:hover, #detail1 a:focus{background: url("../images/detail/icon/예매bt_호버후.png") no-repeat;}
+#detail1 a{position: absolute;bottom: 5%;right: 15%;width: 180px;height: 50px;border: solid 3px #fbfbfb; border-radius: 10px;font-size: 22px;line-height: 50px;text-align: center;}
+#detail1 a:hover, #detail1 a:focus{background:#ed1c24;border: solid 3px #ed1c24;}
 
 #title{padding-top: 111px;}
 #title ,#sub1, #sub2{display: inline-block;}
@@ -26,7 +27,9 @@
 #sub2 .scrollSt p{font-size: 14px;line-height: 22px;margin-right: 3%;}
 #scroll{overflow: auto;}
 
-#detail2{background: #000;color: #ffffff;}
-#infraTab{width: 100%;}
-#infraTab::after{width: 100%;border-bottom:2px solid #ed1c24;}
-#infraTab li{float: left;width: 25%;}
+#detail2{position: relative;}
+#infraTab{width: 70%;margin-left: 15%;margin-right: 15%;}
+#infraTab .tablist{padding-top: 40px;}
+#infraTab .tablist::after{content:"";position: absolute;top:89px;left: 0;border:1px solid #ed1c24;width: 100%;box-sizing: border-box;}
+#infraTab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
+#infraTab .tab:hover, #infraTab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
