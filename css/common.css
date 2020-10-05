@@ -29,13 +29,15 @@
     url("../font/NotoSansKR-Bold.woff2") format("woff2"),
     url("../font/NotoSansKR-Bold.otf") format("opentype");
 }
+
 /* tag reset */
-body, ul, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
+body, ul, p, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
-header, nav, section, footer{display: block;}
+address{font-style: normal;}
+header, nav, section, footer, address{display: block;}
 
 body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #skip a{position: fixed;left: -9999px;top: 0;width: 0;height: 0;z-index: 100;}
@@ -95,22 +97,36 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 
 /* footer */
-#footer.fp-auto-height{height: 350px;}
-#footer .special_theater{height: 72px;border-top: 1px solid #000;border-bottom: 1px solid #000;}
-.special_theater li{float: left;border: 1px solid red;}
+#footer{position: relative;height: 350px;width: 100%;color: #adadad;font-family: "JGothic";}
+.foot-top{border-top: 1px solid #000;border-bottom: 1px solid #000;margin-top: 80px;}
+#footer .special_theater{height: 72px;}
+.special_theater a{float: left;margin-right: 23px;height: 72px;line-height: 72px;}
+.special_theater a img{vertical-align: middle;}
 
+.big-info > li{float: left;position: relative;margin: 40px 18px 40px 0px;font-size: 16px;}
+.big-info > li::after{content: "";position: absolute;right: -9px;top: 1px;width: 1px;height: 14px;background: #adadad;}
+.big-info > li:last-child::after{display: none;}
+.big-info > li > a{text-align: center;}
 
-
+.cgv-info .address{font-size: 14px;line-height: 22px;}
+.address span{position: relative;margin-right: 4px;}
+.address span::after{content: "";position: absolute;right: -5px;top: 1px;width: 1px;height: 12px;background: #adadad;}
+.address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
+.address div{margin-bottom: 24px;}
+.address div a{display: inline-block;box-sizing: border-box;padding: 2px;border: 1px solid #adadad;border-radius: 4px;}
 
 
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
-.family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
-.family > a, .family #familysite{border: 1px solid #999;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
+
+/* foot-right */
+.foot-right{float: right;}
+.family{position: relative;width: 300px;margin: 200px auto;background: pink;font-size: 16px;}
+.family > a, .family #familysite{border: 1px solid #adadad;padding: 3px 5px;line-height: 27px;box-sizing: border-box;text-align: center;}
 .family > a{float: left;}
 .family .fsite{margin-right: 10px;}
-.family .fsite, .family #familysite{width: 200px;}
+.family .fsite, .family #familysite{width: 180px;}
 .family #familysite{display: none;position: absolute;top: 34px;left: 0;}
 .family #familysite a{display: block;padding-left: 10px;}
 
-
+.foot-right .copyright

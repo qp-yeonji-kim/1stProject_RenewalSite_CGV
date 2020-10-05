@@ -43,6 +43,7 @@ $(document).ready(function () {
 
 		//현재설정
 		$(this).parent().has('ul').closest($header).addClass('active'); //#header 너비의 100% 흰색바 생성을 위한 클래스명 추가
+		// .closest : 나를 포함하여 가장 가까이에 있는 부모 태그
 		$(this).next().show().parent().addClass("on");
 	});
 
