@@ -30,7 +30,7 @@
     url("../font/NotoSansKR-Bold.otf") format("opentype");
 }
 /* tag reset */
-body, ul, h1, h2, h3, h4, h5, h6{margin: 0;padding: 0;}
+body, ul, h1, h2, h3, h4, h5, h6, p, strong{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
