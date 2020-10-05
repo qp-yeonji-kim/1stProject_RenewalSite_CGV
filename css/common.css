@@ -49,22 +49,19 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .p_r{position: relative;}
 .p_a{position: absolute;}
 .clearfix::after{content: "";display: block;clear: both;}
+/* 이 부분 다시 복습해서 알아내야.. */
 
 /* header - index만 fixed */
 #headerwrap{position: fixed;width: 100%;left: 0;top: 0;z-index: 100;}
 #header{position: relative;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);font-family: "JGothic";background: rgba(0, 0, 0, 0.6);z-index: 100;}
 
 #header.active::before{content: "";position: absolute;top: 67px;left: 0;width: 100%;height: 65px;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
-.logo{float: left;margin-right: 78px;padding-top: 20px;}
-#gnb{float: left;position: relative;width: 500px;height: 100%;border: 1px solid pink;}
-
-
+.logo{float: left;margin-right: 78px;padding-top: 15px;}
+#gnb{float: left;position: relative;width: 500px;height: 100%;}
 
 #header .main_menu{position: relative;}
 #header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
-
 #header .main_menu li ul{position: absolute;top: 67px;width: 550px;}
-/* 이 방법이 옳은지 모르겠다. */
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
 /* 가상요소 - 붉은 점 */
@@ -78,24 +75,34 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 /* all_menu_btn */
 #header .all_menu_btn{position: absolute;top: 20px;right: 40px;width: 28px;height: 33px;}
 #header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
+#header .all_menu_btn:hover span, #header .all_menu_btn:focus span{background: #ed1c24;}
 #header .all_menu_btn span:nth-child(1){top: 3px;}
 #header .all_menu_btn span:nth-child(2){top: 13px;}
 #header .all_menu_btn span:nth-child(3){top: 23px;}
+/* 색 전환이 자유롭지 못하다. */
 
-#header .all_menu_btn:hover span, #header .all_menu_btn:focus span{background: #ed1c24;}
+/* all_menu_btn 활성화 */
+#header .all_menu_btn.close span{background-color: #fff;}
+#header .all_menu_btn.close:hover span, #header .all_menu_btn.close:focus span{background-color: #ed1c24;}
+#header .all_menu_btn.close span:nth-child(1){top: 13px;transform: rotate(45deg);}
+#header .all_menu_btn.close span:nth-child(2){opacity: 0;}
+#header .all_menu_btn.close span:nth-child(3){top: 13px;transform: rotate(-45deg);}
 
-/* 활성화된 버튼 
-#header .all_menu_btn span:nth-child(1){transform: rotateX(45deg);}
-#header .all_menu_btn span:nth-child(2){opacity: 0;}
-#header .all_menu_btn span:nth-child(3){transform: rotateX(-45deg);} */
-
-#header .all_menu{display: none;position: absolute;top: 67px;left: 360px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
+#header .all_menu{display: none;position: absolute;top: 67px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
 #header .all_menu > ul > li{float: left;width: 168px;height: 215px;margin-left: 50px;}
 #header .all_menu > ul > li > a{display: inline-block;padding-bottom: 12px;color: #ed1c24;font-size: 18px;}
 #header .all_menu li > ul > li > a{display: inline-block;padding-bottom: 8px;color: #fff;font-size: 16px;}
 
+
 /* footer */
-#footer {height: 350px;}
+#footer.fp-auto-height{height: 350px;}
+#footer .special_theater{height: 72px;border-top: 1px solid #000;border-bottom: 1px solid #000;}
+.special_theater li{float: left;border: 1px solid red;}
+
+
+
+
+
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
 .family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
@@ -105,3 +112,5 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .family .fsite, .family #familysite{width: 200px;}
 .family #familysite{display: none;position: absolute;top: 34px;left: 0;}
 .family #familysite a{display: block;padding-left: 10px;}
+
+
