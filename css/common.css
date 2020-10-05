@@ -93,8 +93,16 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header .all_menu > ul > li > a{display: inline-block;padding-bottom: 12px;color: #ed1c24;font-size: 18px;}
 #header .all_menu li > ul > li > a{display: inline-block;padding-bottom: 8px;color: #fff;font-size: 16px;}
 
+
 /* footer */
-#footer {height: 350px;}
+#footer.fp-auto-height{height: 350px;}
+#footer .special_theater{height: 72px;border-top: 1px solid #000;border-bottom: 1px solid #000;}
+.special_theater li{float: left;border: 1px solid red;}
+
+
+
+
+
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
 .family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
