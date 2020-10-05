@@ -48,7 +48,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 /* header - index만 fixed */
 #headerwrap{position: fixed;left: 0;top: 0;z-index: 100;}
-#header{position: relative;width: 100vw;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);z-index: 100;}
+#header{position: relative;width: 100vw;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);font-family: "JGothic";background: rgba(0, 0, 0, 0.6);z-index: 100;}
 /* 100%는 안돼고 왜 100vw는 되는가? %는 계속 자식 요소 너비의 영향을 받음. */
 #header > *{float: left;}
 #header .gnb{position: relative;width: 500px;height: 100%;border: 1px solid pink;padding-right: }
@@ -56,7 +56,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header h1 a{display: inline-block;box-sizing: border-box;width: 77px;height: 65px;line-height: 65px;margin-left: 410px;margin-right: 78px;}
 #header h1 img{width: 77px;height: 32px;vertical-align: middle;}
 
-#header .main_menu{position: relative;font-family: "JGothic";margin-right: 447px;}
+#header .main_menu{position: relative;margin-right: 447px;}
 #header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
 
 #header .main_menu li ul{position: absolute;left: -1920px;padding-left: 1920px;top: 67px;width: 100vw;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
@@ -80,13 +80,15 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 #header .all_menu_btn:hover span, #header .all_menu_btn:focus span{background: #ed1c24;}
 
-
 /* 활성화된 버튼 
 #header .all_menu_btn span:nth-child(1){transform: rotateX(45deg);}
 #header .all_menu_btn span:nth-child(2){opacity: 0;}
 #header .all_menu_btn span:nth-child(3){transform: rotateX(-45deg);} */
-#header .all_menu{display: none;}
 
+#header .all_menu{position: absolute;top: 67px;left: 360px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
+#header .all_menu > ul > li{float: left;width: 168px;height: 215px;margin-left: 50px;}
+#header .all_menu > ul > li > a{display: inline-block;padding-bottom: 12px;color: #ed1c24;font-size: 18px;}
+#header .all_menu li > ul > li > a{display: inline-block;padding-bottom: 8px;color: #fff;font-size: 16px;}
 
 /* footer */
 #footer {height: 350px;}
