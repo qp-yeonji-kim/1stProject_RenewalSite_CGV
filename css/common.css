@@ -89,7 +89,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header .all_menu_btn.close span:nth-child(2){opacity: 0;}
 #header .all_menu_btn.close span:nth-child(3){top: 13px;transform: rotate(-45deg);}
 
-#header .all_menu{display: none;position: absolute;top: 67px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
+#header .all_menu{display: none;opacity: 0;position: absolute;top: 67px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: url("../images/common/bg1.png") no-repeat top center;color: #fff;}
 #header .all_menu > ul > li{float: left;width: 168px;height: 215px;margin-left: 50px;}
 #header .all_menu > ul > li > strong{display: inline-block;padding-bottom: 6px;margin-bottom: 6px;color: #ed1c24;font-size: 16px;}
 #header .all_menu li > ul > li > a{position: relative;display: inline-block;padding-bottom: 8px;color: rgb(209, 209, 209);font-size: 14px;}
@@ -113,6 +113,8 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 .cgv-info{height: 70px;}
 .cgv-info .address{float: left;width: 800px;height: 200px;font-size: 14px;line-height: 22px;}
+.cgv-info .address > *{float: left;}
+.cgv-info .address > p{margin-right: 18px;}
 .address span{position: relative;margin-right: 4px;}
 .address span::after{content: "";position: absolute;right: -5px;top: 1px;width: 1px;height: 12px;background: #adadad;}
 .address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
@@ -123,8 +125,8 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .foot-right{float: right;width: 250px;}
 /* float-right가 되었지만 1200px영역의 끝에 위치하지 않는다. */
 .family{position: relative;width: 300px;height: 36px;margin: 0px auto;font-size: 16px;}
-.family > a, .family #familysite{border: 1px solid #adadad;background: #fff;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
-.family > a{float: left;}
+.family > a, .family #familysite{border: 1px solid #adadad;background: #fff;padding: 3px 5px;line-height: 27px;box-sizing: border-box;border-radius: 4px;}
+.family > a{float: left;width: 36px;height: 36px;}
 .family .fsite{width: 185px;height: 36px;margin-right: 10px;}
 .family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
 /* 화면밖을 빠져나올 수 있게 만드는법, 길이를 직접 지정해주지 않아도 콘텐츠에 맞게 지정되는 법 */
