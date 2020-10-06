@@ -46,7 +46,7 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 #tabpanel1 .percent:first-child{margin-left: 335px;}
 #tabpanel1 .percent + .percent{padding-left: 90px;}
 #tabpanel1 .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
-#tabpanel1 .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 400;padding-top: 18px;}
+#tabpanel1 .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
 
 
 /* 탭 활성화 */
