@@ -22,9 +22,25 @@
                 navigationPosition: 'right',
                 navigationTooltips: ['CGV상영작', '무비차트', '이벤트', 'CGV SHOP', '매거진', 'footer'],
             });
+            var mySwiper = new Swiper('.tabpanel .swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'fraction',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    draggable: true,
+                    snapOnRelease: true,
+                }
+            });
         });
     </script>
-
 </head>
 
 <body>
@@ -218,7 +234,6 @@
             <div class="slide" id="mov-3"><strong class="blind-b">뉴뮤턴트</strong></div>
         </section>
         <section class="section" id="s_moviechart">
-            <!-- area를 여기에 줘도 되는걸까.. -->
             <h2 class="blind-b">무비차트</h2>
             <div class="area">
                 <div>
@@ -230,8 +245,31 @@
                 <div role="tabpanel" class="tabpanel" id="book" aria-labelledby="ranking_book">
                     <div class="swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
+                            <div class="swiper-slide">
+                                <!-- table관련 태그도 괜찮을 것 같다... -->
+                                <ul>
+                                    <li>
+                                        <figure>
+                                            <a href=""><img src="" alt=""></a>
+                                            <figcaption>
+                                                <a href=""><strong>테넷</strong></a>
+                                                <div>
+                                                    <span>예매율 40.4%</span>
+                                                    <span>평점 93%</span>
+                                                </div>
+                                                <div>
+                                                    <a href="" role="button">일반예매</a>
+                                                    <a href="" role="button">IMAX</a>
+                                                    <a href="" role="button">4DMAX</a>
+                                                </div>
+                                            </figcaption>
+                                        </figure>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="swiper-slide">
+
+                            </div>
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
