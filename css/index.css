@@ -5,3 +5,7 @@
 #cnt_now #mov-3{background: url("../images/index/mov-3.jpg") top center;background-size: cover;}
 
 /* #s_moviechart */
+#s_moviechart{color: #fff;text-align: center;}
+#s_moviechart .tab{display: inline-block;padding-bottom: 4px;font-family: JGothic;font-weight: 400;font-size: 36px;}
+#s_moviechart .tab+.tab{margin-left: 200px;}
+#s_moviechart .tab:hover, #s_moviechart .tab:focus{color: #ed1c24;border-bottom: 2px solid #ed1c24;}
