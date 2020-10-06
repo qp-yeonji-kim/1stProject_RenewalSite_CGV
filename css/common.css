@@ -35,7 +35,8 @@ h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
-header, nav, section, footer{display: block;}
+address{font-style: normal;}
+header, nav, section, footer, address{display: block;}
 
 body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #skip a{position: fixed;left: -9999px;top: 0;width: 0;height: 0;z-index: 100;}
@@ -75,7 +76,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 /* all_menu_btn */
 #header .all_menu_btn{position: absolute;top: 20px;right: 40px;width: 28px;height: 33px;}
 #header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
-#header .all_menu_btn:hover span, #header .all_menu_btn:focus span{background: #ed1c24;}
+#header .all_menu_btn:hover span{background: #ed1c24;}
 #header .all_menu_btn span:nth-child(1){top: 3px;}
 #header .all_menu_btn span:nth-child(2){top: 13px;}
 #header .all_menu_btn span:nth-child(3){top: 23px;}
@@ -90,27 +91,51 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 #header .all_menu{display: none;position: absolute;top: 67px;width: 1200px;height: 100vh;padding: 33px 156px;box-sizing: border-box;background: #1d1d1d;color: #fff;}
 #header .all_menu > ul > li{float: left;width: 168px;height: 215px;margin-left: 50px;}
-#header .all_menu > ul > li > a{display: inline-block;padding-bottom: 12px;color: #ed1c24;font-size: 18px;}
-#header .all_menu li > ul > li > a{display: inline-block;padding-bottom: 8px;color: #fff;font-size: 16px;}
-
+#header .all_menu > ul > li > strong{display: inline-block;padding-bottom: 6px;margin-bottom: 6px;color: #ed1c24;font-size: 16px;}
+#header .all_menu li > ul > li > a{position: relative;display: inline-block;padding-bottom: 8px;color: rgb(209, 209, 209);font-size: 14px;}
+#header .all_menu li > ul > li > a:hover, #header .all_menu li > ul > li > a:focus{color: #ed1c24;}
+#header .all_menu li > ul > li > a::after{content: "";position: absolute;right: -8px;top: -3px;}
+#header .all_menu li > ul > li > a:hover::after, #header .all_menu li > ul > li > a:focus::after{width: 4px;height: 4px;border-radius: 50%;background: #ed1c24;}
 
 /* footer */
-#footer.fp-auto-height{height: 350px;}
-#footer .special_theater{height: 72px;border-top: 1px solid #000;border-bottom: 1px solid #000;}
-.special_theater li{float: left;border: 1px solid red;}
-
-
-
-
-
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
-.family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
-.family > a, .family #familysite{border: 1px solid #999;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
+#footer{position: relative;width: 100%;height: 400px;color: #adadad;font-family: "JGothic";}
+.foot-top{border-top: 1px solid #000;border-bottom: 1px solid #000;margin-top: 80px;}
+#footer .special_theater{height: 72px;}
+.special_theater a{float: left;margin-right: 23px;height: 72px;line-height: 72px;}
+.special_theater a img{vertical-align: middle;}
+
+.big-info li{float: left;position: relative;margin: 40px 18px 40px 0px;font-size: 16px;line-height: 16px;}
+.big-info li::after{content: "";position: absolute;right: -9px;top: 1px;width: 1px;height: 14px;background: #adadad;}
+.big-info li:last-child::after{display: none;}
+.big-info li a{text-align: center;}
+
+.cgv-info{height: 70px;}
+.cgv-info .address{float: left;width: 800px;height: 200px;font-size: 14px;line-height: 22px;}
+.address span{position: relative;margin-right: 4px;}
+.address span::after{content: "";position: absolute;right: -5px;top: 1px;width: 1px;height: 12px;background: #adadad;}
+.address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
+.address div{margin-bottom: 24px;}
+.address div a{display: inline-block;box-sizing: border-box;padding: 2px;border: 1px solid #adadad;border-radius: 4px;}
+
+/* foot-right */
+.foot-right{float: right;width: 250px;}
+/* float-right가 되었지만 1200px영역의 끝에 위치하지 않는다. */
+.family{position: relative;width: 300px;height: 36px;margin: 0px auto;font-size: 16px;}
+.family > a, .family #familysite{border: 1px solid #adadad;background: #fff;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
 .family > a{float: left;}
-.family .fsite{margin-right: 10px;}
-.family .fsite, .family #familysite{width: 200px;}
-.family #familysite{display: none;position: absolute;top: 34px;left: 0;}
+.family .fsite{width: 185px;height: 36px;margin-right: 10px;}
+.family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
+/* 화면밖을 빠져나올 수 있게 만드는법, 길이를 직접 지정해주지 않아도 콘텐츠에 맞게 지정되는 법 */
 .family #familysite a{display: block;padding-left: 10px;}
+
+.foot-right .copyright{clear: both;padding-top: 10px;padding-left: 40px;font-size: 14px;}
+
+.sns_list{width: 90px;float: right;}
+.sns_list .sns_i{float: left;width: 27px;height: 27px;margin-top: 8px;}
+
+
+/* 처음 햄버거버튼을 눌렀을 땐 빠르게 나타나고 두번째엔 천천히 opacity가 올라간다. 더불어 tab버튼도 활성화되어 있다..! */
 
 
