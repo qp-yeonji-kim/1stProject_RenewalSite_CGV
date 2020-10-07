@@ -2,15 +2,16 @@
 
 
 
-.all_bg{position: relative;;background: url("../images/theaters/bg/bg-th.png") no-repeat;color: #fff;font-family: JGothic;font-weight: 400;}
+.all_bg{position: relative;background: url("../images/theaters/bg/bg-th.png") no-repeat;color: #fff;font-family: JGothic;font-weight: 400;}
 .all_bg::before{content:"";position: absolute;top: 1023px;left: 0;background: url("../images/theaters/bg/tt-bg.png");width: 100%;height: 1346px;}
-#theaterTab {width: 1200px;padding-top: 185px;height: 1023px;}
+#theaterTab {width: 1200px;padding-top: 150px;height: 1023px;}
 #theaterTab .title{display: inline-block;font-size: 30px;text-align: left;text-align-last: left;width: 189px;border-bottom: 2px solid #fff;padding-bottom: 4px;margin-bottom: 134px;font-weight: 400;}
 /* 제목 옆  */
 #theaterTab .oneline_st {display: inline-block;float: right;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
 #theaterTab .oneline_st > .tab{display: inline-block;font-size:17px;line-height: 20px;}
 #theaterTab .title, #theaterTab > .oneline_st{vertical-align: middle;}
 #theaterTab > .oneline_st > .tab + .tab{margin-left: 38px;}
+#theaterTab .ph{width: 710px;height: 325px;border-radius: 10px 0 0 0;overflow: hidden;}
 #theaterTab .th{position: relative;height: 187px;color: #000;background: #fff;border-radius: 10px;width: 1202px;margin-left: -1px;}
 #theaterTab .th .th_title{position: absolute;top: 30px;left: 56px;font-size: 34px;}
 #theaterTab .th .th_info1{position: absolute;top: 30px;left: 549px;font-size: 16px;line-height: 20px;font-weight: 400;}
@@ -20,16 +21,20 @@
 /* #theaterTab */
 #theaterTab .roundpanel{height: 512px;border-radius: 10px; border: 1px solid #fff;}
 /* dep2 */
-.dep2 > .tablist{padding-top: 30px;float: right;margin-left: 733px;font-weight: 400;}
+.dep2 > .tablist{padding-top: 23px;float: right;font-weight: 400;width: 458px;}
 .dep2 .tablist::after{content:"";display: block;clear:both;}
-.dep2 > .tablist li{float: left;width: calc(100% / 3);text-align: left;font-size: 15px;line-height: 1.6;}
+.dep2 > .tablist li{float: left;width: calc(100% / 3);text-align: left;font-size: 15px;line-height: 24px;}
 .dep2 > .tab + .tab{margin-bottom: 10px;}
 .tab{position: relative;}
 .tabm{margin-left: 38px;}
-#theaterTab > .tablist > .tab::after,.dep2 .tab::after{content: "";position: absolute;right: -8px; top: -3px;}
+/* #theaterTab > .tablist > .tab::after,.dep2 .tab::after{content: "";position: absolute;right: -8px; top: -3px;}
 #theaterTab > .tablist > .tab:hover::after,.dep2 .tab:hover::after,#theaterTab > .tablist > .tab:focus::after,.dep2 .tab:focus::after,#theaterTab > .tablist > .tab.active::after,.dep2 .tab.active::after{width: 4px;height: 4px;border-radius: 50%;background: #d40404;}
 #theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active{color: #d40404;cursor: pointer;}
 .dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{color: #d40404;cursor: pointer;}
+ */
+ #theaterTab > .tablist > .tab, .dep2 .tab{color: #7c7c7c;}
+ #theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active{color: #fff;cursor: pointer;}
+ .dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{color: #fff;cursor: pointer;}
 #tabpanel1{position: relative;}
 #timeTable{position: absolute;top: 880px;left: 0;}
 #timeTable .date{width: 100%;margin-bottom: 56px;}
