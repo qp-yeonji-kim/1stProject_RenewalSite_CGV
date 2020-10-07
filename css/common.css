@@ -29,10 +29,22 @@
     url("../font/NotoSansKR-Bold.woff2") format("woff2"),
     url("../font/NotoSansKR-Bold.otf") format("opentype");
 }
+@font-face{
+    font-family: CJBold;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../font/CJONLYONEBold.eot");
+    src: url("../font/CJONLYONEBold.eot#iefix") format("embedded-opentype"),
+    url("../font/CJONLYONEBold.woff") format("woff"),
+    url("../font/CJONLYONEBold.woff2") format("woff2"),
+    url("../font/CJONLYONEBold.otf") format("opentype");
+}
+
 /* tag reset */
-body, ul, h1, h2, h3, h4, h5, h6, p, strong, figure{margin: 0;padding: 0;}
+body, ul, h1, h2, h3, h4, h5, h6, p, strong, figure, img{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
+img{border: none;vertical-align: middle;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 address{font-style: normal;}
