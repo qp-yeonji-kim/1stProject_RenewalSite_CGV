@@ -40,6 +40,7 @@
 #timeTable .TT_list li+li{margin-left: 52px;}
 #timeTable .TT_list li strong{display: inline-block;font-size: 32px;font-weight: 400;padding-bottom: 12px;}
 #timeTable .TT_list li p{font-size: 14px;}
+
 #timeTable .roundpanel_oneline{height: 250px;border-radius: 10px;border: solid 1px #fbfbfb;}
 #timeTable .roundpanel_oneline .oneline{margin-left: 74px;padding-top: 50px;}
 #timeTable .roundpanel_oneline .TT_st{position: relative;height: 65px;border-radius: 10px;background-color: #ffffff;color: #000;}
