@@ -1,4 +1,13 @@
 $(document).ready(function () {
+	$('#skip a').on('click', function () {
+        var target = $(this).attr('href');
+        console.log(target);
+        //$('#content')
+        $(target).attr('tabIndex', -1).focus();
+
+        return false;
+      });
+
 	//1. gnb
 	var $header=$("#header");
 	var $gnb=$("#gnb > ul");

@@ -47,7 +47,6 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 #keyinfo .percent + .percent{padding-left: 90px;}
 #keyinfo .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
 #keyinfo .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
-395 563
 
 /* 탭 활성화 */
 #cnt-d-tab .tabpanel{display: none;}
