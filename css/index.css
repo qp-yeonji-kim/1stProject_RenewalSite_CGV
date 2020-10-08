@@ -11,7 +11,7 @@
 }
 
 /* #cnt_now */
-/* 디자인을 살려 슬라이더 만들 수 있을까 */
+#content{color: #fff;}
 #cnt_now #mov-1{background: url("../images/index/mov-1.jpg") top center;background-size: cover;}
 #cnt_now #mov-2{background: url("../images/index/mov-2.jpg") top center;background-size: cover;}
 #cnt_now #mov-3{background: url("../images/index/mov-3.jpg") top center;background-size: cover;}
@@ -27,7 +27,6 @@
 #s_moviechart .tabpanel{display: none;}
 #s_moviechart .tabpanel.active{display: block;}
 
-
 /* #s_moviechart > slide */
 #s_moviechart .tabpanel .swiper-slide > ul{width: 1070px;margin: 0 auto;}
 #s_moviechart .tabpanel > ul::after{position: absolute;display: block;clear: both;}
@@ -38,14 +37,13 @@
 #s_moviechart .poster div{position: absolute;left: 0;bottom: 0;width: 48px;height: 43px;background: #fff;border-top-right-radius: 60%;font-family: "CJBold";font-weight: 700;font-size: 25px;line-height: 43px;color: #000;z-index: 50;}
 
 #s_moviechart strong{display: inline-block;margin-top: 15px;font-weight: 400;font-size: 18px;}
-#s_moviechart p{margin: 10px 0px;font-family: NtSansKR;font-weight: 400;font-size: 14px;}
+#s_moviechart p{margin: 10px 0px;font-weight: 400;font-size: 14px;}
 #s_moviechart .book{width: 210px;}
 #s_moviechart .book ul{margin: 0 auto;height: 27px;}
 #s_moviechart .book ul li{display: inline-block;width: 62px;height: 27px;line-height: 27px;font-size: 14px;border-radius: 4px;background: #ed1c24;margin-right: 5px;}
 #s_moviechart .book ul li a{display: inline-block;width: 100%;height: 100%;}
-.tabpanel .swiper-slide > ul > li > a{position: absolute;left: 0;top: 0;width: 210px;height: 295px;line-height: 299px;padding-bottom: 4px;font-family: "NtSansKR";font-weight: 700;font-size: 14px;color: transparent;text-decoration: none;background: transparent left top;}
+.tabpanel .swiper-slide > ul > li > a{position: absolute;left: 0;top: 0;width: 210px;height: 295px;line-height: 299px;padding-bottom: 4px;font-weight: 700;font-size: 14px;color: transparent;text-decoration: none;background: transparent left top;}
 .tabpanel .swiper-slide > ul > li > a:hover, .tabpanel .swiper-slide > ul > li > a:focus{color: #fff;text-decoration: underline;background-color: rgba(0, 0, 0, 0.6);}
-
 
 /* #event */
 h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
@@ -56,7 +54,6 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #event ul li:nth-child(2){margin: 0 30px;}
 /* 순서를 꼭 변경해야지 나열 할 수 있는가? */
 
-
 /* #s_shop */
 #s_shop{background: url("../images/index/bg-shop.jpg") no-repeat center;background-size: auto auto;}
 #s_shop h2{margin: 37px auto 0;}
@@ -66,12 +63,11 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #s_shop ul li:nth-child(2){margin: 0 33px;}
 #s_shop ul li:nth-child(3){margin-bottom: 67px;}
 
-
 /* #megazine */
 #megazine{background: url("../images/index/bg-megazine.jpg") no-repeat center;background-size: auto auto;}
 #megazine h2{margin: 0 auto;}
 #megazine .article{width: 1200px;margin: 80px 0 50px 350px;}
-.article h3{font-family: "NtSansKR";font-size: 30px;text-indent: 10px;margin-bottom: 50px;}
+.article h3{font-size: 30px;text-indent: 10px;margin-bottom: 50px;}
 .article p{font-size: 16px;color: #b2b1b1;font-weight: 200;}
 .article p + p{margin-top: 16px;}
 .article a{display: inline-block;margin: 40px 0 0 470px;}

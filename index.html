@@ -25,36 +25,24 @@
             var mySwiper = new Swiper('#book .swiper-container', {
                 // Optional parameters
                 direction: 'horizontal',
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'fraction',
-                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true,
-                    snapOnRelease: true,
-                }
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
             });
-            var mySwiper = new Swiper('#grade .swiper-container', {
+            var mySwiper2 = new Swiper('#grade .swiper-container', {
                 // Optional parameters
                 direction: 'horizontal',
-                pagination: {
-                    el: '.swiper-pagination',
-                    type: 'fraction',
-                },
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
-                scrollbar: {
-                    el: '.swiper-scrollbar',
-                    draggable: true,
-                    snapOnRelease: true,
-                }
+                observer: true,
+                observeParents: true,
+                observeSlideChildren: true,
             });
         });
     </script>
