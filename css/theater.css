@@ -1,14 +1,16 @@
 @charset "utf-8";
 
 
-
-.all_bg{position: relative;background: url("../images/theaters/bg/bg-th.png") no-repeat;color: #fff;font-family: JGothic;font-weight: 400;}
-.all_bg::before{content:"";position: absolute;top: 1023px;left: 0;background: url("../images/theaters/bg/tt-bg.png");width: 100%;height: 1346px;}
-#theaterTab {width: 1200px;padding-top: 168px;height: 1023px;}
-#theaterTab .title{display: inline-block;font-size: 30px;text-align: left;text-align-last: left;width: 189px;border-bottom: 2px solid #fff;padding-bottom: 4px;margin-bottom: 134px;font-weight: 400;}
+body{color: #fff;font-family: JGothic;font-weight: 400;}
+.all_bg{position: relative;background: url("../images/theaters/bg/bg-th.png") no-repeat;}
+/* .all_bg::before{content:"";position: absolute;top: 1023px;left: 0;background: url("../images/theaters/bg/tt-bg.png");width: 100%;height: 1346px;} */
+.tt_bg{background: url("../images/theaters/bg/tt-bg.png");width: 100%;height: 1346px;}
+#theaterTab {width: 1200px;padding-top: 168px;height: 850px;}
+#theaterTab .title, #timeTable .title{display: inline-block;font-size: 30px;text-align: left;text-align-last: left;width: 189px;border-bottom: 2px solid #fff;padding-bottom: 4px;margin-bottom: 134px;font-weight: 400;}
+#timeTable{padding-top: 300px;}
 /* 제목 옆  */
-#theaterTab .oneline_st {display: inline-block;float: right;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
-#theaterTab .oneline_st > .tab{display: inline-block;font-size:17px;line-height: 20px;}
+#theaterTab .oneline_st, #timeTable .oneline_st{display: inline-block;float: right;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
+#theaterTab .oneline_st > .tab, #timeTable .oneline_st > .tab{display: inline-block;font-size:17px;line-height: 20px;}
 #theaterTab .title, #theaterTab > .oneline_st{vertical-align: middle;}
 #theaterTab > .oneline_st > .tab + .tab{margin-left: 38px;}
 #theaterTab .ph{width: 710px;height: 325px;border-radius: 10px 0 0 0;overflow: hidden;}
@@ -27,16 +29,15 @@
 .dep2 > .tab + .tab{margin-bottom: 10px;}
 .tab{position: relative;}
 .tabm{margin-left: 38px;}
-/* #theaterTab > .tablist > .tab::after,.dep2 .tab::after{content: "";position: absolute;right: -8px; top: -3px;}
-#theaterTab > .tablist > .tab:hover::after,.dep2 .tab:hover::after,#theaterTab > .tablist > .tab:focus::after,.dep2 .tab:focus::after,#theaterTab > .tablist > .tab.active::after,.dep2 .tab.active::after{width: 4px;height: 4px;border-radius: 50%;background: #d40404;}
-#theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active{color: #d40404;cursor: pointer;}
-.dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{color: #d40404;cursor: pointer;}
- */
- #theaterTab > .tablist > .tab, .dep2 .tab{color: #7c7c7c;}
- #theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active{color: #fff;cursor: pointer;}
+
+ #theaterTab > .tablist > .tab, .dep2 .tab, #timeTable > .tablist > .tab, .dep2 .tab{color: #7c7c7c;}
+ #theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active, #timeTable > .tablist > .tab:hover, #timeTable > .tablist > .tab:focus, #timeTable > .tablist > .tab.active{color: #fff;cursor: pointer;}
  .dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{color: #fff;cursor: pointer;}
 #tabpanel1{position: relative;}
-#timeTable{position: absolute;top: 880px;left: 0;}
+#timeTable{position: absolute;top: 880px;left: 0;color: #fff;fw400}
+#theaterTab .oneline_st, #timeTable .oneline_st{display: inline-block;float: right;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
+#timeTable .oneline_st{float: right;width: 839px;text-align: right;}
+#timeTable .oneline_st li{float: left;}
 #timeTable .date{width: 100%;margin-bottom: 56px;}
 /* #tabpanel1-1-1-3 .detail_list li {border-radius:10px;} */
 #timeTable .date > strong{font-size: 32px;font-weight: 400;}
@@ -67,3 +68,5 @@
 
 #theaterTab .tabpanel{display: none;height: 512px;}
 #theaterTab .tabpanel.active{display: block;}
+#timeTable .tabpanel{display: none;height: 512px;}
+#timeTable .tabpanel.active{display: block;}
