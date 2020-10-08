@@ -70,5 +70,4 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 .article h3{width: 600px;margin-bottom: 50px;font-size: 30px;text-indent: 10px;}
 .article h3, .article p{margin-left: 30px;}
 .article p{width: 610px;font-size: 16px;color: #b2b1b1;font-weight: 200;}
-.article p + p{margin-top: 16px;}
 .article a{display: inline-block;margin: 40px 0 0 500px;}

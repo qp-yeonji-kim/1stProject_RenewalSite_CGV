@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
-#detail1 {position: relative;height: 808px;background: url("../images/movie/테넷.jpg") no-repeat;text-align: right;}
+#cnt-d-main {position: relative;height: 808px;background: url("../images/movie/테넷.jpg") no-repeat;text-align: right;}
 #detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 /* 예매버튼 */
-#detail1 a{position: absolute;bottom: -90px;right: 0;width: 180px;height: 50px;border: solid 2px #fbfbfb; border-radius: 10px;font-size: 22px;line-height: 50px;text-align: center;}
-#detail1 a:hover, #detail1 a:focus{background:#ed1c24;border: solid 2px #ed1c24;}
+#cnt-d-main a{position: absolute;bottom: -90px;right: 0;width: 180px;height: 50px;border: solid 2px #fbfbfb; border-radius: 10px;font-size: 22px;line-height: 50px;text-align: center;}
+#cnt-d-main a:hover, #cnt-d-main a:focus{background:#ed1c24;border: solid 2px #ed1c24;}
 /*  */
 #tt_g{ position: relative; float: left; width: 600px;box-sizing: border-box;}
 #title{padding-top: 111px;padding-left: 5%;}
@@ -20,7 +20,7 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 
 
 #sub2 p:first-child{font-size: 16px;line-height: 20px;margin-bottom: 15px;}
-#sub2 .scrollSt{ width: 416px;height: 197px;border-radius: 6px;box-shadow: inset 0 0 105.8px 90.2px #000000;background-color:rgba(0, 0, 0, 0.5);}
+#sub2 .scrollSt{width: 416px;height: 197px;border-radius: 6px;box-shadow: inset 0 0 105.8px 90.2px #000000;background-color:rgba(0, 0, 0, 0.5);}
 #sub2 .scrollSt::-webkit-scrollbar{width: 10px;}
 #sub2 .scrollSt::-webkit-scrollbar-track{background-color: #808080;border-radius: 6px;}
 #sub2 .scrollSt::-webkit-scrollbar-thumb{border-radius: 6px;background-color: #fff;}
@@ -28,27 +28,27 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 #sub2 .scrollSt p{font-size: 14px;line-height: 22px;margin-right: 3%;}
 #scroll{overflow: auto;}
 
-#detail2{position: relative;}
+#cnt-d-tab{position: relative;}
 
-#infraTab .tablist{padding-top: 40px;margin-bottom: 53px;}
-#infraTab .tablist::after{content:"";position: absolute;top:89px;left: 0;border:1px solid #ed1c24;width: 100%;box-sizing: border-box;}
-#infraTab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
-#infraTab .tab:hover, #infraTab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
+#cnt-d-tab .tablist{padding-top: 40px;margin-bottom: 53px;}
+#cnt-d-tab .tablist::after{content:"";position: absolute;top:89px;left: 0;border:1px solid #ed1c24;width: 100%;box-sizing: border-box;}
+#cnt-d-tab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
+#cnt-d-tab .tab:hover, #cnt-d-tab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
 
 /* 탭 주요정보 */
 .tabpanel{width: 100%; font-weight: 400;padding-top: 50px;}
 
-#tabpanel1 .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
-#tabpanel1 .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
-#tabpanel1 li{display: inline-block;float: left;vertical-align: middle;height: 202px;}
-#tabpanel1 .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
-#tabpanel1 .percent{width: 120px;height: 53px;text-align: center;}
-#tabpanel1 .percent:first-child{margin-left: 335px;}
-#tabpanel1 .percent + .percent{padding-left: 90px;}
-#tabpanel1 .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
-#tabpanel1 .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
+#keyinfo_list .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
+#keyinfo_list .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
+#keyinfo_list li{float: left;vertical-align: middle;height: 202px;}
+#keyinfo_list .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
+#keyinfo_list .percent{width: 120px;height: 53px;text-align: center;}
+#keyinfo_list .percent:first-child{margin-left: 335px;}
+#keyinfo_list .percent + .percent{padding-left: 90px;}
+#keyinfo_list .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
+#keyinfo_list .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
 
 
 /* 탭 활성화 */
-#infraTab .tabpanel{display: none;}
-#infraTab .tabpanel.active{display: block;}
+#cnt-d-tab .tabpanel{display: none;}
+#cnt-d-tab .tabpanel.active{display: block;}

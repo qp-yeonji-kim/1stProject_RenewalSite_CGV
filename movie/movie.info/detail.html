@@ -6,13 +6,13 @@
     <title>영화정보 > 영화상세: 영화 : 영화 그 이상의 감동, CGV</title>
     <link rel="stylesheet" href="../../css/common.css">
     <link rel="stylesheet" href="../../css/detail.css">
-   <script src="../../js/jquery-1.12.4.min.js"></script>
+    <script src="../../js/jquery-1.12.4.min.js"></script>
     <script src="../../js/tab.js"></script>
 </head>
 
 <body>
     <section>
-        <div id="detail1">
+        <div id="cnt-d-main">
             <div id="detail_op">
                 <div id="tt_g">
                     <div id="title">
@@ -59,16 +59,16 @@
         </div>
 
     </section>
-    <section id="detail2">
-        <div id="infraTab" class="area">
-            <ul role="tablist" class="tablist" aria-label="">
-                <li role="tab" class="tab first" id="tab1" aria-controls="tabpanel1">주요정보</li>
-                <li role="tab" class="tab" id="tab2" aria-controls="tabpanel2">트레일러</li>
-                <li role="tab" class="tab" id="tab3" aria-controls="tabpanel3">스틸컷</li>
-                <li role="tab" class="tab" id="tab4" aria-controls="tabpanel4">리뷰</li>
+    <section id="cnt-d-tab">
+        <div id="detailTab" class="area">
+            <ul role="tablist" class="tablist" aria-label="detail_list">
+                <li role="tab" class="tab first" id="keyinfo_list" aria-controls="keyinfo">주요정보</li>
+                <li role="tab" class="tab" id="trailer_list" aria-controls="trailer">트레일러</li>
+                <li role="tab" class="tab" id="stealcut_list" aria-controls="stealcut">스틸컷</li>
+                <li role="tab" class="tab last" id="review_list" aria-controls="review">리뷰</li>
             </ul>
             <div>
-                <div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1">
+                <div role="tabpanel" class="tabpanel" id="keyinfo_list" aria-labelledby="keyinfo">
                     <ul class="area1 .area">
                         <li class="describe">
                             감독연출이 훌륭하고<br>
@@ -92,13 +92,13 @@
                     </ul>
 
                 </div>
-                <div role="tabpanel" class="tabpanel" id="tabpanel2" aria-labelledby="tab2">
+                <div role="tabpanel" class="tabpanel" id="trailer_list" aria-labelledby="trailer">
                     내용
                 </div>
-                <div role="tabpanel" class="tabpanel" id="tabpanel3" aria-labelledby="tab3">
+                <div role="tabpanel" class="tabpanel" id="stealcut_list" aria-labelledby="stealcut">
                     내용
                 </div>
-                <div role="tabpanel" class="tabpanel" id="tabpanel4" aria-labelledby="tab4">
+                <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
                     내용
                 </div>
     </section>
