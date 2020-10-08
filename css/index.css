@@ -65,9 +65,10 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 
 /* #megazine */
 #megazine{background: url("../images/index/bg-megazine.jpg") no-repeat center;background-size: auto auto;}
-#megazine h2{margin: 0 auto;}
-#megazine .article{width: 1200px;margin: 80px 0 50px 350px;}
-.article h3{font-size: 30px;text-indent: 10px;margin-bottom: 50px;}
-.article p{font-size: 16px;color: #b2b1b1;font-weight: 200;}
+.article{width: 1200px;margin: 0 auto;}
+.article h2{width: 600px;margin-bottom: 100px;}
+.article h3{width: 600px;margin-bottom: 50px;font-size: 30px;text-indent: 10px;}
+.article h3, .article p{margin-left: 30px;}
+.article p{width: 610px;font-size: 16px;color: #b2b1b1;font-weight: 200;}
 .article p + p{margin-top: 16px;}
-.article a{display: inline-block;margin: 40px 0 0 470px;}
+.article a{display: inline-block;margin: 40px 0 0 500px;}
