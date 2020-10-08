@@ -67,7 +67,7 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #megazine{background: url("../images/index/bg-megazine.jpg") no-repeat center;background-size: auto auto;}
 .article{width: 1200px;margin: 0 auto;}
 .article h2{width: 600px;margin-bottom: 100px;}
-.article h3{width: 600px;margin-bottom: 50px;font-size: 30px;text-indent: 10px;}
+.article h3{width: 600px;margin-bottom: 50px;font-family: "JGothic";font-size: 30px;text-indent: 10px;}
 .article h3, .article p{margin-left: 30px;}
 .article p{width: 610px;font-size: 16px;color: #b2b1b1;font-weight: 200;}
-.article a{display: inline-block;margin: 40px 0 0 500px;}
+.article a{font-family: "NtSansKR";font-weight: 200;display: inline-block;margin: 40px 0 0 500px;}

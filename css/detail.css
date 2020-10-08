@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
+body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #cnt-d-main {position: relative;height: 808px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;}
 #detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 /* 예매버튼 */
@@ -51,3 +51,15 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 /* 탭 활성화 */
 #cnt-d-tab .tabpanel{display: none;}
 #cnt-d-tab .tabpanel.active{display: block;}
+
+
+/* #review */
+#review ul{width: 1200px;}
+#review ul li{width: 600px;height: 154px;}
+#review .reviewer{font-family: "CJBold";font-weight: 700;font-size: 10px;color: #e097ff;}
+
+#review .review_cnt > div{margin: 4px 0 16px 24px;font-family: "NTSansKR";}
+#review .review_cnt strong{font-size: 18px;}
+#review .review_cnt img{margin: 5px 8px;}
+#review .review_cnt span{color: #aaaaaa;font-size: 15px;}
+#review .review_cnt p{font-size: 18px;}
