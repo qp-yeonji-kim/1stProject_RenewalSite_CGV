@@ -28,6 +28,11 @@
 #s_moviechart .tabpanel.active{display: block;}
 
 /* #s_moviechart > slide */
+#s_moviechart .bxslider{position: relative;width: 1085px;margin: 0 auto;}
+#s_moviechart .bxslider .visual > li > div{padding: 0 3.5px;}
+#s_moviechart .bxslider .bx-controls-direction a{position: absolute;top: 123px;}
+#s_moviechart .bxslider .bx-controls-direction .bx-prev{left: -60px;}
+#s_moviechart .bxslider .bx-controls-direction .bx-next{right: -60px;}
 #s_moviechart .tabpanel .swiper-slide > ul{width: 1070px;margin: 0 auto;}
 #s_moviechart .tabpanel > ul::after{position: absolute;display: block;clear: both;}
 #s_moviechart .tabpanel .swiper-slide > ul > li{position: relative;margin-left: 5px;float: left;}
