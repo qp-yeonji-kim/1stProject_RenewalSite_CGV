@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
-#cnt-d-main {position: relative;height: 808px;background: url("../images/movie/테넷.jpg") no-repeat;text-align: right;}
+#cnt-d-main {position: relative;height: 808px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;}
 #detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 /* 예매버튼 */
 #cnt-d-main a{position: absolute;bottom: -90px;right: 0;width: 180px;height: 50px;border: solid 2px #fbfbfb; border-radius: 10px;font-size: 22px;line-height: 50px;text-align: center;}
@@ -38,15 +38,15 @@ body{font-family: JGothic;color: #ffffff;background: #000;font-weight: 400;}
 /* 탭 주요정보 */
 .tabpanel{width: 100%; font-weight: 400;padding-top: 50px;}
 
-#keyinfo_list .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
-#keyinfo_list .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
-#keyinfo_list li{float: left;vertical-align: middle;height: 202px;}
-#keyinfo_list .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
-#keyinfo_list .percent{width: 120px;height: 53px;text-align: center;}
-#keyinfo_list .percent:first-child{margin-left: 335px;}
-#keyinfo_list .percent + .percent{padding-left: 90px;}
-#keyinfo_list .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
-#keyinfo_list .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
+#keyinfo .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
+#keyinfo .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
+#keyinfo li{float: left;vertical-align: middle;height: 202px;}
+#keyinfo .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
+#keyinfo .percent{width: 120px;height: 53px;text-align: center;}
+#keyinfo .percent:first-child{margin-left: 335px;}
+#keyinfo .percent + .percent{padding-left: 90px;}
+#keyinfo .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
+#keyinfo .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
 
 
 /* 탭 활성화 */

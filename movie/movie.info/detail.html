@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../css/detail.css">
     <script src="../../js/jquery-1.12.4.min.js"></script>
     <script src="../../js/tab.js"></script>
+    <script src="../../js/featherlight.min.js"></script>
+    <script src="../../js/featherlight.gallery.min.js"></script>
+
 </head>
 
 <body>
@@ -67,40 +70,43 @@
                 <li role="tab" class="tab" id="stealcut_list" aria-controls="stealcut">스틸컷</li>
                 <li role="tab" class="tab last" id="review_list" aria-controls="review">리뷰</li>
             </ul>
-            <div>
-                <div role="tabpanel" class="tabpanel" id="keyinfo_list" aria-labelledby="keyinfo">
-                    <ul class="area1 .area">
-                        <li class="describe">
-                            감독연출이 훌륭하고<br>
-                            몰입하여 보게 되는 영화
-                        </li>
-                        <li class="percent">
-                            <p>사전기대지수</p>
-                            <strong>99%</strong>
-                        </li>
-                        <li class="percent">
-                            <p>실관람평지수</p>
-                            <strong>93%</strong>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <figure>
+            <div role="tabpanel" class="tabpanel" id="keyinfo" aria-labelledby="keyinfo_list">
+                <ul class="area1 .area">
+                    <li class="describe">
+                        감독연출이 훌륭하고<br>
+                        몰입하여 보게 되는 영화
+                    </li>
+                    <li class="percent">
+                        <p>사전기대지수</p>
+                        <strong>99%</strong>
+                    </li>
+                    <li class="percent">
+                        <p>실관람평지수</p>
+                        <strong>93%</strong>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <figure>
 
-                            </figure>
-                        </li>
-                    </ul>
+                        </figure>
+                    </li>
+                </ul>
 
-                </div>
-                <div role="tabpanel" class="tabpanel" id="trailer_list" aria-labelledby="trailer">
-                    내용
-                </div>
-                <div role="tabpanel" class="tabpanel" id="stealcut_list" aria-labelledby="stealcut">
-                    내용
-                </div>
-                <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
-                    내용
-                </div>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="trailer" aria-labelledby="trailer_list">
+
+            </div>
+            <div role="tabpanel" class="tabpanel" id="stealcut" aria-labelledby="stealcut_list">
+                <section data-featherlight-gallery data-featherlight-filter="a">
+                    <h>This is a gallery</h>
+                    <a href="photo_large.jpg"><img src="photo_thumbnail.jpg"></a>
+                    <a href="other_photo_large.jpg"><img src="other_photo_thumbnail.jpg"></a>
+                </section>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
+                내용
+            </div>
     </section>
 </body>
 
