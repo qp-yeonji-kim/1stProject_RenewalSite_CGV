@@ -31,7 +31,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #cnt-d-tab{position: relative;}
 
 #cnt-d-tab .tablist{padding-top: 40px;margin-bottom: 53px;}
-#cnt-d-tab .tablist::after{content:"";position: absolute;top:89px;left: 0;border:1px solid #ed1c24;width: 100%;box-sizing: border-box;}
+#cnt-d-tab .tablist::after{content:"";position: absolute;top:89px;left: 0;height: 2px;background: #ed1c24;width: 100%;box-sizing: border-box;}
 #cnt-d-tab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
 #cnt-d-tab .tab:hover, #cnt-d-tab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
 
