@@ -30,9 +30,12 @@
 /* #s_moviechart > slide */
 #s_moviechart .bxslider{position: relative;width: 1085px;margin: 0 auto;}
 #s_moviechart .bxslider .visual > li > div{padding: 0 3.5px;}
-#s_moviechart .bxslider .bx-controls-direction a{position: absolute;top: 123px;}
-#s_moviechart .bxslider .bx-controls-direction .bx-prev{left: -60px;}
-#s_moviechart .bxslider .bx-controls-direction .bx-next{right: -60px;}
+#s_moviechart .bxslider .bx-controls-direction a{position: absolute;top: 123px;width: 54px;height: 54px;border-radius: 50%;color: transparent;}
+/* color: transparent; 말고 글씨를 읽어주는 법.
+가상 요소를 만들어 content에 ""를 만들고 그 안에 텍스트를 쓰는 것이 괜찮을까요..? */
+#s_moviechart .bxslider .bx-controls-direction .bx-prev{left: -60px;background: url("../images/common/i-prev.png");}
+#s_moviechart .bxslider .bx-controls-direction .bx-next{right: -60px;background: url("../images/common/i-next.png");}
+
 #s_moviechart .tabpanel .swiper-slide > ul{width: 1070px;margin: 0 auto;}
 #s_moviechart .tabpanel > ul::after{position: absolute;display: block;clear: both;}
 #s_moviechart .tabpanel .swiper-slide > ul > li{position: relative;margin-left: 5px;float: left;}
