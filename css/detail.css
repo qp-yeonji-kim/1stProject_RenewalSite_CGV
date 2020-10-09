@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
+#cnt-d-main {position: relative;height: 808px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;}
+#detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);}
+/* 예매버튼 */
+#cnt-d-main a{position: absolute;bottom: -90px;right: 0;width: 180px;height: 50px;border: solid 2px #fbfbfb; border-radius: 10px;font-size: 22px;line-height: 50px;text-align: center;}
+#cnt-d-main a:hover, #cnt-d-main a:focus{background:#ed1c24;border: solid 2px #ed1c24;}
+/*  */
+#tt_g{ position: relative; float: left; width: 600px;box-sizing: border-box;}
+#title{padding-top: 111px;padding-left: 5%;}
+#title ,#sub1, #sub2{display: inline-block; }
+#title .Ellipse{display: inline-block;width: 45px;height: 45px;background: #3862eb;font-size: 21px;border-radius: 50%;text-align: center;line-height: 45px;margin-right: 15px;}
+#title .Ellipse, #title .title{vertical-align: middle;margin-bottom: 9px;}
+#title > .title{display: inline-block;font-size: 48px;font-weight: 400;}
+#title p{font-size: 24px;margin-bottom: 80px;}
+
+#sub1 p:first-child{font-size: 24px;line-height: 20px;margin-bottom: 10px;}
+#sub1 p+p{font-size: 16px;line-height: 23px;margin-bottom: 54px;}
+
+
+#sub2 p:first-child{font-size: 16px;line-height: 20px;margin-bottom: 15px;}
+#sub2 .scrollSt{width: 416px;height: 197px;border-radius: 6px;box-shadow: inset 0 0 105.8px 90.2px #000000;background-color:rgba(0, 0, 0, 0.5);}
+#sub2 .scrollSt::-webkit-scrollbar{width: 10px;}
+#sub2 .scrollSt::-webkit-scrollbar-track{background-color: #808080;border-radius: 6px;}
+#sub2 .scrollSt::-webkit-scrollbar-thumb{border-radius: 6px;background-color: #fff;}
+#sub2 .scrollSt::-webkit-scrollbar-button { display: none; }
+#sub2 .scrollSt p{font-size: 14px;line-height: 22px;margin-right: 3%;}
+#scroll{overflow: auto;}
+
+#cnt-d-tab{position: relative;}
+
+#cnt-d-tab .tablist{padding-top: 40px;margin-bottom: 53px;}
+#cnt-d-tab .tablist::after{content:"";position: absolute;top:89px;left: 0;border:1px solid #ed1c24;width: 100%;box-sizing: border-box;}
+#cnt-d-tab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
+#cnt-d-tab .tab:hover, #cnt-d-tab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
+
+/* 탭 주요정보 */
+.tabpanel{width: 100%; font-weight: 400;padding-top: 50px;}
+
+#keyinfo .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
+#keyinfo .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
+#keyinfo li{float: left;vertical-align: middle;height: 202px;}
+#keyinfo .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
+#keyinfo .percent{width: 120px;height: 53px;text-align: center;}
+#keyinfo .percent:first-child{margin-left: 335px;}
+#keyinfo .percent + .percent{padding-left: 90px;}
+#keyinfo .percent p{display: inline-block;font-size: 20px;line-height: 35px;}
+#keyinfo .percent strong{display: inline-block;font-size: 58px;line-height: 60px;font-weight: 500;padding-top: 18px;}
+
+/* 탭 활성화 */
+#cnt-d-tab .tabpanel{display: none;}
+#cnt-d-tab .tabpanel.active{display: block;}
+
+
+/* #review */
+#review ul{width: 1200px;}
+#review ul li{width: 600px;height: 154px;}
+#review .reviewer{display: inline-block;margin-right: 40px;height: 154px;font-family: "CJBold";font-weight: 700;font-size: 10px;color: #e097ff;}
+
+#review .review_cnt{width: 450px;height: 164px;display: inline-block;}
+#review .review_cnt > div{margin: 4px 0 16px 24px;font-family: "NTSansKR";}
+#review .review_cnt strong{font-size: 18px;}
+#review .review_cnt img{margin: 5px 8px;}
+#review .review_cnt span{color: #aaaaaa;font-size: 15px;}
+#review .review_cnt p{font-size: 18px;}

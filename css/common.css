@@ -29,49 +29,122 @@
     url("../font/NotoSansKR-Bold.woff2") format("woff2"),
     url("../font/NotoSansKR-Bold.otf") format("opentype");
 }
+@font-face{
+    font-family: CJBold;
+    font-weight: 700;
+    font-style: normal;
+    src: url("../font/CJONLYONEBold.eot");
+    src: url("../font/CJONLYONEBold.eot#iefix") format("embedded-opentype"),
+    url("../font/CJONLYONEBold.woff") format("woff"),
+    url("../font/CJONLYONEBold.woff2") format("woff2"),
+    url("../font/CJONLYONEBold.otf") format("opentype");
+}
+
 /* tag reset */
-body, ul, h1{margin: 0;padding: 0;}
-h1{font-size: 100%;}
+body, ul, h1, h2, h3, h4, h5, h6, p, strong, figure, img{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
+img{border: none;vertical-align: middle;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
-/* 으잉? */
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
-header, nav, section, footer{display: block;}
+address{font-style: normal;}
+header, nav, section, footer, address{display: block;}
 
 body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
-#skip a{position: absolute;left: -9999px;top: 0;width: 0;height: 0;z-index: 100;}
+#skip a{position: fixed;left: -9999px;top: 0;width: 0;height: 0;z-index: 1000;}
 #skip a:focus{left: 0;width: 100%;height: 33px;text-align: center;line-height: 33px;font-size: 16px;color: #ed1c24;background-color: #bcbcbc;}
 
+/* common class */
+.blind-i, .blind-b{width: 1px;height: 1px;overflow: hidden;border: 0px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%)}
+.blind-i{margin-left: -1px;display: inline-block;}
+.blind-b{position: absolute;}
+.area{width: 1200px;margin: 0 auto;}
+.p_r{position: relative;}
+.p_a{position: absolute;}
+.clearfix::after{content: "";display: block;clear: both;}
+
 /* header - index만 fixed */
-#headerwrap{position: fixed;left: 0;top: 0;z-index: 100;}
-#header{position: relative;width: 100%;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);background: rgba(0, 0, 0, 0.6);z-index: 100;}
-#header .nav{width: 1200px;margin: 0 auto;}
-#header .nav > *{float: left;}
+#headerwrap{position: fixed;width: 100%;left: 0;top: 0;z-index: 100;}
+#header{position: relative;height: 65px;border-bottom: 2px solid rgba(255,255,255,0.2);font-family: "JGothic";color: #fff;background: rgba(0, 0, 0, 0.6);z-index: 100;}
 
-#header .nav h1 a{display: inline-block;box-sizing: border-box;width: 77px;height: 65px;line-height: 65px;margin-left: 78px;margin-right: 48px;}
-#header .nav h1 img{width: 77px;height: 32px;vertical-align: middle;}
+#header.active::before{content: "";position: absolute;top: 67px;left: 0;width: 100%;height: 65px;background: rgba(0, 0, 0, 0.6);border-bottom: 2px solid rgba(255,255,255,0.4);}
+.logo{float: left;margin-right: 78px;padding-top: 15px;}
+#gnb{float: left;position: relative;width: 500px;height: 100%;}
 
-#header .main_menu{position: relative;width: 928px;font-family: "JGothic";}
-#header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;color: #fff;}
-
-#header .main_menu li ul{position: absolute;left: 0;top: 65px;width: 928px;}
+#header .main_menu{position: relative;}
+#header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;}
+#header .main_menu li ul{position: absolute;top: 67px;width: 550px;}
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
+/* 가상요소 - 붉은 점 */
+#header .main_menu li a{position: relative;}
+#header .main_menu li a::after{content: "";position: absolute;right: -15px;top: -5px;}
+
 /* main_menu 활성화 */
-#header .main_menu li:hover>a, #header .main_menu li>a:focus,#header .main_menu li.on>a{color: #ed1c24;}
+#header .main_menu li:hover > a, #header .main_menu li > a:focus, #header .main_menu li.on > a{color: #ed1c24;}
+#header .main_menu li a:hover::after, #header .main_menu li a:focus::after,#header .main_menu li.on > a::after{width: 5px;height: 5px;border-radius: 50%;background: #ed1c24;}
 
+/* all_menu_btn */
+#header .all_menu_btn{position: absolute;top: 20px;right: 40px;width: 28px;height: 33px;}
+#header .all_menu_btn span{position: absolute;width: 28px;height: 2px;background: #fff;}
+#header .all_menu_btn:hover span{background: #ed1c24;}
+#header .all_menu_btn span:nth-child(1){top: 3px;}
+#header .all_menu_btn span:nth-child(2){top: 13px;}
+#header .all_menu_btn span:nth-child(3){top: 23px;}
 
-#header .all_menu{display: none;}
+/* all_menu_btn 활성화 */
+#header .all_menu_btn.close span{background-color: #fff;}
+#header .all_menu_btn.close:hover span, #header .all_menu_btn.close:focus span{background-color: #ed1c24;}
+#header .all_menu_btn.close span:nth-child(1){top: 13px;transform: rotate(45deg);}
+#header .all_menu_btn.close span:nth-child(2){opacity: 0;}
+#header .all_menu_btn.close span:nth-child(3){top: 13px;transform: rotate(-45deg);}
+
+#header .all_menu{display: none;opacity: 0;position: absolute;top: 67px;width: 1200px;height: 100vh;box-sizing: border-box;background: url("../images/common/bg1.png") no-repeat top center;}
+#header .all_menu > ul{width: 888px;height: 714px;margin: 32px auto;}
+.all_menu > ul > li{float: left;width: 168px;height: 140px;margin-left: 50px;}
+.all_menu > ul > li:nth-child(5), .all_menu > ul > li:nth-child(6), .all_menu > ul > li:nth-child(7), .all_menu > ul > li:nth-child(8){height: 212px;}
+
+#header .all_menu > ul > li > strong{display: inline-block;padding-bottom: 6px;margin-bottom: 6px;color: #ed1c24;font-size: 16px;}
+#header .all_menu li > ul > li > a{position: relative;display: inline-block;padding-bottom: 8px;color: rgb(209, 209, 209);font-size: 14px;}
+#header .all_menu li > ul > li > a:hover, #header .all_menu li > ul > li > a:focus{color: #ed1c24;}
+#header .all_menu li > ul > li > a::after{content: "";position: absolute;right: -8px;top: -3px;}
+#header .all_menu li > ul > li > a:hover::after, #header .all_menu li > ul > li > a:focus::after{width: 4px;height: 4px;border-radius: 50%;background: #ed1c24;}
 
 
 /* footer */
-#footer {height: 350px;}
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
-.family{position: relative;width: 300px;margin: 200px auto;background: pink;} /* 크기는 자신의 페이지에 맞게 조절하세요 */
-.family > a, .family #familysite{border: 1px solid #999;padding: 3px 5px;line-height: 27px;box-sizing: border-box;}
-.family > a{float: left;}
-.family .fsite{margin-right: 10px;}
-.family .fsite, .family #familysite{width: 200px;}
-.family #familysite{display: none;position: absolute;top: 34px;left: 0;}
+#footer{position: relative;width: 100%;height: 400px;color: #adadad;font-family: "JGothic";}
+.foot-top{border-top: 1px solid #000;border-bottom: 1px solid #000;margin-top: 80px;}
+#footer .special_theater{height: 72px;}
+.special_theater a{float: left;margin-right: 23px;height: 72px;line-height: 72px;}
+.special_theater a img{vertical-align: middle;}
+
+.big-info li{float: left;position: relative;margin: 40px 18px 40px 0px;font-size: 16px;line-height: 16px;}
+.big-info li::after{content: "";position: absolute;right: -9px;top: 1px;width: 1px;height: 14px;background: #adadad;}
+.big-info li:last-child::after{display: none;}
+.big-info li a{text-align: center;}
+
+.cgv-info{height: 70px;}
+.cgv-info .address{float: left;margin-top: 6px;width: 950px;height: 200px;font-size: 14px;line-height: 22px;}
+.cgv-info .address > *{float: left;}
+.cgv-info .address > p{margin-right: 20px;margin-top: 12px;}
+.address span{position: relative;margin-right: 4px;}
+.address span::after{content: "";position: absolute;right: -5px;top: 1px;width: 1px;height: 12px;background: #adadad;}
+.address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
+.address div a{display: inline-block;box-sizing: border-box;padding: 2px;border: 1px solid #adadad;border-radius: 4px;}
+.address > div > div{margin-bottom: 6px;}
+
+/* foot-right */
+.foot-right{float: right;width: 250px;}
+.family{position: relative;width: 300px;height: 36px;margin: 0px auto;font-size: 16px;}
+.family > a, .family #familysite{border: 1px solid #adadad;background: #fff;padding: 3px 5px;line-height: 27px;box-sizing: border-box;border-radius: 4px;}
+.family > a{float: left;width: 36px;height: 36px;}
+.family .fsite{width: 185px;height: 36px;margin-right: 10px;}
+.family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
 .family #familysite a{display: block;padding-left: 10px;}
+
+.foot-right .copyright{clear: both;padding-top: 10px;padding-left: 40px;font-size: 14px;}
+
+.sns_list{width: 90px;float: right;}
+.sns_list .sns_i{float: left;width: 27px;height: 27px;margin-top: 8px;}

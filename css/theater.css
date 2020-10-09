@@ -1,27 +1,79 @@
 @charset "utf-8";
-body, ul{margin: 0;padding: 0;}
-ul{list-style: none;}
 
-body{font-size: 16px;font-weight: 400;color: #555;}
 
-/* #infraTab */
-/* 1). 탭크기 설정 */
-#infraTab{width: 1200px;margin: 100px auto;border: 1px solid tomato;}
-/* 2). 탭그룹 */
-#infraTab > .tablist{height: 70px;margin-bottom: 55px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
-/* 3). 탭버튼 */
-#infraTab > .tablist > .tab{float: left;width: 25%;height: 70px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; border: 1px solid #e1e1e1;text-align: center;line-height: 68px;}
-#infraTab > .tablist > .tab + .tab{border-left: none;}
-/* 4). 탭패널 - 오버, 포커스, 활성화 (li.active) */
-#infraTab > .tablist > .tab:hover, #infraTab > .tablist > .tab:focus, #infraTab > .tablist > .tab.active{background: #222;color: #fff;cursor: pointer;}
-/* 5). 탭패널 - 모두 숨기고 활성화된(div. tabpanel.active) 하나만 보여지게 함. */
-#infraTab .tabpanel{display: none;}
-#infraTab .tabpanel.active{display: block;}
-/* #infraTab .tabpannel 오타 있었어요 */
-
-/* depth2 tab */
-.dep2 .tablist{margin-left: 500px;background: pink;}
+body{color: #fff;font-family: JGothic;font-weight: 400;}
+.all_bg{position: relative;background: url("../images/theaters/bg/bg-th.png") no-repeat;}
+.tt_bg{background: url("../images/theaters/bg/tt-bg.png");width: 100%;height: 1000px;}
+#theaterTab {width: 1200px;padding-top: 168px;height: 850px;}
+#theaterTab .title, #timeTable .title{display: inline-block;font-size: 30px;text-align: left;text-align-last: left;width: 189px;border-bottom: 2px solid #fff;padding-bottom: 4px;margin-bottom: 134px;font-weight: 400;}
+#timeTable{padding-top: 270px;}
+/* 제목 옆  */
+#timeTable .oneline_st{float: right;}
+#theaterTab .oneline_st, #timeTable .oneline_st{display: inline-block;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
+#theaterTab .oneline_st > .tab, #timeTable .oneline_st > .tab{display: inline-block;font-size:17px;line-height: 20px;}
+#theaterTab .title, #theaterTab > .oneline_st{vertical-align: middle;}
+#theaterTab > .oneline_st > .tab + .tab{margin-left: 38px;}
+#theaterTab .ph{width: 710px;height: 325px;border-radius: 10px 0 0 0;overflow: hidden;}
+#theaterTab .th{position: relative;height: 187px;color: #000;background: #fff;border-radius: 10px;width: 1200px;margin-left: -1px;}
+#theaterTab .th .th_title{position: absolute;top: 30px;left: 56px;font-size: 34px;}
+#theaterTab .th .th_info1{position: absolute;top: 30px;left: 549px;font-size: 16px;line-height: 20px;font-weight: 400;}
+#theaterTab .th .th_info2{position: absolute;top: 97px;left: 60px;font-size: 12px;line-height: 20px;font-weight: 400;}
+#theaterTab .th .th_info2::after{content: "";position: absolute;top: 4px;right: -12px;background: url("../images/theaters/icon/42-4-1571-4.png") no-repeat;width: 6px;height: 12px;opacity: 0.8;}
+#theaterTab .th .th_info3{position: absolute;top: 97px;left: 549px;font-size: 14px;line-height: 18px;font-weight: 400;}
+/* #theaterTab */
+#theaterTab .roundpanel{height: 512px;border-radius: 10px; border: 1px solid #fff;box-sizing: border-box;}
+/* dep2 */
+.dep2 > .tablist{padding-top: 23px;float: right;font-weight: 400;width: 458px;}
 .dep2 .tablist::after{content:"";display: block;clear:both;}
-.dep2 .tablist li{float: left;width: calc(100% / 3);}
-.dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active{background: #222;color: #fff;cursor: pointer;}
-.dep2 .tabpanel{height: 190px;background: yellow;}
+.dep2 > .tablist li{float: left;width: calc(100% / 3);text-align: left;font-size: 15px;line-height: 24px;}
+.dep2 > .tab + .tab{margin-bottom: 10px;}
+.tab{position: relative;}
+.tabm{margin-left: 38px;}
+#theaterTab > .tablist > .tab, .dep2 .tab, #timeTable > .tablist > .tab{color: #7c7c7c;}
+#theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active, #timeTable > .tablist > .tab:hover, #timeTable > .tabpanel .TT_list li:hover, #timeTable > .tabpanel .TT_list li:focus, #timeTable > .tabpanel .TT_list li.active  #timeTable > .tablist > .tab:focus, #timeTable > .tablist > .tab.active{color: #fff;cursor: pointer;}
+.dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active,#timeTable > .date li:hover,#timeTable > .date li:focus, #timeTable > .date li.active{color: #fff;cursor: pointer;}
+#timeTable > .tabpanel .TT_list {color: #7c7c7c;}
+#tabpanel1{position: relative;}
+#timeTable{color: #fff;padding-top: 139px;}
+#theaterTab .oneline_st, #timeTable .oneline_st{display: inline-block;float: right;width: 839px;text-align: right;border-bottom: 2px solid #fff;padding-top: 14px;padding-bottom: 4px;}
+#timeTable .oneline_st{float: right;width: 839px;text-align: right;}
+#timeTable .month{font-size: 32px;font-weight: 400;}
+
+#timeTable .date{width: 100%;}
+/* #tabpanel1-1-1-3 .detail_list li {border-radius:10px;} */
+#timeTable .date > strong{font-size: 32px;font-weight: 400;}
+#timeTable .TT_list{float: right;}
+#timeTable .TT_list li{float: left;text-align: center;}
+#timeTable .TT_list li+li{margin-left: 52px;}
+#timeTable .TT_list li strong{display: inline-block;font-size: 32px;font-weight: 400;padding-bottom: 12px;}
+#timeTable .TT_list li p{font-size: 14px;}
+
+#timeTable .roundpanel_oneline{height: 250px;border-radius: 10px;border: solid 1px #fbfbfb;}
+#timeTable .roundpanel_oneline .oneline{margin-left: 74px;padding-top: 50px;}
+#timeTable .roundpanel_oneline .TT_st{position: relative;height: 65px;border-radius: 10px;background-color: #ffffff;color: #000;}
+#timeTable .roundpanel_oneline .Ellipse12{position: absolute;top: 13px;left: 19px;display: inline-block;width: 38px;height: 38px;background: #3862eb;font-size: 18px;border-radius: 50%;text-align: center;line-height: 38px;margin-right: 15px;color:#fff;}
+#timeTable .roundpanel_oneline .TT_st strong{position: absolute;top: 17px;left: 73px;font-size: 30px;}
+#timeTable .roundpanel_oneline .TT_st .ing{position: absolute;top: 15px;left: 146px;color: #3862eb;font-weight: 600;border: 2px solid #3862eb; border-radius: 10px;width: 38px;height: 16px;font-size: 12px;text-align: center;vertical-align: middle;line-height: 16px;}
+#timeTable .roundpanel_oneline .movie_info > p{font-size: 14px;margin-bottom: 11px;/* padding-left: 89px; */}
+#timeTable .roundpanel_oneline .detail_list{color: #000;background-color: #fff;border-radius: 10px;}
+#timeTable .roundpanel_oneline .detail_list li{width: 110px;height: 60px;float: left;background-color: #fff}
+#timeTable .roundpanel_oneline .detail_list li:hover, #timeTable .roundpanel_oneline .detail_list li:focus{cursor: pointer; background: rgb(177, 177, 177);}
+#timeTable .roundpanel_oneline .detail_list li+li{border-left: 2px solid #000;}
+#timeTable .roundpanel_oneline .detail_list li p{text-align: center;vertical-align: middle;}
+#timeTable .roundpanel_oneline .detail_list li p:nth-child(even){color: #3862eb;font-size: 12px;line-height: 16px;font-weight: 600;}
+#timeTable .roundpanel_oneline .detail_list li p:nth-child(odd){font-size: 24px;font-weight: 600;padding-top: 12px;}
+#timeTable .detail_list li:first-child{border-radius: 10px 0 0 10px;}
+#timeTable .detail_list li:last-child{border-radius:0 10px 10px 0;}
+#timeTable .roundpanel_oneline .detail_list .select1{border-radius: 10px;}
+#timeTable .roundpanel_oneline .TT_st p+p{position: absolute;top: 37px;left: 149px;font-size: 12px;font-weight: 600;}
+
+#theaterTab .tabpanel{display: none;height: 512px;}
+#theaterTab .tabpanel.active{display: block;}
+#timeTable .tabpanel{display: none;height: 273px;}
+#timeTable .tabpanel > .tabpanel{display: none;height: 273px;margin-top: 75px;}
+#timeTable .tabpanel.active{display: block;}
+
+/* blackfooter */
+#footer{color: #fff;background: #000;}
+.foot-top{margin-top: -80px;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
+.family > a, .family #familysite{background: #000;}

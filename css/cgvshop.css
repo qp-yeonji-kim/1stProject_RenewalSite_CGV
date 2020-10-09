@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+body{font-family: JGothic;background-color: #000;}
+#shop_main{position: relative;color: #fff;height: 802px;width: 100%;background: url("../images/culture/gift/bg/bg1.png") no-repeat center ;background-size: cover;}
+#shop_main .area{z-index: 10;}
+#shop_main .bigBt{color: #fff;}
+#shop_main img{padding-top: 210px;margin-bottom: 90px;}
+#shop_main .bigBt {width: 100%;height: 70px;border: solid 2px #d41b21;border-radius: 10px;overflow: hidden;font-size: 20px;vertical-align: middle;}
+#shop_main .bigBt li{float: left;height: 70px;transform: skewX(-15deg);}
+#shop_main .bigBt li:first-child{position: absolute;top:0;left: -20px;width: 500px;}
+#shop_main .bigBt li+li{position: absolute;top:0;left: 481px;width: 800px;}
+#shop_main .bigBt li a{display: inline-block;transform: skewX(15deg);line-height: 70px;height: 70px;}
+#shop_main .bigBt li a:first-child{position: absolute;top: 0;left: 50px;width: 670px;}
+#shop_main .bigBt .af a::after, #shop_main .bigBt .al a::after{content: "";background: url("../images/culture/gift/icon/pointer.png");width: 142px;height: 19px;position: absolute;top: 24px;}
+#shop_main .bigBt .af a::after{left: 280px;}
+#shop_main .bigBt .al a::after{left: 490px;}
+/* hover */
+#shop_main .bigBt li:hover, #shop_main .bigBt li:focus{background:#d41b21;transition: 1s all;}
+

@@ -7,495 +7,862 @@
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/theater.css">
 	<script src="../js/jquery-1.12.4.min.js"></script>
+	<script src="../js/common.js"></script>
 	<script src="../js/tab.js"></script>
 </head>
 
 <body>
-	<div id="infraTab">
-		<ul role="tablist" class="tablist" aria-label="지역">
-			<li role="tab" class="tab first" id="tab1" aria-controls="tabpanel1">서울</li>
-			<li role="tab" class="tab" id="tab2" aria-controls="tabpanel2">경기</li>
-			<li role="tab" class="tab" id="tab3" aria-controls="tabpanel3">인천</li>
-			<li role="tab" class="tab" id="tab4" aria-controls="tabpanel4">강원</li>
-			<li role="tab" class="tab" id="tab5" aria-controls="tabpanel5">대전/충청</li>
-			<li role="tab" class="tab" id="tab6" aria-controls="tabpanel6">대구</li>
-			<li role="tab" class="tab" id="tab7" aria-controls="tabpanel7">부산/울산</li>
-			<li role="tab" class="tab" id="tab8" aria-controls="tabpanel8">경상</li>
-			<li role="tab" class="tab last" id="tab9" aria-controls="tabpanel9">광주/전라/제주</li>
-		</ul>
+	<div id="headerwrap">
+		<header id="header">
+			<div class="area p_r clearfix">
+				<h1 class="logo">
+					<a href=""><img src="../images/common/cgv_logo.png" alt="CGV"></a>
+				</h1>
+				<!-- 100% 영역-->
+				<nav class="nav" id="gnb">
+					<span class="blind-b">중요메뉴</span>
+					<ul class="main_menu">
+						<li>
+							<a href="">영화</a>
+							<ul>
+								<li><a href="">무비차트</a></li>
+								<li><a href="">HD 트레일러</a></li>
+								<li><a href="">무비파인더</a></li>
+								<li><a href="">CGV아트하우스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">예매</a>
+							<ul>
+								<li><a href="">빠른예매</a></li>
+								<li><a href="">상영시간표</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="theater/theater.html">극장</a>
+							<ul>
+								<li><a href="theater/theater.html">CGV 극장</a></li>
+								<li><a href="">특별관</a></li>
+								<li><a href="">CLUB 서비스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">이벤트&amp컬쳐</a>
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="">CGV샵</a></li>
+								<li><a href="">매거진</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">고객센터</a>
+							<ul>
+								<li><a href="">자주 찾는 질문</a></li>
+								<li><a href="">CGV공지/뉴스</a></li>
+								<li><a href="">문의하기</a></li>
+								<li><a href="">서비스가이드</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a href="" class="all_menu_btn" role="button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<nav class="all_menu">
+					<span class="blind-b">전체메뉴</span>
+					<ul>
+						<li>
+							<strong>영화</strong>
+							<ul>
+								<li><a href="">무비차트</a></li>
+								<li><a href="">HD 트레일러</a></li>
+								<li><a href="">무비파인더</a></li>
+								<li><a href="">CGV아트하우스</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>예매</strong>
+							<ul>
+								<li><a href="">빠른예매</a></li>
+								<li><a href="">상영시간표</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>극장</strong>
+							<ul>
+								<li><a href="theater/theater.html">CGV 극장</a></li>
+								<li><a href="">특별관</a></li>
+								<li><a href="">CLUB 서비스</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>이벤트&amp컬쳐</strong>
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="">CGV샵</a></li>
+								<li><a href="">매거진</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>고객센터</strong>
+							<ul>
+								<li><a href="">자주 찾는 질문</a></li>
+								<li><a href="">CGV공지/뉴스</a></li>
+								<li><a href="">문의하기</a></li>
+								<li><a href="">서비스가이드</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>무비로그</strong>
+							<ul>
+								<li><a href="">위시리스트</a></li>
+								<li><a href="">내가 본 영화</a></li>
+								<li><a href="">무비다이어리</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>MY CGV</strong>
+							<ul>
+								<li><a href="">예매내역/취소</a></li>
+								<li><a href="">관람권/할인쿠폰 관리</a></li>
+								<li><a href="">CJ ONE 포인트</a></li>
+								<li><a href="">내가꾸민포토티켓</a></li>
+								<li><a href="">기프트샵</a></li>
+								<li><a href="">나의 정보</a></li>
+								<li><a href="">나의 문의내역</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>회사소개</strong>
+							<ul>
+								<li><a href="">회사소개</a></li>
+								<li><a href="">CGV소개</a></li>
+								<li><a href="">투자정보</a></li>
+								<li><a href="">채용정보</a></li>
+								<li><a href="">사이버감사실</a></li>
+								<li><a href="">광고 제휴문의</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>회원서비스</strong>
+							<ul>
+								<li><a href="">로그인</a></li>
+								<li><a href="">회원가입</a></li>
+								<li><a href="">CJ ONE 멤버십</a></li>
+								<li><a href="">사이트맵</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>VIP LOUNGE</strong>
+							<ul>
+								<li><a href="">VIP이벤트</a></li>
+								<li><a href="">VIP전용레터</a></li>
+								<li><a href="">나의 VIP쿠폰</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>알뜰한영화관람법</strong>
+							<ul>
+								<li><a href="">할인카드</a></li>
+								<li><a href="">기타 상품권 안내</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>ENGLISH TICKETING</strong>
+							<ul>
+								<li><a href="">ENGLISH TICKETING</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>CGV정책</strong>
+							<ul>
+								<li><a href="">이용약관</a></li>
+								<li><a href="">편성기준</a></li>
+								<li><a href="">개인정보취급방침</a></li>
+								<li><a href="">법적고지</a></li>
+								<li><a href="">이메일주소무단수집거부</a></li>
+								<li><a href="">상생경영</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+	<div class="all_bg">
+		<div id="theaterTab" class="area dep1">
+			<strong class="area oneline title ">Theaters</strong>
+			<ul role="tablist" class="tablist oneline oneline_st clearfix::after fir" aria-label="지역">
+				<li role="tab" class="tab first" id="tab1" aria-controls="tabpanel1">서울</li>
+				<li role="tab" class="tab" id="tab2" aria-controls="tabpanel2">경기</li>
+				<li role="tab" class="tab" id="tab3" aria-controls="tabpanel3">인천</li>
+				<li role="tab" class="tab" id="tab4" aria-controls="tabpanel4">강원</li>
+				<li role="tab" class="tab" id="tab5" aria-controls="tabpanel5">대전/충청</li>
+				<li role="tab" class="tab" id="tab6" aria-controls="tabpanel6">대구</li>
+				<li role="tab" class="tab" id="tab7" aria-controls="tabpanel7">부산/울산</li>
+				<li role="tab" class="tab" id="tab8" aria-controls="tabpanel8">경상</li>
+				<li role="tab" class="tab last" id="tab9" aria-controls="tabpanel9">광주/전라/제주</li>
+			</ul>
 
-		<div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1">
-			<div class="dep2">
-				<ul role="tablist" class="tablist" aria-label="대도시">
-					<li role="tab" class="tab first" id="tab1-1" aria-controls="tabpanel1-1">CAR CINEMA</li>
-					<li role="tab" class="tab" id="tab1-2" aria-controls="tabpanel1-2">CGV 강남</li>
-					<li role="tab" class="tab" id="tab1-3" aria-controls="tabpanel1-3">CGV 강변</li>
-					<li role="tab" class="tab" id="tab1-4" aria-controls="tabpanel1-4">CGV 건대입구</li>
-					<li role="tab" class="tab" id="tab1-5" aria-controls="tabpanel1-5">CGV 구로</li>
-					<li role="tab" class="tab" id="tab1-6" aria-controls="tabpanel1-6">CGV 대학로</li>
-					<li role="tab" class="tab" id="tab1-7" aria-controls="tabpanel1-7">CGV 동대문</li>
-					<li role="tab" class="tab" id="tab1-8" aria-controls="tabpanel1-8">CGV 등촌</li>
-					<li role="tab" class="tab" id="tab1-9" aria-controls="tabpanel1-9">CGV 명동</li>
-					<li role="tab" class="tab" id="tab1-10" aria-controls="tabpanel1-10">CGV CGV명동역 씨네라이브러리</li>
-					<li role="tab" class="tab" id="tab1-11" aria-controls="tabpanel1-11">CGV 목동</li>
-					<li role="tab" class="tab" id="tab1-12" aria-controls="tabpanel1-12">CGV 미아</li>
-					<li role="tab" class="tab" id="tab1-13" aria-controls="tabpanel1-13">CGV 불광</li>
-					<li role="tab" class="tab" id="tab1-14" aria-controls="tabpanel1-14">CGV 상봉</li>
-					<li role="tab" class="tab" id="tab1-15" aria-controls="tabpanel1-15">CGV 성신여대입구</li>
-					<li role="tab" class="tab" id="tab1-16" aria-controls="tabpanel1-16">CGV 송파</li>
-					<li role="tab" class="tab" id="tab1-17" aria-controls="tabpanel1-17">CGV 수유</li>
-					<li role="tab" class="tab" id="tab1-18" aria-controls="tabpanel1-18">CGV 신촌아트레온</li>
-					<li role="tab" class="tab" id="tab1-19" aria-controls="tabpanel1-19">CGV 압구정</li>
-					<li role="tab" class="tab" id="tab1-20" aria-controls="tabpanel1-20">CGV 여의도</li>
-					<li role="tab" class="tab" id="tab1-21" aria-controls="tabpanel1-21">CGV 영등포</li>
-					<li role="tab" class="tab" id="tab1-22" aria-controls="tabpanel1-22">CGV 왕십리</li>
-					<li role="tab" class="tab" id="tab1-23" aria-controls="tabpanel1-23">CGV 용산아이파크몰</li>
-					<li role="tab" class="tab" id="tab1-24" aria-controls="tabpanel1-24">CGV 중계</li>
-					<li role="tab" class="tab" id="tab1-25" aria-controls="tabpanel1-25">CGV 천호</li>
-					<li role="tab" class="tab" id="tab1-26" aria-controls="tabpanel1-26">CGV 청담시네시티</li>
-					<li role="tab" class="tab" id="tab1-27" aria-controls="tabpanel1-27">CGV 피카다리1958</li>
-					<li role="tab" class="tab" id="tab1-28" aria-controls="tabpanel1-28">CGV 하계</li>
-					<li role="tab" class="tab" id="tab1-29" aria-controls="tabpanel1-29">CGV 홍대</li>
-					<li role="tab" class="tab" id="tab1-30" aria-controls="tabpanel1-30">CINE de CHEF 압구정</li>
-					<li role="tab" class="tab last" id="tab1-31" aria-controls="tabpanel1-31">CINE de CHEF - <br>용산아이파크몰
+			<div role="tabpanel" class="tabpanel roundpanel area" id="tabpanel1" aria-labelledby="tab1">
+				<div class="dep2">
+					<ul role="tablist" class="tablist" aria-label="대도시">
+						<li role="tab" class="tab first" id="tab1-1" aria-controls="tabpanel1-1">CAR CINEMA</li>
+						<li role="tab" class="tab" id="tab1-2" aria-controls="tabpanel1-2">CGV 강남</li>
+						<li role="tab" class="tab" id="tab1-3" aria-controls="tabpanel1-3">CGV 강변</li>
+						<li role="tab" class="tab" id="tab1-4" aria-controls="tabpanel1-4">CGV 건대입구</li>
+						<li role="tab" class="tab" id="tab1-5" aria-controls="tabpanel1-5">CGV 구로</li>
+						<li role="tab" class="tab" id="tab1-6" aria-controls="tabpanel1-6">CGV 대학로</li>
+						<li role="tab" class="tab" id="tab1-7" aria-controls="tabpanel1-7">CGV 동대문</li>
+						<li role="tab" class="tab" id="tab1-8" aria-controls="tabpanel1-8">CGV 등촌</li>
+						<li role="tab" class="tab" id="tab1-9" aria-controls="tabpanel1-9">CGV 명동</li>
+						<li role="tab" class="tab" id="tab1-10" aria-controls="tabpanel1-10"> CGV명동역 - <br>씨네라이브러리</li>
+						<li role="tab" class="tab" id="tab1-11" aria-controls="tabpanel1-11">CGV 목동</li>
+						<li role="tab" class="tab" id="tab1-12" aria-controls="tabpanel1-12">CGV 미아</li>
+						<li role="tab" class="tab" id="tab1-13" aria-controls="tabpanel1-13">CGV 불광</li>
+						<li role="tab" class="tab" id="tab1-14" aria-controls="tabpanel1-14">CGV 상봉</li>
+						<li role="tab" class="tab" id="tab1-15" aria-controls="tabpanel1-15">CGV 성신여대입구</li>
+						<li role="tab" class="tab" id="tab1-16" aria-controls="tabpanel1-16">CGV 송파</li>
+						<li role="tab" class="tab" id="tab1-17" aria-controls="tabpanel1-17">CGV 수유</li>
+						<li role="tab" class="tab" id="tab1-18" aria-controls="tabpanel1-18">CGV 신촌아트레온</li>
+						<li role="tab" class="tab" id="tab1-19" aria-controls="tabpanel1-19">CGV 압구정</li>
+						<li role="tab" class="tab" id="tab1-20" aria-controls="tabpanel1-20">CGV 여의도</li>
+						<li role="tab" class="tab" id="tab1-21" aria-controls="tabpanel1-21">CGV 영등포</li>
+						<li role="tab" class="tab" id="tab1-22" aria-controls="tabpanel1-22">CGV 왕십리</li>
+						<li role="tab" class="tab" id="tab1-23" aria-controls="tabpanel1-23">CGV 용산아이파크몰</li>
+						<li role="tab" class="tab" id="tab1-24" aria-controls="tabpanel1-24">CGV 중계</li>
+						<li role="tab" class="tab" id="tab1-25" aria-controls="tabpanel1-25">CGV 천호</li>
+						<li role="tab" class="tab" id="tab1-26" aria-controls="tabpanel1-26">CGV 청담시네시티</li>
+						<li role="tab" class="tab" id="tab1-27" aria-controls="tabpanel1-27">CGV 피카다리1958</li>
+						<li role="tab" class="tab" id="tab1-28" aria-controls="tabpanel1-28">CGV 하계</li>
+						<li role="tab" class="tab" id="tab1-29" aria-controls="tabpanel1-29">CGV 홍대</li>
+						<li role="tab" class="tab" id="tab1-30" aria-controls="tabpanel1-30">CINE de CHEF - <br> 압구정
+						</li>
+						<li role="tab" class="tab last" id="tab1-31" aria-controls="tabpanel1-31">CINE de CHEF -
+							<br>용산아이파크몰
+						</li>
+					</ul>
+					<div>
+						<div role="tabpanel" class="tabpanel first" id="tabpanel1-1" aria-labelledby="tab1-1">
+							<div class="ph">
+								<img src="../images/theaters/seoul/carcinema.jpg" alt="CAR CINEMA">
+							</div>
+							<div class="th">
+								<strong class="th_title">CAR CINEMA</strong>
+								<p class="th_info1">경기 과천시 막계동 33 (CGV 카시네마 서울랜드)<br>경기 과천시 광명로 181 (CGV 카시네마 서울랜드)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									1관 / 100석<br>
+									야외 자동차 극장</p>
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-2" aria-labelledby="tab1-2">
+							<div class="ph">
+								<img src="../images/theaters/seoul/carcinema.jpg" alt="CGV강남">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 강남</strong>
+								<p class="th_info1">서울특별시 강남구 역삼동 814-6 스타플렉스<br>서울특별시 강남구 강남대로 438 (역삼동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 874석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-3" aria-labelledby="tab1-3">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 강변"></div>
+							<div class="th">
+								<strong class="th_title">CGV 강변</strong>
+								<p class="th_info1">서울특별시 광진구 구의동 546-4 테크노마트 10층<br>서울특별시 광진구 광나루로56길 85 (구의동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									11관 / 1,466석<br>
+									4WAY 입체음향, 완벽한 디지털 사운드,최고급 의자,장애인을 위한 전용화장실,전용 입퇴장로, <br>여성전용 화장실 파우더 룸, 24시간 쉼없이
+									돌아가는 무비
+									파라다이스</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-4" aria-labelledby="tab1-4">
+							<div class="ph"><img src="../images/theaters/seoul/carcinema.jpg" alt="CGV 건대입구"></div>
+							<div class="th">
+								<strong class="th_title">CGV 건대입구</strong>
+								<p class="th_info1">서울시 광진구 자양동 9-4 몰오브케이 3층<br>서울시 광진구 아차산로 30길 26 몰오브케이 3층</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									5관 / 754석<br>20대 취향 인더스트리얼 컨셉의 인테리어, 포토스팟 테라스, 프리미엄 디저트 카페 투썸 플레이스까지!</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-5" aria-labelledby="tab1-5">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 구로"></div>
+							<div class="th">
+								<strong class="th_title">CGV 구로</strong>
+								<p class="th_info1">서울특별시 구로구 구로5동 573번지 AK플라자(구 애경백화점) 6층<br>서울특별시 구로구 구로중앙로 152 (구로동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>10관 / 1,900석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-6" aria-labelledby="tab1-6">
+							<div class="ph">
+								<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 대학로"></div>
+							<div class="th">
+								<strong class="th_title">CGV 대학로</strong>
+								<p class="th_info1">서울특별시 종로구 명륜2가 41-9<br>서울 종로구 대명길 (명륜동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									8관 / 973석<br>스윗박스, 와이드박스, 컴포트석, 마이박스(1인석) 보유</p>
+							</div>
+
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-7" aria-labelledby="tab1-7">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 동대문"></div>
+							<div class="th">
+								<strong class="th_title">CGV 동대문</strong>
+								<p class="th_info1">서울시 중구 을지로6가 17-2 현대시티아울렛 11층<br>서울시 중구 장충단로 13길 20 현대시티아울렛 11층</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									6관 / 676석<br>게임존, 투썸플레이스, VR존등 다양한 부대시설과 전좌석 가죽시트/양팔 팔걸이 적용</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-8" aria-labelledby="tab1-8">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 등촌"></div>
+							<div class="th">
+								<strong class="th_title">CGV 등촌</strong>
+								<p class="th_info1">서울특별시 강서구 등촌동 639-23 3층~9층<br>서울특별시 강서구 공항대로45길 63 3층~9층 (등촌동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									8관 / 1,217석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-9" aria-labelledby="tab1-9">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 명동"></div>
+							<div class="th">
+								<strong class="th_title">CGV 명동</strong>
+								<p class="th_info1">서울특별시 중구 명동2가 83-5번지 눈스퀘어 8층<br>서울특별시 중구 명동길 14 (명동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>5관 / 736석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-10" aria-labelledby="tab1-10">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG"
+									alt="CGV 명동역 씨네라이브러리"></div>
+							<div class="th">
+								<strong class="th_title">CGV 명동역 씨네라이브러리</strong>
+								<p class="th_info1">서울특별시 중구 충무로2가 65-9 하이해리엇 10,11층<br>서울특별시 중구 퇴계로 123 (명동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>
+									5관 / 694석<br>CGV CINE LIBRARY. 영감과 휴식, 소통을 제공하는 국내 최초 영화 전문<br>도서관과 아트하우스를 갖춘 도심 한복판
+									문화공간
+								</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-11" aria-labelledby="tab1-11">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 목동"></div>
+							<div class="th">
+								<strong class="th_title">CGV 목동</strong>
+								<p class="th_info1">서울특별시 양천구 목동 916번지 현대백화점 지하2층<br>서울특별시 양천구 목동로 257, 지하2층(목동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>8관 / 1,372석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-12" aria-labelledby="tab1-12">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 미아"></div>
+							<div class="th">
+								<strong class="th_title">CGV 미아</strong>
+								<p class="th_info1">서울특별시 강북구 미아동 35-4 트레지오 쇼핑몰 9층<br>서울특별시 강북구 도봉로 34, 9층(미아동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 692석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-13" aria-labelledby="tab1-13">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 불광"></div>
+							<div class="th">
+								<strong class="th_title">CGV 불광</strong>
+								<p class="th_info1">서울특별시 은평구 대조동 14-24 팜스퀘어 11층<br>서울특별시 은평구 불광로 20, 11층(대조동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>9관 / 1,620석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-14" aria-labelledby="tab1-14">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 상봉"></div>
+							<div class="th">
+								<strong class="th_title">CGV 상봉</strong>
+								<p class="th_info1">서울시 중랑구 상봉동 79-9 상봉듀오트리스 B2F<br>서울시 중랑구 상봉로 131 (상봉동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>7관 / 1,167석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-15" aria-labelledby="tab1-15">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 성신여대입구">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 성신여대입구</strong>
+								<p class="th_info1">서울특별시 성북구 동선동 1가 1-2 10, 12층<br>서울특별시 성북구 동소문로 106, 10층, 12층(동선동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>3관 / 554석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-16" aria-labelledby="tab1-16">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 송파"></div>
+							<div class="th">
+								<strong class="th_title">CGV 송파</strong>
+								<p class="th_info1">서울특별시 송파구 장지동 201-27 가든파이브 라이프 영관 10층<br>서울특별시 송파구 충민로 66, 10층(문정동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>8관 / 1,481석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-17" aria-labelledby="tab1-17">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 수유"></div>
+							<div class="th">
+								<strong class="th_title">CGV 수유</strong>
+								<p class="th_info1">서울시 강북구 수유동 168-12<br>서울시 강북구 도봉로 399</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>9관 / 972석<br>1F 투썸플레이스 / 2F 게임센터 / 3F 프리미엄 볼링펍</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-18" aria-labelledby="tab1-18">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 신촌아트레온">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 신촌아트레온</strong>
+								<p class="th_info1">서울특별시 서대문구 창천동 20-25 아트레온 2층<br>서울특별시 서대문구 신촌로 129 , 2층(창천동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>10관 / 1,561석<br>4DX, Premium관, Business관, ScreenX 등</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-19" aria-labelledby="tab1-19">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 압구정"></div>
+							<div class="th">
+								<strong class="th_title">CGV 압구정</strong>
+								<p class="th_info1">서울특별시 강남구 신사동 602, 603-2<br>서울특별시 강남구 압구정로30길 45 (신사동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 1,075석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-20" aria-labelledby="tab1-20">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 여의도"></div>
+							<div class="th">
+								<strong class="th_title">CGV 여의도</strong>
+								<p class="th_info1">서울특별시 영등포구 여의도동 국제금융로 10번지 국제금융센터 지하3층<br>서울특별시 영등포구 국제금융로 10,
+									지하3층(여의도동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>9관 / 1,183석<br>4DX관/프리미엄관/컴포트시트관</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-21" aria-labelledby="tab1-21">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 영등포"></div>
+							<div class="th">
+								<strong class="th_title">CGV 영등포</strong>
+								<p class="th_info1">서울특별시 영등포구 영등포동 4가 441-10번지 경방 타임스퀘어 4~7층<br>서울시 영등포구 영중로 15, 4층
+									(영등포동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>12관 / 2,797석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-22" aria-labelledby="tab1-22">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 왕십리"></div>
+							<div class="th">
+								<strong class="th_title">CGV 왕십리</strong>
+								<p class="th_info1">서울특별시 성동구 행당동 168-1 왕십리 민자역사 5층<br>서울특별시 성동구 왕십리광장로 17, 5층(행당동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>10관 / 1,770석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-23" aria-labelledby="tab1-23">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 용산아이파크몰">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 용산아이파크몰</strong>
+								<p class="th_info1">서울특별시 용산구 한강로 3가 40-999 HDC아이파크몰 6층<br>서울특별시 용산구 한강대로23길 55,
+									6층(한강로동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>20관 / 3,893석<br>누적관람객 3,000만명! 대한민국 국민 절반이 이용한 CGV 관람객
+									NO.1
+									극장</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-24" aria-labelledby="tab1-24">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 중계"></div>
+							<div class="th">
+								<strong class="th_title">CGV 중계</strong>
+								<p class="th_info1">서울특별시 노원구 중계동 509-2 홈플러스 중계점 8층<br>서울특별시 노원구 동일로204가길 12, 8층(중계동)
+								</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>7관 / 1,090석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-25" aria-labelledby="tab1-25">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 천호"></div>
+							<div class="th">
+								<strong class="th_title">CGV</strong>
+								<p class="th_info1">서울시 강동구 천호동42 홈플러스 4층<br>서울시 강동구 양재대로 1571 홈플러스 4층</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 1,240석<br>IMAX(347석), SphereX(213석), SCREENX(162석)
+								</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-26" aria-labelledby="tab1-26">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 청담씨네시티">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 청담씨네시티</strong>
+								<p class="th_info1">서울특별시 강남구 신사동 651-21<br>서울특별시 강남구 도산대로 323 (신사동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 670석<br>뉴욕 브로드웨이 극장을 연상케하는 뉴욕빈티지 디자인</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-27" aria-labelledby="tab1-27">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 피카디리1958">
+							</div>
+							<div class="th">
+								<strong class="th_title">CGV 피카디리1958</strong>
+								<p class="th_info1">서울특별시 종로구 돈의동 137 지하2층<br>서울특별시 종로구 돈화문로5가길</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>8관 / 1,244석<br>1,3,5호선 종로3가역 2-1번 출구에 위치</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-28" aria-labelledby="tab1-28">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 하계"></div>
+							<div class="th">
+								<strong class="th_title">CGV 하계</strong>
+								<p class="th_info1">서울특별시 노원구 중계동 506-1 건영백화점 지하1층<br>서울특별시 노원구 섬밭로 258, 지하1층(중계동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>4관 / 913석<br>어린이 전용 Kids관</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-29" aria-labelledby="tab1-29">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 홍대"></div>
+							<div class="th">
+								<strong class="th_title">CGV 홍대</strong>
+								<p class="th_info1">서울특별시 마포구 동교동 159-8<br>서울특별시 마포구 양화로 153 (동교동) 4층</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">1544-1122<br>6관 / 876석</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel" id="tabpanel1-30" aria-labelledby="tab1-30">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="씨네드쉐프 압구정">
+							</div>
+							<div class="th">
+								<strong class="th_title">씨네드쉐프 압구정</strong>
+								<p class="th_info1">서울특별시 강남구 신사동 602, 603-2<br>서울특별시 강남구 압구정로30길 45(신사동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">02-3446-0541~2</p>
+							</div>
+						</div>
+						<div role="tabpanel" class="tabpanel last" id="tabpanel1-31" aria-labelledby="tab1-31">
+							<div class="ph"><img src="../asset/images/theaters/seoul/carcinema.PNG" alt="씨네드쉐프 용산아이파크몰">
+							</div>
+							<div class="th">
+								<strong class="th_title">씨네드쉐프 용산아이파크몰</strong>
+								<p class="th_info1">서울특별시 용산구 한강대로23길 55, 6층(한강로동)</p>
+								<a href="" class="th_info2">위치/주차 안내<span class="blind-b">바로 가기</span></a>
+								<p class="th_info3">02-2012-3793~4</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div role="tabpanel" class="tabpanel roundpanel" id="tabpanel2" aria-labelledby="tab2">
+				<div class="dep2">
+					<ul role="tablist" class="tablist" aria-label="대도시">
+						<li role="tab" class="tab first" id="tab2-1" aria-controls="tabpanel2-1">CGV 경기광주</li>
+						<li role="tab" class="tab" id="tab2-2" aria-controls="tabpanel2-2">CGV 고양행신</li>
+						<li role="tab" class="tab" id="tab2-3" aria-controls="tabpanel2-3">CGV 광교</li>
+						<li role="tab" class="tab" id="tab2-4" aria-controls="tabpanel2-4">CGV 광교상현</li>
+						<li role="tab" class="tab" id="tab2-5" aria-controls="tabpanel2-5">CGV 구리</li>
+						<li role="tab" class="tab" id="tab2-6" aria-controls="tabpanel2-6">CGV 김포운양</li>
+						<li role="tab" class="tab" id="tab2-7" aria-controls="tabpanel2-7">CGV 김포풍무</li>
+						<li role="tab" class="tab" id="tab2-8" aria-controls="tabpanel2-8">CGV 김포한강</li>
+					</ul>
+					<div role="tabpanel" class="tabpanel" id="tabpanel2-1" aria-labelledby="tab2-1">인천내용</div>
+					<div role="tabpanel" class="tabpanel" id="tabpanel2-2" aria-labelledby="tab2-2">수원내용</div>
+					<div role="tabpanel" class="tabpanel" id="tabpanel2-3" aria-labelledby="tab2-3">성남내용</div>
+				</div>
+			</div>
+			<div role="tabpanel" class="tabpanel roundpanel" id="tabpanel3" aria-labelledby="tab3">
+				<div class="dep2">
+					<ul role="tablist" class="tablist" aria-label="대도시">
+						<li role="tab" class="tab first" id="tab3-1" aria-controls="tabpanel3-1">대전</li>
+						<li role="tab" class="tab" id="tab3-2" aria-controls="tabpanel3-2">천안</li>
+						<li role="tab" class="tab last" id="tab3-3" aria-controls="tabpanel3-3">아산</li>
+					</ul>
+					<div role="tabpanel" class="tabpanel" id="tabpanel3-1" aria-labelledby="tab3-1">대전내용</div>
+					<div role="tabpanel" class="tabpanel" id="tabpanel3-2" aria-labelledby="tab3-2">천안내용</div>
+					<div role="tabpanel" class="tabpanel" id="tabpanel3-3" aria-labelledby="tab3-3">아산내용</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- timetable -->
+	<div class="tt_bg">
+		<div class="area" id="timeTable">
+			<h3 class="title">Time table</h3>
+			<ul role="tablist" class="tablist oneline_st clearfix" aria-label="상영중인 영화">
+				<li role="tab" class="tab first clearfix" id="tab1-1-1" aria-controls="tabpanel1-1-1">담보</li>
+				<li role="tab" class="tab tabm clearfix" id="tab1-1-2" aria-controls="tabpanel1-1-2">국제수사</li>
+				<li role="tab" class="tab tabm clearfix" id="tab1-1-3" aria-controls="tabpanel1-1-3">그린랜드</li>
+				<li role="tab" class="tab tabm last clearfix" id="tab1-1-4" aria-controls="tabpanel1-1-4">오!문희</li>
+			</ul>
+			<div role="tabpanel" class="tabpanel first" id="tabpanel1-1-1" aria-labelledby="tab1-1-1">
+				<strong class="month">10월</strong>
+				<ul role="tablist" class="tablist TT_list" aria-controls="상영날짜">
+					<li role="tab" class="tab first " id="tab1-1-1-1" aria-controls="tabpanel1-1-1-1">
+						<a>
+							<strong>03</strong>
+							<p>토</p>
+						</a>
+					</li>
+					<li role="tab" class="tab" id="tab1-1-1-2" aria-controls="tabpanel1-1-1-2">
+						<a>
+							<strong>04</strong>
+							<p>일</p>
+						</a>
+					</li>
+					<li role="tab" class="tab last" id="tab1-1-1-3" aria-controls="tabpanel1-1-1-3">
+						<a>
+							<strong>06</strong>
+							<p>화</p>
+						</a>
 					</li>
 				</ul>
-				<div>
-					<div role="tabpanel" class="tabpanel first" id="tabpanel1-1" aria-labelledby="tab1-1">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CAR CINEMA">
-						<div class="th">
-							<strong class="th_title">CAR CINEMA</strong>
-							<p class="th_info1">경기 과천시 막계동 33 (CGV카시네마 서울랜드)<br>경기 과천시 광명로 181 (CGV카시네마 서울랜드)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								1관 / 100석<br>
-								야외 자동차 극장</p>
-						</div>
-						<div>
-							<strong>Time table</strong>
-							<ul role="tablist" class="tablist" aria-label="상영중인 영화">
-								<li role="tab" class="tab first" id="tab1-1-1" aria-controls="tabpanel1-1-1">담보</li>
-								<li role="tab" class="tab" id="tab1-1-2" aria-controls="tabpanel1-1-2">국제수사</li>
-								<li role="tab" class="tab" id="tab1-1-3" aria-controls="tabpanel1-1-3">그린랜드</li>
+				<div role="tabpanel" class="tabpanel first roundpanel_oneline" id="tabpanel1-1-1-1"
+					aria-labelledby="tab1-1-1-1">
+					<div class="TT_st">
+						<span class="Ellipse12">
+							12
+							<span class="blind-b">세 이상 관람가</span>
+						</span>
+						<strong>담보</strong>
+						<p class="ing">
+							상영중
+						</p>
+						<p>드라마 / 113분/ 2020.09.29 개봉</p>
+					</div>
+					<div class="movie_info oneline">
+						<p>2D / CGV X CAR CINEMA(서울랜드) / 총 100석</p>
+						<ul class="detail_list">
+							<li>
+								<a href="">
+									<p>22:30</p>
+									<p>1석</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p>25:10</p>
+									<p>92석</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div role="tabpanel" class="tabpanel roundpanel_oneline" id="tabpanel1-1-1-2"
+					aria-labelledby="tab1-1-1-2">
+					<div class="TT_st">
+						<span class="Ellipse12">
+							12
+							<span class="blind-b">세 이상 관람가</span>
+						</span>
+						<strong>담보</strong>
+						<p class="ing">
+							상영중
+						</p>
+						<p>드라마 / 113분 / 2020.09.29 개봉</p>
+					</div>
+					<div class="movie_info oneline">
+						<p>2D / CGV X CAR CINEMA(서울랜드) / 총 100석</p>
+						<ul class="detail_list">
+							<li>
+								<a href="">
+									<p>19:30</p>
+									<p>37석</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<p>22:30</p>
+									<p>98석</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div role="tabpanel" class="tabpanel last roundpanel_oneline" id="tabpanel1-1-1-3"
+					aria-labelledby="tab1-1-1-3">
+					<div class="TT_st">
+						<span class="Ellipse12">
+							12
+							<span class="blind-b">세 이상 관람가</span>
+						</span>
+						<strong>담보</strong>
+						<p class="ing">
+							상영중
+						</p>
+						<p>드라마 / 113분 / 2020.09.29 개봉</p>
+					</div>
+					<div>
+						<div class="movie_info oneline">
+							<p>2D / CGV X CAR CINEMA(서울랜드) / 총 100석</p>
+							<ul class="detail_list">
+								<li class="select1">
+									<a href="">
+										<p>22:20</p>
+										<p>99석</p>
+									</a>
+								</li>
 							</ul>
-							<div role="tabpanel" class="tabpanel first" id="tabpanel1-1-1" aria-labelledby="tab1-1-1">
-								<strong>10월</strong>
-								<ul role="tablist" class="tablist TT_list" aria-controls="상영날짜">
-									<li role="tab" class="tab first" id="tab1-1-1-1" aria-controls="tabpanel1-1-1-1">
-										<div>
-											<strong>03</strong>
-											<p>토</p>
-										</div>
-									</li>
-									<li role="tab" class="tab" id="tab1-1-1-2" aria-controls="tabpanel1-1-1-2">
-										<div>
-											<strong>04</strong>
-											<p>일</p>
-										</div>
-									</li>
-									<li role="tab" class="tab" id="tab1-1-1-3" aria-controls="tabpanel1-1-1-3">
-										<div>
-											<strong>06</strong>
-											<p>화</p>
-										</div>
-									</li>
-									<div role="tabpanel" class="tabpanel first" id="tabpanel1-1-1-1"
-										aria-labelledby="tab1-1-1-1">
-										<div class="TT_st">
-											<img src="" alt="12세이상관람가">
-											<strong>담보</strong>
-											<img src="" alt="상영중">
-											<p>드라마/ 113분/ 2020.09.29 개봉</p>
-										</div>
-										<div>
-											<p>2D</p>
-											<p>CGV X CAR CINEMA(서울랜드)</p>
-											<p>총 100석</p>
-											<ul>
-												<li>
-													<a href="">
-														<p>22:30</p>
-														<p>1석</p>
-													</a>
-												</li>
-												<li>
-													<a href="">
-														<p>25:10</p>
-														<p>92석</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div role="tabpanel" class="tabpanel" id="tabpanel1-1-1-2"
-										aria-labelledby="tab1-1-1-2">
-										<div class="TT_st">
-											<img src="" alt="12세이상관람가">
-											<strong>담보</strong>
-											<img src="" alt="상영중">
-											<p>드라마/ 113분/ 2020.09.29 개봉</p>
-										</div>
-										<div>
-											<p>2D</p>
-											<p>CGV X CAR CINEMA(서울랜드)</p>
-											<p>총 100석</p>
-											<ul>
-												<li>
-													<a href="">
-														<p>19:30</p>
-														<p>37석</p>
-													</a>
-												</li>
-												<li>
-													<a href="">
-														<p>22:30</p>
-														<p>98석</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-									<div role="tabpanel" class="tabpanel" id="tabpanel1-1-1-3"
-										aria-labelledby="tab1-1-1-3">
-										<div class="TT_st">
-											<img src="" alt="12세이상관람가">
-											<strong>담보</strong>
-											<img src="" alt="상영중">
-											<p>드라마/ 113분/ 2020.09.29 개봉</p>
-										</div>
-										<div>
-											<p>2D</p>
-											<p>CGV X CAR CINEMA(서울랜드)</p>
-											<p>총 100석</p>
-											<ul>
-												<li>
-													<a href="">
-														<p>22:20</p>
-														<p>99석</p>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</ul>
-							</div>
-							<div role="tabpanel" class="tabpanel" id="tabpanel1-1-2" aria-labelledby="tab1-1-2">
-
-							</div>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-2" aria-labelledby="tab1-2">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV강남">
-						<div class="th">
-							<strong class="th_title">CGV 강남</strong>
-							<p class="th_info1">서울특별시 강남구 역삼동 814-6 스타플렉스<br>서울특별시 강남구 강남대로 438 (역삼동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 874석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-3" aria-labelledby="tab1-3">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 강변">
-						<div class="th">
-							<strong class="th_title">CGV 강변</strong>
-							<p class="th_info1">서울특별시 광진구 구의동 546-4 테크노마트 10층<br>서울특별시 광진구 광나루로56길 85 (구의동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								11관 / 1,466석<br>
-								4WAY 입체음향, 완벽한 디지털 사운드,최고급 의자,장애인을 위한 전용화장실,전용 입퇴장로, 여성전용 화장실 파우더 룸,24시간 쉼없이 돌아가는 무비
-								파라다이스</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-4" aria-labelledby="tab1-4">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 건대입구">
-						<div class="th">
-							<strong class="th_title">CGV 건대입구</strong>
-							<p class="th_info1">서울시 광진구 자양동 9-4 몰오브케이 3층<br>서울시 광진구 아차산로 30길 26 몰오브케이 3층</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								5관 / 754석<br>20대 취향 인더스트리얼 컨셉의 인테리어, 포토스팟 테라스, 프리미엄 디저트 카페 투썸 플레이스까지!</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-5" aria-labelledby="tab1-5">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 구로">
-						<div class="th">
-							<strong class="th_title">CGV 구로</strong>
-							<p class="th_info1">서울특별시 구로구 구로5동 573번지 AK플라자(구 애경백화점) 6층<br>서울특별시 구로구 구로중앙로 152 (구로동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>10관 / 1,900석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-6" aria-labelledby="tab1-6">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 대학로">
-						<div class="th">
-							<strong class="th_title">CGV 대학로</strong>
-							<p class="th_info1">서울특별시 종로구 명륜2가 41-9<br>서울 종로구 대명길 (명륜동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								8관 / 973석<br>스윗박스, 와이드박스, 컴포트석, 마이박스(1인석) 보유</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-7" aria-labelledby="tab1-7">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 동대문">
-						<div class="th">
-							<strong class="th_title">CGV 동대문</strong>
-							<p class="th_info1">서울시 중구 을지로6가 17-2 현대시티아울렛 11층<br>서울시 중구 장충단로 13길 20 현대시티아울렛 11층</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								6관 / 676석<br>게임존, 투썸플레이스, VR존등 다양한 부대시설과 전좌석 가죽시트/양팔 팔걸이 적용</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-8" aria-labelledby="tab1-8">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 등촌">
-						<div class="th">
-							<strong class="th_title">CGV 등촌</strong>
-							<p class="th_info1">서울특별시 강서구 등촌동 639-23 3층~9층<br>서울특별시 강서구 공항대로45길 63 3층~9층 (등촌동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								8관 / 1,217석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-9" aria-labelledby="tab1-9">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 명동">
-						<div class="th">
-							<strong class="th_title">CGV 명동</strong>
-							<p class="th_info1">서울특별시 중구 명동2가 83-5번지 눈스퀘어 8층<br>서울특별시 중구 명동길 14 (명동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>5관 / 736석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-10" aria-labelledby="tab1-10">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 명동역 씨네라이브러리">
-						<div class="th">
-							<strong class="th_title">CGV 명동역 씨네라이브러리</strong>
-							<p class="th_info1">서울특별시 중구 충무로2가 65-9 하이해리엇 10,11층<br>서울특별시 중구 퇴계로 123 (명동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>
-								5관 / 694석<br>CGV CINE LIBRARY. 영감과 휴식, 소통을 제공하는 국내 최초 영화 전문 도서관과 아트하우스를 갖춘 도심 한복판 문화공간
-							</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-11" aria-labelledby="tab1-11">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 목동">
-						<div class="th">
-							<strong class="th_title">CGV 목동</strong>
-							<p class="th_info1">서울특별시 양천구 목동 916번지 현대백화점 지하2층<br>서울특별시 양천구 목동로 257, 지하2층(목동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>8관 / 1,372석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-12" aria-labelledby="tab1-12">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 미아">
-						<div class="th">
-							<strong class="th_title">CGV 미아</strong>
-							<p class="th_info1">서울특별시 강북구 미아동 35-4 트레지오 쇼핑몰 9층<br>서울특별시 강북구 도봉로 34, 9층(미아동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 692석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-13" aria-labelledby="tab1-13">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 불광">
-						<div class="th">
-							<strong class="th_title">CGV 불광</strong>
-							<p class="th_info1">서울특별시 은평구 대조동 14-24 팜스퀘어 11층<br>서울특별시 은평구 불광로 20, 11층(대조동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>9관 / 1,620석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-14" aria-labelledby="tab1-14">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 상봉">
-						<div class="th">
-							<strong class="th_title">CGV 상봉</strong>
-							<p class="th_info1">서울시 중랑구 상봉동 79-9 상봉듀오트리스 B2F<br>서울시 중랑구 상봉로 131 (상봉동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>7관 / 1,167석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-15" aria-labelledby="tab1-15">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 성신여대입구">
-						<div class="th">
-							<strong class="th_title">CGV 성신여대입구</strong>
-							<p class="th_info1">서울특별시 성북구 동선동 1가 1-2 10, 12층<br>서울특별시 성북구 동소문로 106, 10층, 12층(동선동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>3관 / 554석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-16" aria-labelledby="tab1-16">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 송파">
-						<div class="th">
-							<strong class="th_title">CGV 송파</strong>
-							<p class="th_info1">서울특별시 송파구 장지동 201-27 가든파이브 라이프 영관 10층<br>서울특별시 송파구 충민로 66, 10층(문정동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>8관 / 1,481석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-17" aria-labelledby="tab1-17">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 수유">
-						<div class="th">
-							<strong class="th_title">CGV 수유</strong>
-							<p class="th_info1">서울시 강북구 수유동 168-12<br>서울시 강북구 도봉로 399</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>9관 / 972석<br>1F 투썸플레이스 / 2F 게임센터 / 3F 프리미엄 볼링펍</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-18" aria-labelledby="tab1-18">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 신촌아트레온">
-						<div class="th">
-							<strong class="th_title">CGV 신촌아트레온</strong>
-							<p class="th_info1">서울특별시 서대문구 창천동 20-25 아트레온 2층<br>서울특별시 서대문구 신촌로 129 , 2층(창천동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>10관 / 1,561석<br>4DX, Premium관, Business관, ScreenX 등</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-19" aria-labelledby="tab1-19">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 압구정">
-						<div class="">
-							<strong class="th_title">CGV 압구정</strong>
-							<p class="th_info1">서울특별시 강남구 신사동 602, 603-2<br>서울특별시 강남구 압구정로30길 45 (신사동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 1,075석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-20" aria-labelledby="tab1-20">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 여의도">
-						<div class="th">
-							<strong class="th_title">CGV 여의도</strong>
-							<p class="th_info1">서울특별시 영등포구 여의도동 국제금융로 10번지 국제금융센터 지하3층<br>서울특별시 영등포구 국제금융로 10,
-								지하3층(여의도동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>9관 / 1,183석<br>4DX관/프리미엄관/컴포트시트관</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-21" aria-labelledby="tab1-21">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 영등포">
-						<div class="th">
-							<strong class="th_title">CGV 영등포</strong>
-							<p class="th_info1">서울특별시 영등포구 영등포동 4가 441-10번지 경방 타임스퀘어 4~7층<br>서울시 영등포구 영중로 15, 4층 (영등포동)
-							</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>12관 / 2,797석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-22" aria-labelledby="tab1-22">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 왕십리">
-						<div class="">
-							<strong class="th_title">CGV 왕십리</strong>
-							<p class="th_info1">서울특별시 성동구 행당동 168-1 왕십리 민자역사 5층<br>서울특별시 성동구 왕십리광장로 17, 5층(행당동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>10관 / 1,770석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-23" aria-labelledby="tab1-23">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 용산아이파크몰">
-						<div class="th">
-							<strong class="th_title">CGV 용산아이파크몰</strong>
-							<p class="th_info1">서울특별시 용산구 한강로 3가 40-999 HDC아이파크몰 6층<br>서울특별시 용산구 한강대로23길 55, 6층(한강로동)
-							</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>20관 / 3,893석<br>누적관람객 3,000만명! 대한민국 국민 절반이 이용한 CGV 관람객 NO.1
-								극장</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-24" aria-labelledby="tab1-24">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 중계">
-						<div class="th">
-							<strong class="th_title">CGV 중계</strong>
-							<p class="th_info1">서울특별시 노원구 중계동 509-2 홈플러스 중계점 8층<br>서울특별시 노원구 동일로204가길 12, 8층(중계동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>7관 / 1,090석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-25" aria-labelledby="tab1-25">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 천호">
-						<div class="th">
-							<strong class="th_title">CAR CINEMA</strong>
-							<p class="th_info1">서울시 강동구 천호동42 홈플러스 4층<br>서울시 강동구 양재대로 1571 홈플러스 4층</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 1,240석<br>IMAX(347석), SphereX(213석), SCREENX(162석)</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-26" aria-labelledby="tab1-26">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 청담씨네시티">
-						<div class="th">
-							<strong class="th_title">CGV 청담씨네시티</strong>
-							<p class="th_info1">서울특별시 강남구 신사동 651-21<br>서울특별시 강남구 도산대로 323 (신사동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 670석<br>뉴욕 브로드웨이 극장을 연상케하는 뉴욕빈티지 디자인</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-27" aria-labelledby="tab1-27">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 피카디리1958">
-						<div class="th">
-							<strong class="th_title">CGV 피카디리1958</strong>
-							<p class="th_info1">서울특별시 종로구 돈의동 137 지하2층<br>서울특별시 종로구 돈화문로5가길</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>8관 / 1,244석<br>1,3,5호선 종로3가역 2-1번 출구에 위치</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-28" aria-labelledby="tab1-28">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 하계">
-						<div class="th">
-							<strong class="th_title">CGV 하계</strong>
-							<p class="th_info1">서울특별시 노원구 중계동 506-1 건영백화점 지하1층<br>서울특별시 노원구 섬밭로 258, 지하1층(중계동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>4관 / 913석<br>어린이 전용 Kids관</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-29" aria-labelledby="tab1-29">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="CGV 홍대">
-						<div class="th">
-							<strong class="th_title">CGV 홍대</strong>
-							<p class="th_info1">서울특별시 마포구 동교동 159-8<br>서울특별시 마포구 양화로 153 (동교동) 4층</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">1544-1122<br>6관 / 876석</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel" id="tabpanel1-30" aria-labelledby="tab1-30">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="씨네드쉐프 압구정">
-						<div class="th">
-							<strong class="th_title">씨네드쉐프 압구정</strong>
-							<p class="th_info1">서울특별시 강남구 신사동 602, 603-2<br>서울특별시 강남구 압구정로30길 45(신사동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">02-3446-0541~2</p>
-						</div>
-					</div>
-					<div role="tabpanel" class="tabpanel last" id="tabpanel1-31" aria-labelledby="tab1-31">
-						<img src="../asset/images/theaters/seoul/carcinema.PNG" alt="씨네드쉐프 용산아이파크몰">
-						<div class="th">
-							<strong class="th_title">씨네드쉐프 용산아이파크몰</strong>
-							<p class="th_info1">서울특별시 용산구 한강대로23길 55, 6층(한강로동)</p>
-							<a href="" class="th_info2">위치/주차 안내</a>
-							<p class="th_info3">02-2012-3793~4</p>
 						</div>
 					</div>
 				</div>
 			</div>
-
-		</div>
-		<div role="tabpanel" class="tabpanel" id="tabpanel2" aria-labelledby="tab2">
-			<div class="dep2">
-				<ul role="tablist" class="tablist" aria-label="대도시">
-					<li role="tab" class="tab first" id="tab2-1" aria-controls="tabpanel2-1">인천</li>
-					<li role="tab" class="tab" id="tab2-2" aria-controls="tabpanel2-2">수원</li>
-					<li role="tab" class="tab last" id="tab2-3" aria-controls="tabpanel2-3">성남</li>
-				</ul>
-				<div role="tabpanel" class="tabpanel" id="tabpanel2-1" aria-labelledby="tab2-1">인천내용</div>
-				<div role="tabpanel" class="tabpanel" id="tabpanel2-2" aria-labelledby="tab2-2">수원내용</div>
-				<div role="tabpanel" class="tabpanel" id="tabpanel2-3" aria-labelledby="tab2-3">성남내용</div>
-			</div>
-		</div>
-		<div role="tabpanel" class="tabpanel" id="tabpanel3" aria-labelledby="tab3">
-			<div class="dep2">
-				<ul role="tablist" class="tablist" aria-label="대도시">
-					<li role="tab" class="tab first" id="tab3-1" aria-controls="tabpanel3-1">대전</li>
-					<li role="tab" class="tab" id="tab3-2" aria-controls="tabpanel3-2">천안</li>
-					<li role="tab" class="tab last" id="tab3-3" aria-controls="tabpanel3-3">아산</li>
-				</ul>
-				<div role="tabpanel" class="tabpanel" id="tabpanel3-1" aria-labelledby="tab3-1">대전내용</div>
-				<div role="tabpanel" class="tabpanel" id="tabpanel3-2" aria-labelledby="tab3-2">천안내용</div>
-				<div role="tabpanel" class="tabpanel" id="tabpanel3-3" aria-labelledby="tab3-3">아산내용</div>
+			<div role="tabpanel" class="tabpanel" id="tabpanel1-1-2" aria-labelledby="tab1-1-2">
 			</div>
 		</div>
 	</div>
+	<footer id="footer">
+		<div class="foot-top">
+			<ul class="special_theater area">
+				<li><a href=""><img src="../images/common/i1-gray4dx.png"alt="4DX"></a></li>
+				<li><a href=""><img src="../images/common/i2-imax.png" alt="IMAX"></a></a></li>
+				<li><a href=""><img src="../images/common/i3-whitescreenx.png" alt="SCREEN X"></a></li>
+				<li><a href=""><img src="../images/common/i4-spherex.png" alt="SPHERE X"></a></li>
+				<li><a href=""><img src="../images/common/i5-whitetempur.png" alt="TEMPUR CINEMA"></a></li>
+				<li><a href=""><img src="../images/common/i6-whitegoldclass.png" alt="GOLD CLASS"></a></li>
+				<li><a href=""><img src="../images/common/i7-whitecinedechef.png" alt="CNIE de CHEF"></a></li>
+				<li><a href=""><img src="../images/common/i8-private.png" alt="PRIVATE CINEMA"></a></li>
+				<li><a href=""><img src="../images/common/i9-cinekids.png" alt="CINE KIDS"></a></li>
+				<li><a href=""><img src="../images/common/i10-whitecineforet.png" alt="CINE &amp; FORET"></a></li>
+			</ul>
+		</div>
+		<div class="cgv-info area clearfix">
+			<ul class="big-info clearfix">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">IR</a></li>
+				<li><a href="">채용정보</a></li>
+				<li><a href="">광고/프로모션문의</a></li>
+				<li><a href="">제휴문의</a></li>
+				<li><a href="">출점문의</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">편성기준</a></li>
+				<li><a href="">개인정보처리방침</a></li>
+				<li><a href="">법적고지</a></li>
+				<li><a href="">이메일주소무단수집거부</a></li>
+				<li><a href="">상생경영</a></li>
+				<li><a href="">사이트맵</a></li>
+			</ul>
+			<address class="address">
+				<p><img src="../images/common/cgv_logo_b.png" alt="cgv"></p>
+				<div>
+					<p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+					<div>
+						<span>대표이사 : 최병환</span>
+						<span>사업자등록번호 : 104-81-45690</span>
+						<span>통신판매업신고번호 : 2017-서울용산-0662</span>
+						<a href="" role="button" target="_blank">사업자 정보 확인</a>
+					</div>
+					<span>호스팅사업자 : CJ올리브네트웍스</span>
+					<span>개인정보보호 책임자 : 이동현</span>
+					<span>대표이메일 : cjcgvmaster@cj.net</span>
+					<span>CGV고객센터 : 1544-1122</span>
+				</div>
+			</address>
+			<div class="foot-right">
+				<div class="family">
+					<a href="" class="fsite">계열사 바로가기</a>
+					<ul id="familysite">
+						<li>
+							<strong>CJ그룹</strong>
+							<ul>
+								<li><a href="">CJ주식회사</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>엔터테인먼트 &amp; 미디어</strong>
+							<ul>
+								<li><a href="">CJ ENM (E&amp;M)</a></li>
+								<li><a href="">CJ CGV</a></li>
+								<li><a href="">CJ파워캐스트</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>식품 &amp; 식품서비스</strong>
+							<ul>
+								<li><a href="">CJ제일제당 (식품)</a></li>
+								<li><a href="">CJ프레시웨이</a></li>
+								<li><a href="">CJ푸드빌</a></li>
+								<li><a href="">CJ엠디원</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>생명공학</strong>
+							<ul>
+								<li><a href="">CJ제일제당 (바이오)</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>신유통</strong>
+							<ul>
+								<li><a href="">CJ ENM (오쇼핑)</a></li>
+								<li><a href="">CJ대한통운</a></li>
+								<li><a href="">CJ텔레닉스</a></li>
+								<li><a href="">CJ올리브영</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>인프라</strong>
+							<ul>
+								<li><a href="">CJ대한통운 (건설)</a></li>
+								<li><a href="">CJ올리브네트웍스</a></li>
+							</ul>
+						</li>
+					</ul>
+					<a href="" target="_blank" class="btn_submit" title="새창열기">GO</a>
+				</div>
+				<p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
+				<ul class="sns_list">
+					<li><a href="https://www.facebook.com/CJCGV" target="_blank" title="페이스북 새창열기"><svg
+								aria-hidden="true" focusable="false" data-prefix="fab"
+								data-icon="facebook-square"
+								class="sns_i svg-inline--fa fa-facebook-square fa-w-14" role="img"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path fill="currentColor"
+									d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+								</path>
+							</svg>
+						</a>
+					</li>
+					<li><a href="https://twitter.com/cj_cgv" traget="_blank" title="트위터 새창열기"><svg
+								aria-hidden="true" focusable="false" data-prefix="fab"
+								data-icon="twitter-square"
+								class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path fill="currentColor"
+									d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
+								</path>
+							</svg>
+						</a>
+					</li>
+					<li><a href="https://www.instagram.com/cgv_korea/" target="_blank" title="인스타그램 새창열기"><svg
+								aria-hidden="true" focusable="false" data-prefix="fab"
+								data-icon="instagram-square"
+								class="sns_i svg-inline--fa fa-instagram-square fa-w-14" role="img"
+								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+								<path fill="currentColor"
+									d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
+								</path>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
 </body>
 
 </html>
