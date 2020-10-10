@@ -30,7 +30,7 @@ body{color: #fff;font-family: JGothic;font-weight: 400;}
 .tab{position: relative;}
 .tabm{margin-left: 38px;}
 #theaterTab > .tablist > .tab, .dep2 .tab, #timeTable > .tablist > .tab{color: #7c7c7c;}
-#theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active, #timeTable > .tablist > .tab:hover, #timeTable > .tabpanel .TT_list li:hover, #timeTable > .tabpanel .TT_list li:focus, #timeTable > .tabpanel .TT_list li.active  #timeTable > .tablist > .tab:focus, #timeTable > .tablist > .tab.active{color: #fff;cursor: pointer;}
+#theaterTab > .tablist > .tab:hover, #theaterTab > .tablist > .tab:focus, #theaterTab > .tablist > .tab.active, #timeTable > .tablist > .tab:hover, #timeTable > .tabpanel .TT_list li:hover, #timeTable > .tabpanel .TT_list li:focus, #timeTable > .tabpanel .TT_list li.active  #timeTable > .tablist > .tab:focus, #timeTable > .tablist > .tab.active,#timeTable > .tabpanel > .tablist > .tab.active{color: #fff;cursor: pointer;}
 .dep2 .tab:hover, .dep2 .tab:focus, .dep2 .tab.active,#timeTable > .date li:hover,#timeTable > .date li:focus, #timeTable > .date li.active{color: #fff;cursor: pointer;}
 #timeTable > .tabpanel .TT_list {color: #7c7c7c;}
 #tabpanel1{position: relative;}
