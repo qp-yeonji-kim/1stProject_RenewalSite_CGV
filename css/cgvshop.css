@@ -37,8 +37,16 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 .snack{float: left;width: 554px;height: 552px;border-radius: 10px;background: #fff; margin-bottom: 82px;}
 .snack:nth-child(2){margin-left: 80px;}
 .snack:nth-child(4){margin-left: 80px;}
-.snack ul li{float: left;width: 50%;overflow: hidden;}
+.longouter{float: left; left: 50%;overflow: hidden;width: 50%;height: 470px;
+border-right:3px solid #000;box-sizing: border-box;}
+.longinner{margin-left: 50%;transform: translateX(-50%); width: 150%;}
+/* .shortoutertop{float: right;width: 220px;height: 220px;}
+.shortinnertop{width: 220px;height: 220px;} */
 
+/* over */
+.longouter
+.over li{display: inline-block;}
+.over li img{display: inline-block;background: rgb(109, 56, 56);width: 35px;height: 35px;border-radius: 50%;}
 /* footer black.ver */
 #footer{color: #fff;background: #000;}
 .foot-top{margin-top: -80px;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
