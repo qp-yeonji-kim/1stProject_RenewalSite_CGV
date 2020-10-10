@@ -76,3 +76,35 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 .article h3, .article p{margin-left: 30px;}
 .article p{width: 610px;font-size: 16px;color: #b2b1b1;font-weight: 200;}
 .article a{font-family: "NtSansKR";font-weight: 200;display: inline-block;margin: 40px 0 0 500px;}
+
+/* #fp-nav */
+#fp-nav.fp-right{right: 20px;}
+#fp-nav ul li, .fp-slidesNav ul li{margin: 62px;width: 10px;height: 10px;}
+
+/* 기본 */
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span{
+    height: 10px;
+    width: 10px;
+    margin: -2.5px 0 0 -2.5px;
+    border-radius: 100%;
+ }
+#fp-nav > ul > li > a{left: 5px;top: 5px;}
+#fp-nav > ul > li > a > span:nth-child(2){width: 6px;height: 6px;background: #bcbcbc;border: 2px solid #ffffff;}
+
+/* .active 타이틀 기본상태 */
+#fp-nav ul li .fp-tooltip.fp-right{right: -12.5px;top: 3.5px;}
+#fp-nav ul li .fp-tooltip{font-size: 12px;line-height: 20px;color: #fff;width: auto;height: 20px;padding: 0 18px 0 8px;background: #ed1c24;border-radius: 6px;}
+#fp-nav ul li a.active+.fp-tooltip{opacity: 1;}
+
+/* 호버, active 상태 */
+#fp-nav ul li a.active span:nth-child(2),
+.fp-slidesNav ul li a.active span:nth-child(2),
+#fp-nav ul li:hover a.active span:nth-child(2),
+.fp-slidesNav ul li:hover a.active span:nth-child(2){width: 6px;height: 6px;margin: -2px 0 0 -2px;background: #ed1c24;}
+#fp-nav ul li:hover a span:nth-child(2),
+.fp-slidesNav ul li:hover a span:nth-child(2){
+    width: 6px;height: 6px;margin: -2px 0 0 -2px;background: #ed1c24;
+}
