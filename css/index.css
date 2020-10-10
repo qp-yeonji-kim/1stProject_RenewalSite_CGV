@@ -31,8 +31,6 @@
 #s_moviechart .bxslider{position: relative;width: 1085px;margin: 0 auto;}
 #s_moviechart .bxslider .visual > li > div{padding: 0 3.5px;}
 #s_moviechart .bxslider .bx-controls-direction a{position: absolute;top: 123px;width: 54px;height: 54px;border-radius: 50%;color: transparent;}
-/* color: transparent; 말고 글씨를 읽어주는 법.
-가상 요소를 만들어 content에 ""를 만들고 그 안에 텍스트를 쓰는 것이 괜찮을까요..? */
 #s_moviechart .bxslider .bx-controls-direction .bx-prev{left: -60px;background: url("../images/common/i-prev.png");}
 #s_moviechart .bxslider .bx-controls-direction .bx-next{right: -60px;background: url("../images/common/i-next.png");}
 
@@ -56,11 +54,10 @@
 /* #event */
 h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #event h2{margin: 0 auto 72px;}
-#event ul{display: flex;margin: 0 auto;width: 1200px;height: 520px;flex-wrap: wrap;}
-#event ul li{width: 380px;height: 240px;}
-#event ul li:nth-child(1){margin-bottom: 24px;}
-#event ul li:nth-child(2){margin: 0 30px;}
-/* 순서를 꼭 변경해야지 나열 할 수 있는가? */
+#event ul{position: relative;margin: 0 auto;width: 1200px;height: 520px;}
+#event ul li{float: left;width: 380px;height: 240px;}
+#event ul li:nth-child(2){position: absolute;left: 0;top: 272px;}
+#event ul li:nth-child(3){margin: 0 30px;}
 
 /* #s_shop */
 #s_shop{background: url("../images/index/bg-shop.jpg") no-repeat center;background-size: auto auto;}
