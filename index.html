@@ -10,8 +10,8 @@
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/fullpage.min.js"></script>
-    <script src="js/jquery.bxslider.min.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
     <script>
         $(document).ready(function () {
             $('#content').fullpage({
@@ -25,26 +25,27 @@
                 minSlides: 5,
                 maxSlides: 5,
                 moveSlides: 5,
-                slideWidth: 217,
+                slideWidth: 1085,
                 pager: false,
                 shrinkItems: true, //캐러셀은 전체 항목만 표시하고 maxSlides / minSlides를 기준으로 뷰포트에 맞게 이미지를 축소합니다.
-                nextText:"다음 슬라이드 페이지",
-                prevText:"이전 슬라이드 페이지"
+                prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
+                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
             });
             var grade = $('#slider2 .visual').bxSlider({
                 minSlides: 5,
                 maxSlides: 5,
                 moveSlides: 5,
-                slideWidth: 217,
+                slideWidth: 1085,
                 pager: false,
                 shrinkItems: true, //캐러셀은 전체 항목만 표시하고 maxSlides / minSlides를 기준으로 뷰포트에 맞게 이미지를 축소합니다.
-                nextText:"다음 슬라이드 페이지",
-                prevText:"이전 슬라이드 페이지"
+                prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
+                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
             });
 
-            $('#s_moviechart .tab').on('click', function () {
-                if ($(this).is('#ranking_book')) book.reloadSlider();
-                else if ($(this).is('#ranking_grade')) grade.reloadSlider();
+            $('#s_moviechart #ranking_grade').on('click', function () {
+                setTimeout(function () {
+                    grade.reloadSlider();
+                }, 10);
             })
         });
     </script>
@@ -349,7 +350,7 @@
                                             <a href="" role="button">IMAX</a>
                                         </li>
                                         <li>
-                                            <a href="" role="button">4DMAX</a>
+                                            <a href="" role="button">4DX</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -379,7 +380,7 @@
                             </li>
                             <li>
                                 <div class="poster">
-                                    <img src="images/index/07-33index_mov.jpg" alt="">
+                                    <img src="images/index/07-03index_mov.jpg" alt="">
                                     <div>7<span class="blind-i">위</span></div>
                                 </div>
                                 <strong>테스와 보낸 여름</strong>
@@ -461,37 +462,12 @@
                     <div class="bxslider" id="slider2">
                         <ul class="visual">
                             <li>
-                                <div>
-                                    <div class="poster">
-                                        <img src="images/index/01-08index_mov.jpg" alt="">
-                                        <div>11<span class="blind-i">위</span></div>
-                                    </div>
-                                    <strong>테넷</strong>
-                                    <p>예매율 40.4%&nbsp;&nbsp;평점 93%</p>
-                                    <div class="book">
-                                        <ul>
-                                            <li>
-                                                <a href="" role="button">일반예매</a>
-                                            </li>
-                                            <li>
-                                                <a href="" role="button">IMAX</a>
-                                            </li>
-                                            <li>
-                                                <a href="" role="button">4DMAX</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <a href="">상세보기</a>
-                                </div>
-                            </li>
-                            <li>
                                 <div class="poster">
-                                    <img src="images/index/02-23index_mov.jpg" alt="">
-                                    <div>12<span class="blind-i">위</span></div>
+                                    <img src="images/index/41-01index_mov.jpg" alt="">
+                                    <div>1<span class="blind-i">위</span></div>
                                 </div>
-                                <strong>더 렌탈-소리없는 감시자</strong>
-
-                                <p>예매율 8.5%&nbsp;&nbsp;평점 ?%</p>
+                                <strong>인셉션</strong>
+                                <p>예매율 0.0%&nbsp;&nbsp;평점 99%</p>
                                 <div class="book">
                                     <ul>
                                         <li>
@@ -506,96 +482,28 @@
                             </li>
                             <li>
                                 <div class="poster">
-                                    <img src="images/index/03-11index_mov.jpg" alt="">
+                                    <img src="images/index/24-02index_mov.jpg" alt="">
+                                    <div>2<span class="blind-i">위</span></div>
+                                </div>
+                                <strong>나를 구하지 마세요</strong>
+
+                                <p>예매율 0.3%&nbsp;&nbsp;평점 98%</p>
+                                <div class="book">
+                                    <ul>
+                                        <li>
+                                            <a href="" role="button">일반예매</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="">상세보기</a>
+                            </li>
+                            <li>
+                                <div class="poster">
+                                    <img src="images/index/07-03index_mov.jpg" alt="">
                                     <div>3<span class="blind-i">위</span></div>
                                 </div>
-                                <strong>오!문희</strong>
-
-                                <p>예매율 3.6%&nbsp;&nbsp;평점 90%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="">상세보기</a>
-                            </li>
-                            <li>
-                                <div class="poster">
-                                    <img src="images/index/04-00index_mov.jpg" alt="">
-                                    <div>4<span class="blind-i">위</span></div>
-                                </div>
-                                <strong>루브르박물관 기획특별전</strong>
-
-                                <p>예매율 2.5%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="">상세보기</a>
-                            </li>
-                            <li>
-                                <div class="poster">
-                                    <img src="images/index/05-00index_mov.jpg" alt="">
-                                    <div>5<span class="blind-i">위</span></div>
-                                </div>
-                                <strong>공포체험라디오 4DX</strong>
-
-                                <p>예매율 1.9%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="">상세보기</a>
-                            </li>
-                            <li>
-                                <div class="poster">
-                                    <img src="images/index/06-18index_mov.jpg" alt="">
-                                    <div>6<span class="blind-i">위</span></div>
-                                </div>
-                                <strong>뉴뮤턴트</strong>
-                                <p>예매율 1.5%&nbsp;&nbsp;평점 63%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <a href="">상세보기</a>
-                            </li>
-                            <li>
-                                <div class="poster">
-                                    <img src="images/index/07-33index_mov.jpg" alt="">
-                                    <div>7<span class="blind-i">위</span></div>
-                                </div>
                                 <strong>테스와 보낸 여름</strong>
-    
+
                                 <p>예매율 1.2%&nbsp;&nbsp;평점 97%</p>
                                 <div class="book">
                                     <ul>
@@ -608,12 +516,82 @@
                             </li>
                             <li>
                                 <div class="poster">
-                                    <img src="images/index/08-19index_mov.jpg" alt="">
+                                    <img src="images/index/16-04index_mov.jpg" alt="">
+                                    <div>4<span class="blind-i">위</span></div>
+                                </div>
+                                <strong>남매의 여름밤</strong>
+
+                                <p>예매율 0.6%&nbsp;&nbsp;평점 97%</p>
+                                <div class="book">
+                                    <ul>
+                                        <li>
+                                            <a href="" role="button">일반예매</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="">상세보기</a>
+                            </li>
+                            <li>
+                                <div class="poster">
+                                    <img src="images/index/11-05index_mov.jpg" alt="">
+                                    <div>5<span class="blind-i">위</span></div>
+                                </div>
+                                <strong>드라이브</strong>
+
+                                <p>예매율 0.7%&nbsp;&nbsp;평점 95%</p>
+                                <div class="book">
+                                    <ul>
+                                        <li>
+                                            <a href="" role="button">일반예매</a>
+                                        </li>
+                                        <li>
+                                            <a href="" role="button">IMAX</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="">상세보기</a>
+                            </li>
+                            <li>
+                                <div class="poster">
+                                    <img src="images/index/25-06index_mov.jpg" alt="">
+                                    <div>6<span class="blind-i">위</span></div>
+                                </div>
+                                <strong>극장판 짱구는 못말려</strong>
+                                <p>예매율 0.2%&nbsp;&nbsp;평점 95%</p>
+                                <div class="book">
+                                    <ul>
+                                        <li>
+                                            <a href="" role="button">일반예매</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="">상세보기</a>
+                            </li>
+                            <li>
+                                <div class="poster">
+                                    <img src="images/index/40-07index_mov.jpg" alt="">
+                                    <div>7<span class="blind-i">위</span></div>
+                                </div>
+                                <strong>메멘토</strong>
+
+                                <p>예매율 0.0%&nbsp;&nbsp;평점 95%</p>
+                                <div class="book">
+                                    <ul>
+                                        <li>
+                                            <a href="" role="button">일반예매</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="">상세보기</a>
+                            </li>
+                            <li>
+                                <div class="poster">
+                                    <img src="images/index/01-08index_mov.jpg" alt="">
                                     <div>8<span class="blind-i">위</span></div>
                                 </div>
-                                <strong>베로니카의 이중 생활</strong>
-    
-                                <p>예매율 1.1%&nbsp;&nbsp;평점 ?%</p>
+                                <strong>테넷</strong>
+
+                                <p>예매율 29.0%&nbsp;&nbsp;평점 93%</p>
                                 <div class="book">
                                     <ul>
                                         <li>
@@ -622,18 +600,21 @@
                                         <li>
                                             <a href="" role="button">IMAX</a>
                                         </li>
+                                        <li>
+                                            <a href="" role="button">4DMAX</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
                                 <div class="poster">
-                                    <img src="images/index/09-20index_mov.jpg" alt="">
+                                    <img src="images/index/17-09index_mov.jpg" alt="">
                                     <div>9<span class="blind-i">위</span></div>
                                 </div>
-                                <strong>세 가지 색-블루</strong>
-    
-                                <p>예매율 1.0%&nbsp;&nbsp;평점 ?%</p>
+                                <strong>다만 악에서 구하소서</strong>
+
+                                <p>예매율 0.5%&nbsp;&nbsp;평점 92%</p>
                                 <div class="book">
                                     <ul>
                                         <li>
@@ -648,19 +629,16 @@
                             </li>
                             <li>
                                 <div class="poster">
-                                    <img src="images/index/10-33index_mov.jpg" alt="">
+                                    <img src="images/index/29-10index_mov.jpg" alt="">
                                     <div>10<span class="blind-i">위</span></div>
                                 </div>
-                                <strong>세 가지 색-레드</strong>
-    
-                                <p>예매율 0.9%&nbsp;&nbsp;평점 ?%</p>
+                                <strong>하워즈 엔드</strong>
+
+                                <p>예매율 0.1%&nbsp;&nbsp;평점 91%</p>
                                 <div class="book">
                                     <ul>
                                         <li>
                                             <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -669,6 +647,7 @@
                         </ul>
                     </div>
                 </div>
+            </div>
         </section>
         <section class="section" id="event">
             <h2>이벤트</h2>
@@ -829,7 +808,7 @@
                                     </svg>
                                 </a>
                             </li>
-                            <li><a href="https://twitter.com/cj_cgv" traget="_blank" title="트위터 새창열기"><svg
+                            <li><a href="https://twitter.com/cj_cgv" target="_blank" title="트위터 새창열기"><svg
                                         aria-hidden="true" focusable="false" data-prefix="fab"
                                         data-icon="twitter-square"
                                         class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img"
@@ -856,6 +835,7 @@
                 </div>
             </footer>
         </div>
+    </div>
 </body>
 
 </html>

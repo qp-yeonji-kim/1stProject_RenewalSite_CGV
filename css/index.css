@@ -27,7 +27,7 @@
 #s_moviechart .tabpanel{display: none;}
 #s_moviechart .tabpanel.active{display: block;}
 
-/* #s_moviechart > slide */
+/* #s_moviechart .bxslider */
 #s_moviechart .bxslider{position: relative;width: 1085px;margin: 0 auto;}
 #s_moviechart .bxslider .visual > li > div{padding: 0 3.5px;}
 #s_moviechart .bxslider .bx-controls-direction a{position: absolute;top: 123px;width: 54px;height: 54px;border-radius: 50%;color: transparent;}
@@ -36,13 +36,13 @@
 #s_moviechart .bxslider .bx-controls-direction .bx-prev{left: -60px;background: url("../images/common/i-prev.png");}
 #s_moviechart .bxslider .bx-controls-direction .bx-next{right: -60px;background: url("../images/common/i-next.png");}
 
-#s_moviechart .tabpanel .swiper-slide > ul{width: 1070px;margin: 0 auto;}
+#s_moviechart .tabpanel .bxslider > ul{width: 1070px;margin: 0 auto;}
 #s_moviechart .tabpanel > ul::after{position: absolute;display: block;clear: both;}
-#s_moviechart .tabpanel .swiper-slide > ul > li{position: relative;margin-left: 5px;float: left;}
-#s_moviechart .tabpanel .swiper-slide > ul > li:first-child{margin: 0;}
+#s_moviechart .tabpanel .bxslider > ul > li{position: relative;margin-left: 5px;float: left;}
+#s_moviechart .tabpanel .bxslider > ul > li:first-child{margin: 0;}
 #s_moviechart .poster{position: relative;}
 #s_moviechart .poster img{border-bottom: 1px solid #fff;}
-#s_moviechart .poster div{position: absolute;left: 0;bottom: 0;width: 48px;height: 43px;background: #fff;border-top-right-radius: 60%;font-family: "CJBold";font-weight: 700;font-size: 25px;line-height: 43px;color: #000;z-index: 50;}
+#s_moviechart .poster div{position: absolute;left: 3.5px;bottom: 0;width: 48px;height: 43px;background: #fff;border-top-right-radius: 60%;font-family: "CJBold";font-weight: 700;font-size: 25px;line-height: 43px;color: #000;z-index: 50;}
 
 #s_moviechart strong{display: inline-block;margin-top: 15px;font-weight: 400;font-size: 18px;}
 #s_moviechart p{margin: 10px 0px;font-weight: 400;font-size: 14px;}
@@ -50,8 +50,8 @@
 #s_moviechart .book ul{margin: 0 auto;height: 27px;}
 #s_moviechart .book ul li{display: inline-block;width: 62px;height: 27px;line-height: 27px;font-size: 14px;border-radius: 4px;background: #ed1c24;margin-right: 5px;}
 #s_moviechart .book ul li a{display: inline-block;width: 100%;height: 100%;}
-.tabpanel .swiper-slide > ul > li > a{position: absolute;left: 0;top: 0;width: 210px;height: 295px;line-height: 299px;padding-bottom: 4px;font-weight: 700;font-size: 14px;color: transparent;text-decoration: none;background: transparent left top;}
-.tabpanel .swiper-slide > ul > li > a:hover, .tabpanel .swiper-slide > ul > li > a:focus{color: #fff;text-decoration: underline;background-color: rgba(0, 0, 0, 0.6);}
+.bxslider .visual > li > a{position: absolute;left: 3.5px;top: 0;width: 210px;height: 295px;line-height: 299px;padding-bottom: 4px;font-weight: 700;font-size: 14px;color: transparent;text-decoration: none;background: transparent left top;}
+.bxslider .visual > li > a:hover, .bxslider .visual > li > a:focus{color: #fff;text-decoration: underline;background-color: rgba(0, 0, 0, 0.6);}
 
 /* #event */
 h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
