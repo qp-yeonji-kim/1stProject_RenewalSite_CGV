@@ -12,9 +12,10 @@
 
 /* #cnt_now */
 #content{color: #fff;}
-#cnt_now #mov-1{background: url("../images/index/mov-1.jpg") top center;background-size: cover;}
-#cnt_now #mov-2{background: url("../images/index/mov-2.jpg") top center;background-size: cover;}
-#cnt_now #mov-3{background: url("../images/index/mov-3.jpg") top center;background-size: cover;}
+#cnt_now #wide_slider img{width: 100%;}
+#cnt_now #wide_slider img:nth-child(1){background: url("../images/index/mov-1.jpg") top center;background-size: cover;}
+#cnt_now #wide_slider img:nth-child(2){background: url("../images/index/mov-2.jpg") top center;background-size: cover;}
+#cnt_now #wide_slider img:nth-child(3){background: url("../images/index/mov-3.jpg") top center;background-size: cover;}
 
 /* #s_moviechart */
 #s_moviechart .tablist{width: 460px;margin: 0px auto 50px;}
@@ -81,30 +82,20 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #fp-nav.fp-right{right: 20px;}
 #fp-nav ul li, .fp-slidesNav ul li{margin: 62px;width: 10px;height: 10px;}
 
-/* 기본 */
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span{
-    height: 10px;
-    width: 10px;
-    margin: -2.5px 0 0 -2.5px;
-    border-radius: 100%;
- }
+/* 버튼 기본 */
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{height: 10px;width: 10px;margin: -2.5px 0 0 -2.5px;border-radius: 100%;}
 #fp-nav > ul > li > a{left: 5px;top: 5px;}
 #fp-nav > ul > li > a > span:nth-child(2){width: 6px;height: 6px;background: #bcbcbc;border: 2px solid #ffffff;}
 
-/* .active 타이틀 기본상태 */
+/* .active 타이틀 기본 */
 #fp-nav ul li .fp-tooltip.fp-right{right: -12.5px;top: 3.5px;}
 #fp-nav ul li .fp-tooltip{font-size: 12px;line-height: 20px;color: #fff;width: auto;height: 20px;padding: 0 18px 0 8px;background: #ed1c24;border-radius: 6px;}
 #fp-nav ul li a.active+.fp-tooltip{opacity: 1;}
 
-/* 호버, active 상태 */
+/* hover, active 상태 */
 #fp-nav ul li a.active span:nth-child(2),
 .fp-slidesNav ul li a.active span:nth-child(2),
 #fp-nav ul li:hover a.active span:nth-child(2),
 .fp-slidesNav ul li:hover a.active span:nth-child(2){width: 6px;height: 6px;margin: -2px 0 0 -2px;background: #ed1c24;}
 #fp-nav ul li:hover a span:nth-child(2),
-.fp-slidesNav ul li:hover a span:nth-child(2){
-    width: 6px;height: 6px;margin: -2px 0 0 -2px;background: #ed1c24;
-}
+.fp-slidesNav ul li:hover a span:nth-child(2){width: 6px;height: 6px;margin: -2px 0 0 -2px;background: #ed1c24;}
