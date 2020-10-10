@@ -12,11 +12,12 @@
 
 /* #cnt_now */
 #content{color: #fff;}
-#wide_poster{display: table;width: 1920px;height: auto;overflow: hidden;}
-#wide_poster li div{width: 100%;height: auto;}
-#wide_poster li div:nth-child(1){background: url("../images/index/mov-1.jpg") top center;background-size: cover;}
-#wide_poster li div:nth-child(2){background: url("../images/index/mov-2.jpg") top center;background-size: cover;}
-#wide_poster li div:nth-child(3){background: url("../images/index/mov-3.jpg") top center;background-size: cover;}
+#wide_slider, .wide_poster, .wide_poster li{height: 100vh;}
+.wide_poster li{background: no-repeat center top;background-size: cover;}
+.wide_poster li:nth-child(1){background-image: url("../images/index/mov-1.jpg");}
+.wide_poster li:nth-child(2){background-image: url("../images/index/mov-2.jpg");}
+.wide_poster li:nth-child(3){background-image: url("../images/index/mov-3.jpg");}
+
 
 /* #s_moviechart */
 #s_moviechart .tablist{width: 460px;margin: 0px auto 50px;}
