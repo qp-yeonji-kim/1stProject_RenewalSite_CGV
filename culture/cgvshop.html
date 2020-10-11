@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <title>CGV 샵 : 이벤트&컬쳐 : 영화 그 이상의 감동, CGV</title>
     <link rel="stylesheet" href="../css/common.css">
-    </title>
     <link rel="stylesheet" href="../css/cgvshop.css">
-    </title>
-    <link rel="stylesheet" href="">
     <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="../js/jquery.bxslider.min.js"></script>
     <script>
         //마우스 오버효과 스크립트 수정함
@@ -27,10 +25,9 @@
                     $(this).removeClass("on");
                 }
             });
-        });
         
+            
         //마우스 오버효과 스크립트 수정함
-        $(document).ready(function () {
             //mouseover시 일어나는 effect	
             var $snackEle = $(".grouppk > ul > li");
             $snackEle.attr('tabindex', 0);
@@ -44,9 +41,10 @@
                     $(this).removeClass("on");
                 }
             });
-        });
         
-        var wide_slider = $('#moviepass .pass').bxSlider({
+
+        //bx-slider
+            var moviepass = $('#moviepass .pass').bxSlider({
                 minSlides: 1,
                 maxSlides: 1,
                 moveSlides: 1,
@@ -55,6 +53,7 @@
                 prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
                 nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
             });
+        });
     </script>
 </head>
 
