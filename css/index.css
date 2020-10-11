@@ -87,7 +87,6 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{height: 10px;width: 10px;margin: -2.5px 0 0 -2.5px;border-radius: 100%;}
 #fp-nav > ul > li > a{left: 5px;top: 5px;}
 #fp-nav > ul > li > a > span:nth-child(2){width: 6px;height: 6px;background: #bcbcbc;border: 2px solid #ffffff;}
-#fp-nav ul li a span, .fp-slidesNav ul li a span{width: 10px;height: 10px;margin-left: -1px;bottom: -2px;}
 
 /* .active 타이틀 기본 */
 #fp-nav ul li .fp-tooltip.fp-right{right: -12.5px;top: 3.5px;}
