@@ -25,9 +25,9 @@
                     $(this).removeClass("on");
                 }
             });
-        
-            
-        //마우스 오버효과 스크립트 수정함
+
+
+            //마우스 오버효과 스크립트 수정함
             //mouseover시 일어나는 effect	
             var $snackEle = $(".grouppk > ul > li");
             $snackEle.attr('tabindex', 0);
@@ -41,19 +41,37 @@
                     $(this).removeClass("on");
                 }
             });
-        
 
-        //bx-slider
+
+            //bx-slider
             var moviepass = $('#moviepass .pass').bxSlider({
                 minSlides: 1,
                 maxSlides: 1,
                 moveSlides: 1,
                 slideWidth: 583,
                 shrinkItems: true,
+                captions: true,
+                pager: false,
                 prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
                 nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
             });
+
+            var moviepass = $('#card .giftcard').bxSlider({
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideWidth: 583,
+                slideHeight: 236,
+                shrinkItems: true,
+                pager: false,
+                prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
+                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
+            });
+
+
         });
+        //bx-slider 좌우버튼
+        $('.bxslider').bxSlider();
     </script>
 </head>
 
@@ -93,7 +111,7 @@
                     <div class="snack">
                         <strong>콤보</strong>
                         <a href="" class="more">
-                            <img src="" alt="더보기">
+                            <img src="../images/culture/gift/icon/more_black.png" alt="더보기">
                         </a>
                         <ul class="clearfix">
                             <li>
@@ -169,7 +187,7 @@
                     <div class="snack">
                         <strong>팝콘</strong>
                         <a href="" class="more">
-                            <img src="" alt="더보기">
+                            <img src="../images/culture/gift/icon/more_black.png" alt="더보기">
                         </a>
                         <ul class="clearfix">
                             <li>
@@ -239,7 +257,7 @@
                     <div class="snack">
                         <strong>음료</strong>
                         <a href="" class="more">
-                            <img src="" alt="더보기">
+                            <img src="../images/culture/gift/icon/more_black.png" alt="더보기">
                         </a>
                         <ul class="clearfix">
                             <li>
@@ -307,7 +325,7 @@
                     <div class="snack">
                         <strong>스낵</strong>
                         <a href="" class="more">
-                            <img src="" alt="더보기">
+                            <img src="../images/culture/gift/icon/more_black.png" alt="더보기">
                         </a>
                         <ul class="clearfix">
                             <li>
@@ -381,7 +399,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area grouppk">
+            <div class="area grouppk clearfix">
                 <h3 class="sub_tit tit1">패키지</h3>
                 <a href="">
                     <img src="" alt="더보기">
@@ -455,64 +473,65 @@
             </div>
         </div>
         <div class="area">
-            <h3 class="sub_tit tit2">영화 관람권</h3>
-            <a href=""><img src="" alt="더보기"></a>
-            <div id="moviepass" class="bxslider">
-                <ul class="pass">
-                    <li><img src="../images/culture/gift/moviepass/cgvmoviepass.jpg"
-                            alt="cgv 영화관람권"></li>
-                    <li><img src="../images/culture/gift/moviepass/cgvimax.jpg" alt="IMAX 영화관람권">
+            <div class="g p_r">
+                <h3 class="sub_tit tit2">영화 관람권</h3>
+                <a href=""><img src="../images/culture/gift/icon/more_white.png" alt="더보기"></a>
+            </div>
+            <div id="moviepass" class="bxslider p_r">
+                    <ul class="pass">
+                        <li>
+                            <img src="../images/culture/gift/moviepass/cgvmoviepass.jpg" alt="cgv 영화관람권">
+                        </li>
+                        <li>
+                            <img src="../images/culture/gift/moviepass/cgvimax.jpg" alt="IMAX 영화관람권">
+                        </li>
+                        <li>
+                            <img src="../images/culture/gift/moviepass/cgvgoldclass.jpg" alt="CGV 골드클래스">
+                        </li>
+                        <li>
+                            <img src="../images/culture/gift/moviepass/CGVcine-chef.jpg" alt="CGV 씨네드쉐프 관람권">
+                        </li>
+                        <li>
+                            <img src="../images/culture/gift/moviepass/CGV4DX.jpg" alt="CGV 4DX관람권">
+                        </li>
+                        <li>
+                            <img src="../images/culture/gift/moviepass/CGV3D.jpg" alt="CGV 3D관람권">
+                        </li>
+                    </ul>
+            </div>
+        </div>
+        <div class="area">
+            <div>
+                <h3 class="sub_tit tit2">기프트카드</h3>
+                <a href=""><img src="../images/culture/gift/icon/more_white.png" alt="더보기"></a>
+            </div>
+            <div class="bxslider" id="card">
+                <ul class="giftcard">
+                    <li><img src="../images/culture/gift/giftcard/inthepopcorn.jpg" alt="흔들리는 팝콘속에서 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/PACONNIEA.jpg" alt="PACONNIE A형 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/PACONNIEB.jpg" alt="PACONNIE B형 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/PACONNIEC.jpg" alt="PACONNIE C형 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/moonpopcorn.jpg" alt="달아달아 팝콘이 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/CHRISTMAWithCGV.jpg" alt="CHRISTMAS With CGV기프트카드">
                     </li>
-                    <li><img src="../images/culture/gift/moviepass/cgvgoldclass.jpg" alt="CGV 골드클래스">
+                    <li><img src="../images/culture/gift/giftcard/cherryblossom.jpg" alt="체리블라썸을타나봄 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/CGVgiftcardA.jpg"
+                            alt="CGV giftcard movieart A형 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/CGVgiftcardB.jpg"
+                            alt="CGV giftcard movieart B형 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/2020HAPPYNewYear.jpg" alt="2020 HAPPY New Year 기프트카드">
                     </li>
-                    <li><img src="../images/culture/gift/moviepass/CGVcine-chef.jpg"
-                            alt="CGV 씨네드쉐프 관람권"></li>
-                    <li><img src="../images/culture/gift/moviepass/CGV4DX.jpg" alt="CGV 4DX관람권"></li>
-                    <li><img src="../images/culture/gift/moviepass/CGV3D.jpg" alt="CGV 3D관람권">
+                    <li><img src="../images/culture/gift/giftcard/summerparty.jpg" alt="파코니의 썸머파티 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/picinic.jpg" alt="파코니피크닉 기프트카드">
                     </li>
+                    <li><img src="../images/culture/gift/giftcard/SNOWPACONNIE.jpg" alt="SNOW PACONNIE 기프트카드"></li>
+                    <li><img src="../images/culture/gift/giftcard/summerpaconnie.jpg" alt="파코니야 여름을부탁해 기프트카드"></li>
                 </ul>
             </div>
         </div>
-        <h3 class="sub_tit tit2">기프트카드</h3>
-        <a href=""><img src="" alt="더보기"></a>
-        <div class="swiper-container">
-            <ul class="swiper-wrapper">
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/inthepopcorn.jpg"
-                        alt="흔들리는 팝콘속에서 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE A.jpg"
-                        alt="PACONNIE A형 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE B.jpg"
-                        alt="PACONNIE B형 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE C.jpg"
-                        alt="PACONNIE C형 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/moon popcorn.jpg"
-                        alt="달아달아 팝콘이 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CHRISTMAS With CGV.jpg"
-                        alt="CHRISTMAS With CGV기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/cherryblossom.jpg"
-                        alt="체리블라썸을타나봄 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartA).jpg"
-                        alt="CGV giftcard movieart A형 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartB).jpg"
-                        alt="CGV giftcard movieart B형 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/2020 HAPPY New Year.jpg"
-                        alt="2020 HAPPY New Year 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerparty.jpg"
-                        alt="파코니의 썸머파티 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/picinic.jpg" alt="파코니피크닉 기프트카드">
-                </li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/SNOW PACONNIE.jpg"
-                        alt="SNOW PACONNIE 기프트카드"></li>
-                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerpaconnie.jpg"
-                        alt="파코니야 여름을부탁해 기프트카드"></li>
-            </ul>
         </div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        </div>
-        <!--   </section>
-        <section class="shop_tab area">
+    </section>
+    <!--   <section class="shop_tab area">
             <div id="giftTab">
                 <div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1">
                     <h3 class="sub_tit ">스낵</h3>

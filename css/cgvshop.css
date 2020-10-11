@@ -36,7 +36,7 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 #content strong{position: relative;color:#000;font-size: 30px;margin-left: 30px; line-height: 82px;}
 #content strong::after{content: "";position: absolute;top: 53px;left: -30px;height: 3px;width: 554px;background: #000;}
 /* 글씨 크기 바꾸고 싶으면(작은제목), 라인하이트 조절하고 after의 탑좌표도 조정해 주어야해욤 */
-
+.class a{display: inline-block;}
 /* snack style */
 #section .group{position: absolute;top: 1500px;left: 0;} 
 .snack{float: left;width: 554px;height: 552px;border-radius: 10px;background: #fff; margin-bottom: 82px;overflow: hidden;}
@@ -62,7 +62,7 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 .snack .over ul li a:hover, .snack .over ul li a:focus{background: #adadad;}
 
 /* package style */
-.grouppk{padding-top: 139px;}
+.grouppk{padding-top: 130px;margin-bottom: 140px;}
 .grouppk > ul >li{position: relative;float: left;width: 25%;text-align: center;}
 .grouppk .package > div{width: 281px;overflow: hidden; border-radius: 10px;}
 /* .grouppk > ul >li, .grouppk .package > div{} */
@@ -76,16 +76,19 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 /* img가 아닌 a에게 스타일을 주어야 합니다 */
 .package .over ul li a{display:block;background:#fff;width: 25px;height: 25px;border-radius: 50%;text-align: center;padding: 5px;}
 .package .over ul li a:hover, .snack .over ul li a:focus{background: #adadad;}
-
-#moviepass .pass{width: 583px;height: 236px;background-color: #fff; border-radius: 10px;}
+/* bx-silder */
+#moviepass{float: left;width: 50%;padding-bottom: 140px;background: url("../images/culture/gift/bg/bxbg.png")no-repeat center center;}
+#moviepass .bx-wrapper{display: inline-block;}
+#moviepass .pass img{}
+/* #moviepass div{width: 583px;height: 236px;border-radius: 10px; overflow: hidden;} */
+#moviepass img{padding-left: 89px;}
 /* #moviepass .pass li{width: 583px;height: 236px;background-color: #fff; border-radius: 10px;} */
-
-
-
-/* tabpanel */
-.tabpanel {display: none;}
-.tabpanel.active {display: block;}
-
+#moviepass .dtable > div{display: table-cell;vertical-align: middle;}
+#moviepass .bxslider .bx-controls-direction{display: inline-block;}
+.bx-has-controls-direction{{position: absolute;top: 87px;}
+/* #moviepass .bxslider .bx-controls-direction a{position: absolute;top: 87px;display: inline-block;background: pink;width: 30px;height: 64px;} */
+#moviepass .bxslider .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 87px;left: 24px;background: pink;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
+#moviepass .bxslider .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 87px;right: 24px;background: pink;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
 /* footer black.ver */
 #footer{color: #fff;background: #000;}
 .foot-top{margin-top: -80px;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
