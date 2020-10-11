@@ -10,7 +10,7 @@
     </title>
     <link rel="stylesheet" href="">
     <script src="../js/jquery-1.12.4.min.js"></script>
-    <script src="../js/tab.js"></script>
+    <script src="../js/jquery.bxslider.min.js"></script>
     <script>
         //마우스 오버효과 스크립트 수정함
         $(document).ready(function () {
@@ -28,6 +28,33 @@
                 }
             });
         });
+        
+        //마우스 오버효과 스크립트 수정함
+        $(document).ready(function () {
+            //mouseover시 일어나는 effect	
+            var $snackEle = $(".grouppk > ul > li");
+            $snackEle.attr('tabindex', 0);
+
+            //li에 포커스가 가거나 마우스가 진입할 경우 클래스 추가, 포커스와 마우스가 나가면 처음으로 되돌리기
+            $snackEle.on({
+                'focusin mouseenter': function () {
+                    $(this).addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).removeClass("on");
+                }
+            });
+        });
+        
+        var wide_slider = $('#moviepass .pass').bxSlider({
+                minSlides: 1,
+                maxSlides: 1,
+                moveSlides: 1,
+                slideWidth: 583,
+                shrinkItems: true,
+                prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
+                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
+            });
     </script>
 </head>
 
@@ -58,400 +85,434 @@
                 <li><a href="">플레이존</a></li>
                 <li><a href="">상품권 소개</a></li>
             </ul>
-            <div></div>
         </div>
-        <div class="area p_r">
-            <h3 class="sub_tit tit1 clearfix">스낵</h3>
-            <div class="group clearfix area">
-                <!-- 첫번째 .snack 마크업만 수정함 - 나머지도 하세요 -->
-                <div class="snack">
-                    <strong>콤보</strong>
-                    <ul class="clearfix">
-                        <li>
-                            <div class="longouter dtable">
-                                <!-- display: table -->
-                                <div>
-                                    <!-- display: table-cell;vertical-align: middle;로 이미지를 수직 가운데 위치시킨다 -->
-                                    <!-- 이미지, 파일, 폴더명에 공백은 허용되지 않아요 -->
-                                    <img src="../images/culture/gift/combo/CGV-combo.jpg" alt="CGV 콤보">
-                                </div>
-                            </div>
-                            <div class="over">
-                                <p class="name">CGV 콤보</p>
-                                <p class="price">9,000원</p>
-                                <ul>
-                                    <li>
-                                        <a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <div>
-                                    <img src="../images/culture/gift/combo/smallset.jpg" alt="스몰세트">
-                                </div>
-                            </div>
-                            <div class="over">
-                                <p class="name">스몰세트</p>
-                                <p class="price">6,500원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <div>
-                                    <img src="../images/culture/gift/combo/doublecombo.jpg" alt="더블콤보">
-                                </div>
-                            </div>
-                            <div class="over">
-                                <p class="name">더블콤보</p>
-                                <p class="price">12,000원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="snack">
-                    <strong>팝콘</strong>
-                    <ul>
-                        <li>
-                            <div class="longouter dtable">
-                                    <img src="../images/culture/gift/popcorn/gosoL.jpg" alt="고소팝콘L">
-                                    <div class="over">
-                                        <p class="name">고소팝콘(L)</p>
-                                        <p class="price">5,000원</p>
-                                        <ul>
-                                            <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                        alt="장바구니"></a></li>
-                                            <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                        alt="구매하기"></a></li>
-                                            <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                            </li>
-                                        </ul>
+        <div>
+            <div class="area p_r">
+                <h3 class="sub_tit tit1 clearfix">스낵</h3>
+                <div class="group clearfix area">
+                    <!-- 첫번째 .snack 마크업만 수정함 - 나머지도 하세요 -->
+                    <div class="snack">
+                        <strong>콤보</strong>
+                        <a href="" class="more">
+                            <img src="" alt="더보기">
+                        </a>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="longouter dtable">
+                                    <!-- display: table -->
+                                    <div>
+                                        <!-- display: table-cell;vertical-align: middle;로 이미지를 수직 가운데 위치시킨다 -->
+                                        <!-- 이미지, 파일, 폴더명에 공백은 허용되지 않아요 -->
+                                        <img src="../images/culture/gift/combo/CGV-combo.jpg" alt="CGV 콤보">
                                     </div>
                                 </div>
-                                <a href="" class="more">
-                                    <img src="" alt="더보기">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/popcorn/sweetL.jpg" alt="달콤팝콘L">
-                            </div>
-                            <div class="over">
-                                <p class="name">달콤팝콘(L)</p>
-                                <p class="price">6,000원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                                <a href="" class="more">
-                                    <img src="" alt="더보기">
-                                </a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/popcorn/doublecheeseL.jpg" alt="더블치즈팝콘L">
-                            </div>
-                            <div class="over">
-                                <p class="name">더블치즈팝콘(L)</p>
-                                <p class="price">6,000원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                                <a href="" class="more">
-                                    <img src="" alt="더보기">
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="snack">
-                    <strong>음료</strong>
-                    <ul>
-                        <li>
-                            <div class="longouter dtable">
-                                    <img src="../images/culture/gift/drink/drinkM.jpg" alt="탄산음료M">
+                                <div class="over">
+                                    <p class="name">CGV 콤보</p>
+                                    <p class="price">9,000원</p>
+                                    <ul>
+                                        <li>
+                                            <a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a>
+                                        </li>
+                                        <li>
+                                            <a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="over">
-                                <p class="name">탄산음료M</p>
-                                <p class="price">2,500원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/drink/americanoICE.jpg" alt="아메리카노ICE">
-                            </div>
-                            <div class="over">
-                                <p class="name">아메리카노(ICE)</p>
-                                <p class="price">4,000원</p>
-                                <ul>
-                                    <li><a href="장바구니"><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt=""></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/drink/americanoHOT.jpg" alt="아메리카노HOT">
-                            </div>
-                            <div class="over">
-                                <p class="name">아메리카노(HOT)</p>
-                                <p class="price">3,500원</p>
-                                <ul>
-                                    <li><a href="장바구니"><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt=""></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="snack">
-                    <strong>스낵</strong>
-                    <ul>
-                        <li>
-                            <div class="longouter dtable">
-                                    <img src="../images/culture/gift/snack/NACHO.jpg" alt="칠리치즈나쵸">
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/combo/smallset.jpg" alt="스몰세트">
+                                    </div>
                                 </div>
-                            <div class="over">
-                                <p class="name">칠리치즈나쵸</p>
-                                <p class="price">4,900원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/snack/CHILLHOTDOG.jpg" alt="칠리치즈핫도그">
-                            </div>
-                            <div class="over">
-                                <p class="name">칠리치즈핫도그</p>
-                                <p class="price">4,500원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                        <li>
-                            <div class="shortouter dtable">
-                                <img src="../images/culture/gift/snack/PLANEHOTDOG.jpg" alt="플레인핫도그">
-                            </div>
-                            <div class="over">
-                                <p class="name">플레인핫도그</p>
-                                <p class="price">4,000원</p>
-                                <ul>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
-                                                alt="장바구니"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
-                                                alt="구매하기"></a></li>
-                                    <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a>
-                                    </li>
-                                </ul>
-                            </div>
-                                    <a href="" class="more">
-                                        <img src="" alt="더보기">
-                                    </a>
-                        </li>
-                    </ul>
+                                <div class="over">
+                                    <p class="name">스몰세트</p>
+                                    <p class="price">6,500원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/combo/doublecombo.jpg" alt="더블콤보">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">더블콤보</p>
+                                    <p class="price">12,000원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="snack">
+                        <strong>팝콘</strong>
+                        <a href="" class="more">
+                            <img src="" alt="더보기">
+                        </a>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="longouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/popcorn/gosoL.jpg" alt="고소팝콘L">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">고소팝콘(L)</p>
+                                    <p class="price">5,000원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/popcorn/sweetL.jpg" alt="달콤팝콘L">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">달콤팝콘(L)</p>
+                                    <p class="price">6,000원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/popcorn/doublecheeseL.jpg" alt="더블치즈팝콘L">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">더블치즈팝콘(L)</p>
+                                    <p class="price">6,000원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기구매하기"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="snack">
+                        <strong>음료</strong>
+                        <a href="" class="more">
+                            <img src="" alt="더보기">
+                        </a>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="longouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/drink/drinkM.jpg" alt="탄산음료M">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">탄산음료M</p>
+                                    <p class="price">2,500원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/drink/americanoICE.jpg" alt="아메리카노ICE">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">아메리카노(ICE)</p>
+                                    <p class="price">4,000원</p>
+                                    <ul>
+                                        <li><a href="장바구니"><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt=""></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/drink/americanoHOT.jpg" alt="아메리카노HOT">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">아메리카노(HOT)</p>
+                                    <p class="price">3,500원</p>
+                                    <ul>
+                                        <li><a href="장바구니"><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt=""></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a></li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="snack">
+                        <strong>스낵</strong>
+                        <a href="" class="more">
+                            <img src="" alt="더보기">
+                        </a>
+                        <ul class="clearfix">
+                            <li>
+                                <div class="longouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/snack/NACHO.jpg" alt="칠리치즈나쵸">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">칠리치즈나쵸</p>
+                                    <p class="price">4,900원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/snack/CHILLHOTDOG.jpg" alt="칠리치즈핫도그">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">칠리치즈핫도그</p>
+                                    <p class="price">4,500원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="shortouter dtable">
+                                    <div>
+                                        <img src="../images/culture/gift/snack/PLANEHOTDOG.jpg" alt="플레인핫도그">
+                                    </div>
+                                </div>
+                                <div class="over">
+                                    <p class="name">플레인핫도그</p>
+                                    <p class="price">4,000원</p>
+                                    <ul>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png"
+                                                    alt="장바구니"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png"
+                                                    alt="구매하기"></a>
+                                        </li>
+                                        <li><a href=""><img src="../images/culture/gift/icon/giftbox.png"
+                                                    alt="선물하기"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <h3 class="sub_tit tit1">패키지</h3>
-            <a href=""><img src="" alt="더보기"></a>
-            <ul>
-                <li>
-                    <img src="../images/culture/gift/package/DOUBLEPACKAGE.jpg" alt="더블패키지">
-                    <div class="over">
-                        <p class="name">더블패키지</p>
-                        <p class="price">25,000원</p>
-                        <ul>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <img src="../images/culture/gift/package/BIRTHDAYPACKAGE.jpg" alt="생일축하 패키지">
-                    <div class="over">
-                        <p class="name">생일축하 패키지</p>
-                        <p class="price">15,000원</p>
-                        <ul>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <img src="../images/culture/gift/package/THANKSGIFTS.jpg" alt="감사선물 패키지">
-                    <div class="over">
-                        <p class="name">감사선물 패키지</p>
-                        <p class="price">45,000원</p>
-                        <ul>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <img src="../images/culture/gift/package/alone.png" alt="혼자서 먹어주라">
-                    <div class="over">
-                        <p class="name">혼자서 먹어주라 패키지</p>
-                        <p class="price">15,000원</p>
-                        <ul>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a></li>
-                            <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
+            <div class="area grouppk">
+                <h3 class="sub_tit tit1">패키지</h3>
+                <a href="">
+                    <img src="" alt="더보기">
+                </a>
+                <ul>
+                    <li class="package">
+                        <div>
+                            <img src="../images/culture/gift/package/THANKSGIFTS.jpg" alt="더블패키지">
+                        </div>
+                        <div class="over">
+                            <p class="name">더블패키지</p>
+                            <p class="price">25,000원</p>
+                            <ul>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="package">
+                        <div>
+                            <img src="../images/culture/gift/package/BIRTHDAYPACKAGE.jpg" alt="생일축하 패키지">
+                        </div>
+                        <div class="over">
+                            <p class="name">생일축하 패키지</p>
+                            <p class="price">15,000원</p>
+                            <ul>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="package">
+                        <div>
+                            <img src="../images/culture/gift/package/DOUBLEPACKAGE.jpg" alt="감사선물 패키지">
+                        </div>
+                        <div class="over">
+                            <p class="name">감사선물 패키지</p>
+                            <p class="price">45,000원</p>
+                            <ul>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="package">
+                        <div>
+                            <img src="../images/culture/gift/package/alone.jpg" alt="혼자서 먹어주라">
+                        </div>
+                        <div class="over">
+                            <p class="name">혼자서 먹어주라 패키지</p>
+                            <p class="price">15,000원</p>
+                            <ul>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping-cart.png" alt="장바구니"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/shopping bag.png" alt="구매하기"></a>
+                                </li>
+                                <li><a href=""><img src="../images/culture/gift/icon/giftbox.png" alt="선물하기"></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="area">
             <h3 class="sub_tit tit2">영화 관람권</h3>
             <a href=""><img src="" alt="더보기"></a>
-            <div class="swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/cgv moviepass.jpg.png"
+            <div id="moviepass" class="bxslider">
+                <ul class="pass">
+                    <li><img src="../images/culture/gift/moviepass/cgvmoviepass.jpg"
                             alt="cgv 영화관람권"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/cgv imax.jpg" alt="IMAX 영화관람권">
+                    <li><img src="../images/culture/gift/moviepass/cgvimax.jpg" alt="IMAX 영화관람권">
                     </li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/cgv goldclass.jpg"
-                            alt="CGV 골드클래스"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/CGV cine-chef.jpg"
+                    <li><img src="../images/culture/gift/moviepass/cgvgoldclass.jpg" alt="CGV 골드클래스">
+                    </li>
+                    <li><img src="../images/culture/gift/moviepass/CGVcine-chef.jpg"
                             alt="CGV 씨네드쉐프 관람권"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/CGV 4DX.jpg" alt="CGV 4DX관람권">
-                    </li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/moviepass/CGV 3D.jpg" alt="CGV 3D관람권">
+                    <li><img src="../images/culture/gift/moviepass/CGV4DX.jpg" alt="CGV 4DX관람권"></li>
+                    <li><img src="../images/culture/gift/moviepass/CGV3D.jpg" alt="CGV 3D관람권">
                     </li>
                 </ul>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
-            <h3 class="sub_tit tit2">기프트카드</h3>
-            <a href=""><img src="" alt="더보기"></a>
-            <div class="swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/inthepopcorn.jpg"
-                            alt="흔들리는 팝콘속에서 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE A.jpg"
-                            alt="PACONNIE A형 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE B.jpg"
-                            alt="PACONNIE B형 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE C.jpg"
-                            alt="PACONNIE C형 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/moon popcorn.jpg"
-                            alt="달아달아 팝콘이 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CHRISTMAS With CGV.jpg"
-                            alt="CHRISTMAS With CGV기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/cherryblossom.jpg"
-                            alt="체리블라썸을타나봄 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartA).jpg"
-                            alt="CGV giftcard movieart A형 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartB).jpg"
-                            alt="CGV giftcard movieart B형 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/2020 HAPPY New Year.jpg"
-                            alt="2020 HAPPY New Year 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerparty.jpg"
-                            alt="파코니의 썸머파티 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/picinic.jpg" alt="파코니피크닉 기프트카드">
-                    </li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/SNOW PACONNIE.jpg"
-                            alt="SNOW PACONNIE 기프트카드"></li>
-                    <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerpaconnie.jpg"
-                            alt="파코니야 여름을부탁해 기프트카드"></li>
-                </ul>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            <!--   </section>
+        </div>
+        <h3 class="sub_tit tit2">기프트카드</h3>
+        <a href=""><img src="" alt="더보기"></a>
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/inthepopcorn.jpg"
+                        alt="흔들리는 팝콘속에서 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE A.jpg"
+                        alt="PACONNIE A형 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE B.jpg"
+                        alt="PACONNIE B형 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/PACONNIE C.jpg"
+                        alt="PACONNIE C형 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/moon popcorn.jpg"
+                        alt="달아달아 팝콘이 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CHRISTMAS With CGV.jpg"
+                        alt="CHRISTMAS With CGV기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/cherryblossom.jpg"
+                        alt="체리블라썸을타나봄 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartA).jpg"
+                        alt="CGV giftcard movieart A형 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/CGV giftcard(movieartB).jpg"
+                        alt="CGV giftcard movieart B형 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/2020 HAPPY New Year.jpg"
+                        alt="2020 HAPPY New Year 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerparty.jpg"
+                        alt="파코니의 썸머파티 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/picinic.jpg" alt="파코니피크닉 기프트카드">
+                </li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/SNOW PACONNIE.jpg"
+                        alt="SNOW PACONNIE 기프트카드"></li>
+                <li class="swiper-slide"><img src="../images/culture/gift/giftcard/summerpaconnie.jpg"
+                        alt="파코니야 여름을부탁해 기프트카드"></li>
+            </ul>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </div>
+        <!--   </section>
         <section class="shop_tab area">
             <div id="giftTab">
                 <div role="tabpanel" class="tabpanel" id="tabpanel1" aria-labelledby="tab1">
