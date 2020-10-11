@@ -29,10 +29,11 @@
                 maxSlides: 1,
                 moveSlides: 1,
                 slideWidth: 1920,
-                pager: true,
                 shrinkItems: true,
                 prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
-                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
+                nextText: '<span class="blind-b">다음 슬라이드 페이지</span>',
+                startText:'<span class="blind-b">슬라이드 재생</span>',
+                stopText:'<span class="blind-b">슬라이드 정지</span>'
             });
             var book = $('#slider1 .visual').bxSlider({
                 minSlides: 5,
@@ -251,13 +252,13 @@
             <h2 class="blind-b">CGV상영작</h2>
             <div class="bxslider" id="wide_slider">
                 <ul class="wide_poster">
-                    <li>
+                    <li class="poster1">
                         <span class="blind-i">테넷</span>
                     </li>
-                    <li>
+                    <li class="poster2">
                         <span class="blind-i">오!문희</span>
                     </li>
-                    <li>
+                    <li class="poster3">
                         <span class="blind-i">뉴뮤턴트</span>
                     </li>
                 </ul>
