@@ -73,7 +73,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 
 #header .main_menu{position: relative;}
 #header .main_menu > li{position: relative;float: left;margin-right: 45px;font-size: 18px;line-height: 70px;}
-#header .main_menu li ul{position: absolute;top: 67px;width: 550px;}
+#header .main_menu li ul{position: absolute;top: 64px;width: 550px;}
 #header .main_menu li ul li{float: left;margin-right: 40px;font-size: 16px;}
 
 /* 가상요소 - 붉은 점 */
