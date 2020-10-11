@@ -2,7 +2,7 @@
 
 #content{padding-top: 168px;}
 #chartTab h2{float: left;width: 189px;padding-bottom: 4px;font-family: JGothic;font-size: 30px;border-bottom: 2px solid black;}
-#chartTab .tablist{float: right;padding: 13px 0 4px 80px;font-family: JGothic;font-size: 17px;border-bottom: 2px solid black;}
+#chartTab .tablist{float: right;padding: 13px 0 4px 80px;font-family: JGothic;font-size: 17px;border-bottom: 2px solid black;cursor: pointer;}
 
 #chartTab .tablist > li{float: left;}
 #chartTab .tablist > li + li{margin-left: 38px;}
