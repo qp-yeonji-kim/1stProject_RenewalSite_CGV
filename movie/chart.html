@@ -4,15 +4,430 @@
 <head>
     <meta charset="UTF-8">
     <title>영화 그 이상의 감동, CGV</title>
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/chart.css">
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/common.js"></script>
-</script>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/chart.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/common.js"></script>
 </head>
 
 <body>
     <div id="skip">
         <a href="#content">본문 바로가기</a>
     </div>
-    
+    <div id="headerwrap">
+        <header id="header">
+            <div class="area p_r clearfix">
+                <h1 class="logo">
+                    <a href="../index.html"><img src="../images/common/cgv_logo.png" alt="CGV"></a>
+                </h1>
+                <nav class="nav" id="gnb">
+                    <span class="blind-b">중요메뉴</span>
+                    <ul class="main_menu">
+                        <li>
+                            <a href="chart.html">영화</a>
+                            <ul>
+                                <li><a href="chart.html">무비차트</a></li>
+                                <li><a href="">HD 트레일러</a></li>
+                                <li><a href="">무비파인더</a></li>
+                                <li><a href="">CGV아트하우스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">예매</a>
+                            <ul>
+                                <li><a href="">빠른예매</a></li>
+                                <li><a href="">상영시간표</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../theater/theater.html">극장</a>
+                            <ul>
+                                <li><a href="../theater/theater.html">CGV 극장</a></li>
+                                <li><a href="">특별관</a></li>
+                                <li><a href="">CLUB 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../culture/cgvshop.html">이벤트&amp컬쳐</a>
+                            <ul>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="../culture/cgvshop.html">CGV샵</a></li>
+                                <li><a href="">매거진</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">고객센터</a>
+                            <ul>
+                                <li><a href="">자주 찾는 질문</a></li>
+                                <li><a href="">CGV공지/뉴스</a></li>
+                                <li><a href="">문의하기</a></li>
+                                <li><a href="">서비스가이드</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="all_menu_btn" role="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <nav class="all_menu">
+                    <span class="blind-b">전체메뉴</span>
+                    <ul>
+                        <li>
+                            <strong>영화</strong>
+                            <ul>
+                                <li><a href="chart.html">무비차트</a></li>
+                                <li><a href="">HD 트레일러</a></li>
+                                <li><a href="">무비파인더</a></li>
+                                <li><a href="">CGV아트하우스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>예매</strong>
+                            <ul>
+                                <li><a href="">빠른예매</a></li>
+                                <li><a href="">상영시간표</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>극장</strong>
+                            <ul>
+                                <li><a href="../theater/theater.html">CGV 극장</a></li>
+                                <li><a href="">특별관</a></li>
+                                <li><a href="">CLUB 서비스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>이벤트&amp컬쳐</strong>
+                            <ul>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="../culture/cgvshop.html">CGV샵</a></li>
+                                <li><a href="">매거진</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>고객센터</strong>
+                            <ul>
+                                <li><a href="">자주 찾는 질문</a></li>
+                                <li><a href="">CGV공지/뉴스</a></li>
+                                <li><a href="">문의하기</a></li>
+                                <li><a href="">서비스가이드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>무비로그</strong>
+                            <ul>
+                                <li><a href="">위시리스트</a></li>
+                                <li><a href="">내가 본 영화</a></li>
+                                <li><a href="">무비다이어리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>MY CGV</strong>
+                            <ul>
+                                <li><a href="">예매내역/취소</a></li>
+                                <li><a href="">관람권/할인쿠폰 관리</a></li>
+                                <li><a href="">CJ ONE 포인트</a></li>
+                                <li><a href="">내가꾸민포토티켓</a></li>
+                                <li><a href="">기프트샵</a></li>
+                                <li><a href="">나의 정보</a></li>
+                                <li><a href="">나의 문의내역</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>회사소개</strong>
+                            <ul>
+                                <li><a href="">회사소개</a></li>
+                                <li><a href="">CGV소개</a></li>
+                                <li><a href="">투자정보</a></li>
+                                <li><a href="">채용정보</a></li>
+                                <li><a href="">사이버감사실</a></li>
+                                <li><a href="">광고 제휴문의</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>회원서비스</strong>
+                            <ul>
+                                <li><a href="">로그인</a></li>
+                                <li><a href="">회원가입</a></li>
+                                <li><a href="">CJ ONE 멤버십</a></li>
+                                <li><a href="">사이트맵</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>VIP LOUNGE</strong>
+                            <ul>
+                                <li><a href="">VIP이벤트</a></li>
+                                <li><a href="">VIP전용레터</a></li>
+                                <li><a href="">나의 VIP쿠폰</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>알뜰한영화관람법</strong>
+                            <ul>
+                                <li><a href="">할인카드</a></li>
+                                <li><a href="">기타 상품권 안내</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>ENGLISH TICKETING</strong>
+                            <ul>
+                                <li><a href="">ENGLISH TICKETING</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>CGV정책</strong>
+                            <ul>
+                                <li><a href="">이용약관</a></li>
+                                <li><a href="">편성기준</a></li>
+                                <li><a href="">개인정보취급방침</a></li>
+                                <li><a href="">법적고지</a></li>
+                                <li><a href="">이메일주소무단수집거부</a></li>
+                                <li><a href="">상생경영</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+    <section id="content" class="area">
+        <div id="chartTab">
+            <h2>무비차트</h2>
+            <ul role="tablist" class="tablist" aria-label="chart_list">
+                <li role="tab" class="tab first" id="reserve_list" aria-controls="book">예매율순</li>
+                <li role="tab" class="tab" id="mark_list" aria-controls="mark">평점순</li>
+                <li role="tab" class="tab" id="audience_list" aria-controls="audience">관람객순</li>
+                <li role="tab" class="tab last" id="scheduled_list" aria-controls="scheduled">상영예정작</li>
+            </ul>
+            <div role="tabpanel" class="tabpanel" id="reserve" aria-labelledby="reserve_list">
+                <ul class="movies">
+                    <li>
+                        <div class="poster">
+                            <a href="movie.info/detail.html"><img src="../images/chart/01-08mov.jpg" alt=""></a>
+                        </div>
+                        <strong>테넷</strong>
+                        <p>예매율 40.4%&nbsp;&nbsp;평점 93%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">4DMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/02-23mov.jpg" alt=""></a>
+                        </div>
+                        <strong>더 렌탈-소리없는 감시자</strong>
+                        <p>예매율 8.5%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/03-11mov.jpg" alt=""></a>
+                        </div>
+                        <strong>오!문희</strong>
+                        <p>예매율 3.6%&nbsp;&nbsp;평점 90%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/04-00mov.jpg" alt=""></a>
+                        </div>
+                        <strong>루브르박물관 기획특별전</strong>
+                        <p>예매율 2.5%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/05-00mov.jpg" alt=""></a>
+                        </div>
+                        <strong>공포체험라디오 4DX</strong>
+                        <p>예매율 1.9%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">4DX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/06-18mov.jpg" alt=""></a>
+                        </div>
+                        <strong>뉴뮤턴트</strong>
+                        <p>예매율 1.5%&nbsp;&nbsp;평점 63%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">4DMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/07-03mov.jpg" alt=""></a>
+                        </div>
+                        <strong>테스와 보낸 여름</strong>
+                        <p>예매율 1.2%&nbsp;&nbsp;평점 97%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/08-19mov.jpg" alt=""></a>
+                        </div>
+                        <strong>베로니카의 이중 생활</strong>
+                        <p>예매율 1.1%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/09-20mov.jpg" alt=""></a>
+                        </div>
+                        <strong>세 가지 색-블루</strong>
+                        <p>예매율 1.0%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="poster">
+                            <a href=""><img src="../images/chart/10-33mov.jpg" alt=""></a>
+                        </div>
+                        <strong>세 가지 색-레드</strong>
+                        <p>예매율 0.9%&nbsp;&nbsp;평점 ?%<br>
+                            2020.08.26 개봉</p>
+                        <div class="btn_book">
+                            <ul class="book">
+                                <li>
+                                    <a href="" role="button">일반예매</a>
+                                </li>
+                                <li>
+                                    <a href="" role="button">IMAX</a>
+                                </li>
+                            </ul>
+                            <a href="">
+                                상세보기
+                            </a>
+                        </div>
+                    </li>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="mark" aria-labelledby="mark_list">
+            </div>
+            <div role="tabpanel" class="tabpanel" id="audience" aria-labelledby="audience_list">
+            </div>
+            <div role="tabpanel" class="tabpanel" id="scheduled" aria-labelledby="scheduled_list">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

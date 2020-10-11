@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+#content{padding-top: 168px;}
+#chartTab h2{float: left;width: 189px;padding-bottom: 4px;font-family: JGothic;font-size: 30px;border-bottom: 2px solid black;}
+#chartTab .tablist{float: right;padding: 13px 0 4px 80px;font-family: JGothic;font-size: 17px;border-bottom: 2px solid black;}
+
+#chartTab .tablist > li{float: left;}
+#chartTab .tablist > li + li{margin-left: 38px;}
+
+#chartTab .tabpanel{clear: both;width: 1200px;padding-top: 134px}
+#chartTab #reserve .movies > li{position: relative;float: left;margin-bottom: 60px;}
+#chartTab #reserve .movies > li{margin-right: 57px;}
+#chartTab #reserve .movies > li:nth-child(4n){margin-right: 0;}
+/* #chartTab #reserve .movies > li > a{position: absolute;left: 0;top: 0;width: 252px;height: 355px;line-height: 359px;padding-bottom: 4px;text-align: center;font-weight: 700;font-size: 14px;background: transparent left top;color: transparent;text-decoration: none;} */
+
+#reserve .movies > li > strong{display: inline-block;margin-top: 10px;margin-left: 8px;font-family: "JGothic";font-size: 18px;font-weight: 400;}
+#reserve .movies > li > p{margin-left: 8px;font-size: 14px;} 
+
+#reserve .btn_book{text-align: center;}
+#reserve .btn_book .book{width: 252px;text-align: center;}
+#reserve .btn_book .book > li{display: inline-block;text-align: center;width: 70px;height: 30px;line-height: 34px;font-size: 15px;font-weight: 800;color: #fff;border-radius: 4px;background: #ed1c24;}
+
+/* hover, focus */
+#chartTab #reserve .movies > li > a:hover, #chartTab #reserve .movies > li > a:focus{color: #fff;text-decoration: underline;background-color: rgba(0, 0, 0, 0.6);}

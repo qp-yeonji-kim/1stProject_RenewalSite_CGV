@@ -19,7 +19,7 @@
                 sectionsColor: ['#000', '#292929', '#000', '#ed1c24', '#0f0f0f', '#fff'],
                 navigation: true,
                 navigationPosition: 'right',
-                navigationTooltips: ['CGV상영작', '무비차트', '이벤트', 'CGV SHOP', '매거진', 'footer'],
+                navigationTooltips: ['CGV상영작', '무비차트', '이벤트', 'CGV SHOP', '매거진', 'footer']
             });
             var wide_slider = $('#wide_slider .wide_poster').bxSlider({
                 auto: true,
@@ -40,7 +40,7 @@
                 moveSlides: 5,
                 slideWidth: 1085,
                 pager: false,
-                shrinkItems: true, //캐러셀은 전체 항목만 표시하고 maxSlides / minSlides를 기준으로 뷰포트에 맞게 이미지를 축소합니다.
+                shrinkItems: true,
                 prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
                 nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
             });
@@ -78,9 +78,9 @@
                     <span class="blind-b">중요메뉴</span>
                     <ul class="main_menu">
                         <li>
-                            <a href="">영화</a>
+                            <a href="movie/chart.html">영화</a>
                             <ul>
-                                <li><a href="">무비차트</a></li>
+                                <li><a href="movie/chart.html">무비차트</a></li>
                                 <li><a href="">HD 트레일러</a></li>
                                 <li><a href="">무비파인더</a></li>
                                 <li><a href="">CGV아트하우스</a></li>
@@ -131,7 +131,7 @@
                         <li>
                             <strong>영화</strong>
                             <ul>
-                                <li><a href="">무비차트</a></li>
+                                <li><a href="movie/chart.html">무비차트</a></li>
                                 <li><a href="">HD 트레일러</a></li>
                                 <li><a href="">무비파인더</a></li>
                                 <li><a href="">CGV아트하우스</a></li>
@@ -252,13 +252,13 @@
             <div class="bxslider" id="wide_slider">
                 <ul class="wide_poster">
                     <li>
-                        <div></div>
+                        <span class="blind-i">테넷</span>
                     </li>
                     <li>
-                        <div></div>
+                        <span class="blind-i">오!문희</span>
                     </li>
                     <li>
-                        <div></div>
+                        <span class="blind-i">뉴뮤턴트</span>
                     </li>
                 </ul>
             </div>
@@ -267,10 +267,10 @@
             <h2 class="blind-b">무비차트</h2>
             <div class="area">
                 <ul role="tablist" class="tablist" aria-label="영화순위">
-                    <li role="tab" class="tab first" id="ranking_book" aria-controls="book">예매순위</li>
+                    <li role="tab" class="tab first" id="ranking_book" aria-controls="reserve">예매순위</li>
                     <li role="tab" class="tab last" id="ranking_grade" aria-controls="grade">평점순위</li>
                 </ul>
-                <div role="tabpanel" class="tabpanel" id="book" aria-labelledby="ranking_book">
+                <div role="tabpanel" class="tabpanel" id="reserve" aria-labelledby="ranking_book">
                     <div class="bxslider" id="slider1">
                         <ul class="visual">
                             <li>
@@ -280,19 +280,17 @@
                                 </div>
                                 <strong>테넷</strong>
                                 <p>예매율 40.4%&nbsp;&nbsp;평점 93%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">4DMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -303,16 +301,14 @@
                                 <strong>더 렌탈-소리없는 감시자</strong>
 
                                 <p>예매율 8.5%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -323,16 +319,14 @@
                                 <strong>오!문희</strong>
 
                                 <p>예매율 3.6%&nbsp;&nbsp;평점 90%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -343,16 +337,14 @@
                                 <strong>루브르박물관 기획특별전</strong>
 
                                 <p>예매율 2.5%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -363,19 +355,17 @@
                                 <strong>공포체험라디오 4DX</strong>
 
                                 <p>예매율 1.9%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">4DX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -385,19 +375,17 @@
                                 </div>
                                 <strong>뉴뮤턴트</strong>
                                 <p>예매율 1.5%&nbsp;&nbsp;평점 63%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">4DMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -408,13 +396,11 @@
                                 <strong>테스와 보낸 여름</strong>
 
                                 <p>예매율 1.2%&nbsp;&nbsp;평점 97%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -425,16 +411,14 @@
                                 <strong>베로니카의 이중 생활</strong>
 
                                 <p>예매율 1.1%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -445,16 +429,14 @@
                                 <strong>세 가지 색-블루</strong>
 
                                 <p>예매율 1.0%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -465,16 +447,14 @@
                                 <strong>세 가지 색-레드</strong>
 
                                 <p>예매율 0.9%&nbsp;&nbsp;평점 ?%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                         </ul>
@@ -490,16 +470,14 @@
                                 </div>
                                 <strong>인셉션</strong>
                                 <p>예매율 0.0%&nbsp;&nbsp;평점 99%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -510,13 +488,11 @@
                                 <strong>나를 구하지 마세요</strong>
 
                                 <p>예매율 0.3%&nbsp;&nbsp;평점 98%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -527,13 +503,11 @@
                                 <strong>테스와 보낸 여름</strong>
 
                                 <p>예매율 1.2%&nbsp;&nbsp;평점 97%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -544,13 +518,11 @@
                                 <strong>남매의 여름밤</strong>
 
                                 <p>예매율 0.6%&nbsp;&nbsp;평점 97%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -561,16 +533,14 @@
                                 <strong>드라이브</strong>
 
                                 <p>예매율 0.7%&nbsp;&nbsp;평점 95%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -580,13 +550,11 @@
                                 </div>
                                 <strong>극장판 짱구는 못말려</strong>
                                 <p>예매율 0.2%&nbsp;&nbsp;평점 95%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -597,13 +565,11 @@
                                 <strong>메멘토</strong>
 
                                 <p>예매율 0.0%&nbsp;&nbsp;평점 95%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -614,19 +580,17 @@
                                 <strong>테넷</strong>
 
                                 <p>예매율 29.0%&nbsp;&nbsp;평점 93%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">4DMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">4DMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -637,16 +601,14 @@
                                 <strong>다만 악에서 구하소서</strong>
 
                                 <p>예매율 0.5%&nbsp;&nbsp;평점 92%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                        <li>
-                                            <a href="" role="button">IMAX</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                    <li>
+                                        <a href="" role="button">IMAX</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                             <li>
@@ -657,13 +619,11 @@
                                 <strong>하워즈 엔드</strong>
 
                                 <p>예매율 0.1%&nbsp;&nbsp;평점 91%</p>
-                                <div class="book">
-                                    <ul>
-                                        <li>
-                                            <a href="" role="button">일반예매</a>
-                                        </li>
-                                    </ul>
-                                </div>
+                                <ul class="book">
+                                    <li>
+                                        <a href="" role="button">일반예매</a>
+                                    </li>
+                                </ul>
                                 <a href="">상세보기</a>
                             </li>
                         </ul>
