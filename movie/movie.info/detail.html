@@ -252,7 +252,7 @@
                     <li role="tab" class="tab last" id="review_list" aria-controls="review">리뷰</li>
                 </ul>
                 <div role="tabpanel" class="tabpanel" id="keyinfo" aria-labelledby="keyinfo_list">
-                    <ul class="area1 .area">
+                    <ul class="area1 area">
                         <li class="describe">
                             감독연출이 훌륭하고<br>
                             몰입하여 보게 되는 영화
@@ -266,12 +266,68 @@
                             <strong>93%</strong>
                         </li>
                     </ul>
-                    <ul>
-                        <li>
-                            <figure>
-
-                            </figure>
+                    <ul class="area2 area" id="chart">
+                        <li class="sex">
+                          <strong>성별 예매 분포</strong>
+                          <ul>
+                              <div class="st p_r">
+                                    <li class="person p_r">
+                                      <div class="manper">
+                                          <img src="../../images/detail/icon/man.png" alt="남자">
+                                          <p>59%</p>
+                                      </div>
+                                    </li>
+                                  <li class="person p_r">
+                                      <div class="womanper">
+                                          <img src="../../images/detail/icon/woman.png" alt="여자">
+                                          <p> 41%</p>
+                                      </div>
+                                    </li>
+                                 </div>
+                          </ul>
                         </li>
+                        <li class="graph p_r">
+                            <strong>연령별 예매 분포</strong>
+                            <div class="ages">
+                                <img src="../../images/detail/icon/graph.png" alt="연령별 예매 분포 그래프">
+                                <p class="age1">10대<span class="blind-b"> 2.2%</span></p>
+                                <p class="age2">20대<span class="blind-b"> 35.9%</span></p>
+                                <p class="age3">30대<span class="blind-b"> 35.2%</span></p>
+                                <p class="age4">40대<span class="blind-b"> 17.1%</span></p>
+                                <p class="age5">50대<span class="blind-b"> 9.6%</span></p>
+                            </div>
+                        </li>
+                        <li class="charm">
+                            <strong>매력포인트</strong>
+                            <div class="pentagon p_r">
+                              <!-- 점수별 -->
+                              <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
+                              <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
+                              <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
+                              <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
+                              <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
+                      
+                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                              <svg>
+                                <polygon points="98,0 181,79 151,174 55,165 44,85" />
+                              </svg>
+                        </li>
+                        <li class="emotion">
+                            <strong>감정포인트</strong>
+                            <div class="pentagon p_r">
+                              <!-- 점수별 -->
+                              <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
+                              <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
+                              <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
+                              <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
+                              <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
+                      
+                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                              <svg>
+                                <polygon points="98,49 145,90 151,174 37,187 80,85" />
+                              </svg>
+                        </li>
+
                     </ul>
 
                 </div>
@@ -463,7 +519,7 @@
         </section>
     </section>
 
-    	<footer id="footer">
+    	 <footer id="footer">
 		<div class="foot-top">
 			<ul class="special_theater area">
 				<li><a href=""><img src="../../images/common/i1-gray4dx.png"alt="4DX"></a></li>

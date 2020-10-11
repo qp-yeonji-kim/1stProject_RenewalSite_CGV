@@ -2,11 +2,11 @@
 
 body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #header, #header.active::before{background-color:rgba(0, 0, 0, 1);}
-#cnt-d-main {position: relative;height: 808px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;}
-#detail_op {position: absolute;top:0;left: 50%;height: 808px;width: 50%;background: rgba(0, 0, 0, 0.5);}
+#cnt-d-main {position: relative;height: 950px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;background-size: cover;}
+#detail_op {position: absolute;top:0;left: 50%;height: 950px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 
 /* #cnt-d-main */
-#tt_g{ position: relative; float: left; width: 600px;box-sizing: border-box;}
+#tt_g{ position: relative; float: left; width: 600px;box-sizing: border-box;padding-top: 50px;}
 #title{padding-top: 111px;padding-left: 5%;}
 #title ,#sub1, #sub2{display: inline-block; }
 #title .Ellipse{display: inline-block;width: 45px;height: 45px;background: #3862eb;font-size: 21px;border-radius: 50%;text-align: center;line-height: 45px;margin-right: 15px;}
@@ -39,6 +39,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 .tabpanel{width: 100%; font-weight: 400;padding-top: 50px;}
 #keyinfo .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
 #keyinfo .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
+#keyinfo .area2{height: 380px;width: 100%;display: inline-block;box-sizing: border-box;margin-bottom: 20px;}
 #keyinfo li{float: left;vertical-align: middle;height: 202px;}
 #keyinfo .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
 #keyinfo .percent{width: 120px;height: 53px;text-align: center;}
@@ -51,6 +52,43 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #cnt-d-tab .tabpanel{display: none;}
 #cnt-d-tab .tabpanel.active{display: block;}
 
+/* #chart */
+#chart strong {display: inline-block;text-align: center; font-weight: 400;font-size: 20px;margin-bottom: 60px;width: 300px;}
+#chart ul > li{float: left;width: 300px;}
+#chart .sex{display: inline-block;width: 300px;height: 300px;}
+#chart .sex .st{width: 300px;height: 300px;}
+#chart .person{display: inline-block;height: 51px;padding-top: 10px;}
+#chart .person .manper, #chart .person .womanper{position: absolute;left: 62px;}
+#chart .person .manper{top: 60px;}
+#chart .person .womanper{top: 180px;}
+#chart .person p{line-height: 73px; margin-left: 30px;display: inline-block;}
+#chart .person .manper p{color:  #ed1c24; font-size: 36px; font-weight: 600;}
+#chart .person .womanper p{font-size: 28px;font-weight: 400;}
+#chart li:first-child div{display: inline-block;width: 300px;height: 50px;}
+#chart li:first-child div img{float: left; width: 51px;}
+#chart li:first-child div p{float: left;width: 200px;}
+
+#chart .ages{width: 300px;height: 300px;}
+#chart .ages p{position: absolute; top: 336px;}
+#chart .ages .age1{left: 15px;}
+#chart .ages .age2{left: 64px;}
+#chart .ages .age3{left: 112px;}
+#chart .ages .age4{left: 161px;}
+#chart .ages .age5{left: 213px;}
+#chart .ages img{padding-top: 50px;}
+/* 배경이미지 가로199, 세로189 */
+#chart .pentagon{width: 300px;height: 300px;padding: 55.5px 50.5px;box-sizing: border-box;background: url("../images/detail/icon/pentagon.gif") no-repeat center;}
+#chart .pentagon p{position: absolute;}
+#chart .pentagon .value1{top: 34px;left: 121px;}
+#chart .pentagon .value2{top: 123px;left: 253px;}
+#chart .pentagon .value3{top: 240px;left: 220px;}
+#chart .pentagon .value4{top: 240px;left: 17px;}
+#chart .pentagon .value5{top: 123px;left: 17px;}
+#chart .charm .pentagon svg{width: 199px;height: 189px;}
+#chart .charm .pentagon svg polygon{fill: rgba(255,0,0,.5);stroke: none;}
+
+#chart .emotion .pentagon svg{width: 199px;height: 189px;}
+#chart .emotion .pentagon svg polygon{fill: rgba(255,0,0,.5);stroke: none;}
 /* #stealcut*/
 #stealcut{height: 5300px;}
 
@@ -70,5 +108,5 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 
 /* blackfooter */
 #footer{color: #fff;background: #000;}
-.foot-top{margin-top: -80px;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
+.foot-top{border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
 .family > a, .family #familysite{background: #000;}
