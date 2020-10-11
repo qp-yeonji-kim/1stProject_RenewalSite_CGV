@@ -59,8 +59,7 @@ body{background: #000;}
 
 /* #trailerSlider */
 /* 메인 슬라이더 */
-#trailerSlider, #trailerSlider #bxslider li, #trailerSlider #bxslider li img{width: 1200px;}
-#trailerSlider{height: 830px;margin: 0 auto;border: 1px solid red;}
+#trailerSlider{width: 1200px;height: 830px;}
 
 /* 썸네일 슬라이더 */
 #trailerSlider #bxslider-pager img{width: 206px;}
