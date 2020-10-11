@@ -1,0 +1,8 @@
+[테넷]극찬 리뷰 스팟 - tenet_spot
+[테넷]최종 예고편 - tenet_last
+[테넷]추격 액션 예고편 - tenet_action
+[테넷]인버전 예고편 - tenet_inversion
+[테넷]시간 첩보 액션 예고편 - tenet_time
+[테넷]에이전트 예고편 - tenet_acent
+[테넷]새로운 예고편 - tenet_new
+[테넷]공식 예고편- tenet_offical

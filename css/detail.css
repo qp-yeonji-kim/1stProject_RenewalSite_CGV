@@ -89,8 +89,28 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 
 #chart .emotion .pentagon svg{width: 199px;height: 189px;}
 #chart .emotion .pentagon svg polygon{fill: rgba(255,0,0,.5);stroke: none;}
+/* #trailer */
+*{margin: 0;padding: 0;}
+body{background: #000;}
+
+.blind-b{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+
+/* #trailerSlider */
+/* 메인 슬라이더 */
+#trailerSlider{width: 1200px;height: 830px;}
+
+/* 썸네일 슬라이더 */
+#trailerSlider #bxslider-pager img{width: 206px;}
+#trailerSlider .bx-wrapper:nth-child(2){position: relative;width: 1030px;margin: 0 auto;}
+  /* 이전 , 다음 버튼*/
+#trailerSlider .bx-controls-direction a{position: absolute;top: 50%;transform: translateY(-50%);width: 11px;height: 23px;z-index: 100;}
+#trailerSlider .bx-controls-direction a.disabled{display: none;}/* 비활성화된 버튼 숨기기 */
+#trailerSlider .bx-controls-direction .bx-prev{left: -50px;background: url("../images/detail/btn_prev.png");}
+#trailerSlider .bx-controls-direction .bx-next{right: -50px;background: url("../images/detail/btn_next.png");}
+
 /* #stealcut*/
 #stealcut{height: 5300px;}
+#stealcut a img{display: inline-block;padding-bottom: 4px;}
 
 /* #review */
 #review ul{width: 1200px;height: 1000px;}
