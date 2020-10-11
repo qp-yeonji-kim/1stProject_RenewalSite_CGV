@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+#content{padding-top: 168px;}
+#chartTab h2{float: left;width: 189px;padding-bottom: 4px;font-family: JGothic;font-size: 30px;border-bottom: 2px solid black;}
+#chartTab .tablist{float: right;padding: 13px 0 4px 80px;font-family: JGothic;font-size: 17px;border-bottom: 2px solid black;}
+
+#chartTab .tablist > li{float: left;}
+#chartTab .tablist > li + li{margin-left: 38px;}
+#chartTab .tabpanel{clear: both;width: 1200px;padding-top: 134px}
+#chartTab #reserve ul > li{float: left;}
+#chartTab #reserve ul > li + li{margin-left: 57px;}
+
