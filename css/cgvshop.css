@@ -27,10 +27,10 @@ body{font-family: JGothic;background-color: #000;color: #fff;}
 /* 각 항목 별 margin-bottom */
 
 /* 제목 스타일 */
-h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: left;}
+h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: left;display: inline-block;}
 .tit1,.tit2{border-bottom: 2px solid #fff; padding-bottom: 9px;box-sizing: border-box;width: 200px;margin-bottom: 90px;}
 .tit1{width: 152px;}
-.tit2{width: 200px;}
+.tit2{width: 214px;}
 
 /* 작은제목스타일 */
 #content strong{position: relative;color:#000;font-size: 30px;margin-left: 30px; line-height: 82px;}
@@ -50,6 +50,7 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 .snack .shortouter{height: 235px;}
 .snack .dtable > div{display: table-cell;vertical-align: middle;}
 .snack .over{position: absolute;top: 0;left: 0;width: 100%;height: 100%;padding-top: 55px;background:rgba(0,0,0,.7);opacity: 0;transition: all 0.5s;}
+
 /* li에 오버하면 스크립트에서 li.on이 되어 보여진다 */
 .snack ul li.on .over{opacity: 1;}
 .snack .longouter+.over{padding-top: 155px;}
@@ -57,10 +58,12 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 .snack .over .price{font-size: 20px;margin: 10px 0 35px;}
 .snack .over ul li{display: inline-block;}
 .snack .over ul li+li{padding-left: 8px;}
+
 /* img가 아닌 a에게 스타일을 주어야 합니다 */
 .snack .over ul li a{display:block;background:#fff;width: 25px;height: 25px;border-radius: 50%;text-align: center;padding: 5px;}
 .snack .over ul li a:hover, .snack .over ul li a:focus{background: #adadad;}
 
+.snack .more_black{position: absolute; top: 32px;right: 23px;height: 17px;width: 18px;}
 /* package style */
 .grouppk{padding-top: 130px;margin-bottom: 140px;}
 .grouppk > ul >li{position: relative;float: left;width: 25%;text-align: center;}
@@ -73,23 +76,25 @@ h3{font-size: 24px;color: #fff;font-weight: 400;margin-left: 5px;text-align: lef
 .package .over .price{font-size: 18px;margin: 10px 0 20px;}
 .package .over ul li{display: inline-block;}
 .package .over ul li+li{padding-left: 8px;}
+
+.grouppk > .hh a{position: absolute;top: 4px;left: 144px;}
 /* img가 아닌 a에게 스타일을 주어야 합니다 */
 .package .over ul li a{display:block;background:#fff;width: 25px;height: 25px;border-radius: 50%;text-align: center;padding: 5px;}
 .package .over ul li a:hover, .snack .over ul li a:focus{background: #adadad;}
 /* bx-silder */
-#moviepass{float: left;width: 50%;padding-bottom: 140px;background: url("../images/culture/gift/bg/bxbg.png")no-repeat center center;}
-#moviepass .bx-wrapper{display: inline-block;}
-#moviepass .pass img{}
-/* #moviepass div{width: 583px;height: 236px;border-radius: 10px; overflow: hidden;} */
-#moviepass img{padding-left: 89px;}
-/* #moviepass .pass li{width: 583px;height: 236px;background-color: #fff; border-radius: 10px;} */
-#moviepass .dtable > div{display: table-cell;vertical-align: middle;}
-#moviepass .bxslider .bx-controls-direction{display: inline-block;}
-.bx-has-controls-direction{{position: absolute;top: 87px;}
-/* #moviepass .bxslider .bx-controls-direction a{position: absolute;top: 87px;display: inline-block;background: pink;width: 30px;height: 64px;} */
-#moviepass .bxslider .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 87px;left: 24px;background: pink;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
-#moviepass .bxslider .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 87px;right: 24px;background: pink;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
+.oo .ff{float: left;width: 50%}
+.oo .half a{ margin-right: 363px;}
+.oo .p_r > a{position: absolute; top: 4px;right: 0;}
+.half{width: 583px;}
+#moviepass{overflow: hidden;border-radius: 10px;background-color: #fff;width: 583px;height: 236px;}
+.ff:first-child .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 87px;left: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
+.ff:first-child .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 87px;right: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
+
+#card{overflow: hidden;border-radius: 10px;background-color: #fff;width: 583px;height: 236px;}
+.ff:nth-child(2) .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 213px;left: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
+.ff:nth-child(2) .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 213px;right: 35px;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
+
 /* footer black.ver */
-#footer{color: #fff;background: #000;}
-.foot-top{margin-top: -80px;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
+#footer{color: #fff;}
+.foot-top{margin-top: 700px;;border-bottom:1px solid #5e5e5e;border-top:1px solid #5e5e5e;}
 .family > a, .family #familysite{background: #000;}
