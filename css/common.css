@@ -55,7 +55,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #skip a:focus{left: 0;width: 100%;height: 33px;text-align: center;line-height: 33px;font-size: 16px;color: #ed1c24;background-color: #bcbcbc;}
 
 /* common class */
-.blind-i, .blind-b{width: 1px;height: 1px;overflow: hidden;border: 0px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%)}
+.blind-i, .blind-b{width: 1px;height: 1px;overflow: hidden;border: 0px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 .blind-i{margin-left: -1px;display: inline-block;}
 .blind-b{position: absolute;}
 .area{width: 1200px;margin: 0 auto;}
