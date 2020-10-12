@@ -108,8 +108,9 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #stealcut a img{display: inline-block;padding-bottom: 4px;}
 
 /* #review */
-#review ul{width: 1200px;height: 1000px;}
+#review ul{width: 1200px;height: 850px;}
 #review ul li{position: relative;float: left;width: 600px;height: 154px;margin-bottom: 10px;box-sizing: border-box;}
+
 #review .reviewer{display: inline-block;margin: 10px 40px 0 50px;height: 154px;vertical-align: top;font-family: "CJBold";font-weight: 700;font-size: 10px;color: #e097ff;}
 #review .reviewer span{position: absolute;bottom: 50px;left: 34px;}
 
@@ -120,12 +121,16 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #review .review_cnt span{color: #aaaaaa;font-size: 15px;float: right;}
 #review .review_cnt p{font-size: 18px;height: 130px;}
 
-#review .paging{width: 620px;margin: 0 auto;}
-#review .paging li{font-family: NtSansKR;font-size: 18px;width: auto;height: auto;}
-#review .paging li a{float: left;padding-bottom: 2px;border-bottom: 1px solid transparent;transition: all 0.2s;}
-#review .paging li a:hover, #review .paging li a:focus, #review .paging li:nth-child(1){color: #ed1c24;border-bottom: 1px solid #ed1c24;}
-#review .paging li + li{margin-left: 28px;}
-
+#review .paging{width: 620px;height: 23px;margin: 0 auto;}
+#review .paging li{float: left;font-family: NtSansKR;font-size: 18px;width: auto;height: auto;}
+#review .paging li + li{margin-left: 30px;}
+#review .paging li:nth-child(2){margin-left: 0;}
+#review .paging li a{padding-bottom: 2px;border-bottom: 1px solid transparent;transition: all 0.2s;}
+#review .paging li a:hover, #review .paging li a:focus, #review .paging li:nth-child(2) a{color: #ed1c24;border-bottom: 1px solid #ed1c24;}
+#review .paging li:first-child, #review .paging li:last-child{width: 10px;height: 21px;margin-bottom: 0;margin-top: 3.5px;background-position: cover;}
+#review .paging li:first-child a, #review .paging li:last-child a{display: inline-block;width: 8px;height: 17px;}
+#review .paging li:first-child{margin-right: 46px;background: url("../images/detail/btn_prev_x.png") center;}
+#review .paging li:last-child{margin-left: 42px;background: url("../images/detail/btn_next.png") center;}
 
 /* blackfooter */
 #footer{color: #fff;background: #000;}
