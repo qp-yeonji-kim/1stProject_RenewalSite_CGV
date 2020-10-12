@@ -17,7 +17,7 @@
 #chartTab .tabpanel .movies > li > strong{display: inline-block;box-sizing: border-box;padding: 10px 8px 0px 8px;width: 252px;height: 28px;font-family: "JGothic";font-size: 18px;font-weight: 400;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
 #reserve .movies > li > p{margin-left: 8px;font-size: 14px;} 
 
-#reserve .btn_book > a{position: absolute;top: 0;left: 0;width: 252px;height: 359px;text-align: center;line-height: 359px;background-color: transparent;color: transparent;transition: all 0.5s;}
+#reserve .btn_book > a{position: absolute;top: 0;left: 0;width: 252px;height: 359px;font-family: "JGothic";font-size: 15px;font-weight: 700;text-align: center;line-height: 359px;background-color: transparent;color: transparent;transition: all 0.5s;}
 #reserve .btn_book .book{width: 252px;}
 #reserve .btn_book .book > li{display: inline-block;margin: 4px 4px 0 4px;text-align: center;width: 70px;height: 30px;line-height: 34px;font-size: 15px;font-weight: 800;color: #fff;border-radius: 4px;background: #ed1c24;}
 
