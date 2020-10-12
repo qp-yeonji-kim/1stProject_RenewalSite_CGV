@@ -3,10 +3,10 @@
 body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #header, #header.active::before{background-color:rgba(0, 0, 0, 1);}
 #cnt-d-main {position: relative;height: 950px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;background-size: cover;}
-#detail_op {position: absolute;top:0;left: 50%;height: 950px;width: 50%;background: rgba(0, 0, 0, 0.5);}
+#detail_op {position: absolute;top: 0;left: 50%;height: 950px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 
 /* #cnt-d-main */
-#tt_g{ position: relative; float: left; width: 600px;box-sizing: border-box;padding-top: 50px;}
+#tt_g{position: relative; float: left; width: 600px;box-sizing: border-box;padding-top: 50px;}
 #title{padding-top: 111px;padding-left: 5%;}
 #title ,#sub1, #sub2{display: inline-block; }
 #title .Ellipse{display: inline-block;width: 45px;height: 45px;background: #3862eb;font-size: 21px;border-radius: 50%;text-align: center;line-height: 45px;margin-right: 15px;}
@@ -22,7 +22,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #sub2 .scrollSt::-webkit-scrollbar{width: 10px;}
 #sub2 .scrollSt::-webkit-scrollbar-track{background-color: #808080;border-radius: 6px;}
 #sub2 .scrollSt::-webkit-scrollbar-thumb{border-radius: 6px;background-color: #fff;}
-#sub2 .scrollSt::-webkit-scrollbar-button { display: none; }
+#sub2 .scrollSt::-webkit-scrollbar-button {display: none;}
 #sub2 .scrollSt p{font-size: 14px;line-height: 22px;margin-right: 3%;}
 #scroll{overflow: auto;}
 
@@ -33,12 +33,12 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #cnt-d-tab .tablist{padding-top: 40px;margin-bottom: 53px;cursor: pointer;}
 #cnt-d-tab .tablist::after{content:"";position: absolute;top:89px;left: 0;height: 2px;background: #ed1c24;width: 100%;box-sizing: border-box;}
 #cnt-d-tab .tab{float: left;width: 25%;text-align: center;font-size: 24px;height: 50px;vertical-align: middle;line-height: 50px;}
-#cnt-d-tab .tab:hover, #cnt-d-tab li:focus{border-radius: 30px 0 0 0;background: #ed1c24;}
+#cnt-d-tab .tab:hover, #cnt-d-tab .tab:focus, #cnt-d-tab .tab.active{border-radius: 30px 0 0 0;background: #ed1c24;}
 
 /* 탭 주요정보 */
 .tabpanel{width: 100%; font-weight: 400;padding-top: 50px;}
 #keyinfo .area1{display: inline-block;margin-bottom: 53px;width: 100%;height: 202px;box-sizing: border-box;}
-#keyinfo .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: solid 1px #fbfbfb;background-color: #fbfbfb;width: 100%;}
+#keyinfo .area1::after{content: "";position: absolute;top:300px;left: 0;opacity: 0.2;border: 1px solid #fbfbfb;background-color: #fbfbfb;width: 100%;}
 #keyinfo .area2{height: 380px;width: 100%;display: inline-block;box-sizing: border-box;margin-bottom: 20px;}
 #keyinfo li{float: left;vertical-align: middle;height: 202px;}
 #keyinfo .describe{font-size: 44px;line-height: 58px; font-weight: 400;margin-left: 40px;margin-right: 335px;}
@@ -53,7 +53,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #cnt-d-tab .tabpanel.active{display: block;}
 
 /* #chart */
-#chart strong {display: inline-block;text-align: center; font-weight: 400;font-size: 20px;margin-bottom: 60px;width: 300px;}
+#chart strong {display: inline-block;text-align: center;font-weight: 400;font-size: 20px;margin-bottom: 60px;width: 300px;}
 #chart ul > li{float: left;width: 300px;}
 #chart .sex{display: inline-block;width: 300px;height: 300px;}
 #chart .sex .st{width: 300px;height: 300px;}
@@ -62,7 +62,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #chart .person .manper{top: 60px;}
 #chart .person .womanper{top: 180px;}
 #chart .person p{line-height: 73px; margin-left: 30px;display: inline-block;}
-#chart .person .manper p{color:  #ed1c24; font-size: 36px; font-weight: 600;}
+#chart .person .manper p{color:  #ed1c24; font-size: 36px;font-weight: 600;}
 #chart .person .womanper p{font-size: 28px;font-weight: 400;}
 #chart li:first-child div{display: inline-block;width: 300px;height: 50px;}
 #chart li:first-child div img{float: left; width: 51px;}
