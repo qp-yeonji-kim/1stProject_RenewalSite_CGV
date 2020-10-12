@@ -120,6 +120,12 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #review .review_cnt span{color: #aaaaaa;font-size: 15px;float: right;}
 #review .review_cnt p{font-size: 18px;height: 130px;}
 
+#review .paging{width: 620px;margin: 0 auto;}
+#review .paging li{font-family: NtSansKR;font-size: 18px;width: auto;height: auto;}
+#review .paging li a{float: left;padding-bottom: 2px;border-bottom: 1px solid transparent;transition: all 0.2s;}
+#review .paging li a:hover, #review .paging li a:focus, #review .paging li:nth-child(1){color: #ed1c24;border-bottom: 1px solid #ed1c24;}
+#review .paging li + li{margin-left: 28px;}
+
 
 /* blackfooter */
 #footer{color: #fff;background: #000;}
