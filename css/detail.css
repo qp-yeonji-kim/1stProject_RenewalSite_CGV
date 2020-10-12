@@ -108,7 +108,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #stealcut a img{display: inline-block;padding-bottom: 4px;}
 
 /* #review */
-#review ul{width: 1200px;height: 1000px;}
+#review ul{width: 1200px;height: 850px;}
 #review ul li{position: relative;float: left;width: 600px;height: 154px;margin-bottom: 10px;box-sizing: border-box;}
 
 #review .reviewer{display: inline-block;margin: 10px 40px 0 50px;height: 154px;vertical-align: top;font-family: "CJBold";font-weight: 700;font-size: 10px;color: #e097ff;}
