@@ -93,6 +93,8 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 /* #trailer */
 /* 메인 슬라이더 */
 #trailerSlider{width: 1200px;height: 830px;}
+#bxslider>li {margin-bottom: 50px;}
+#bxslider>li video{width: 1200px;}
 
 /* 썸네일 슬라이더 */
 #trailerSlider #bxslider-pager img{width: 206px;}

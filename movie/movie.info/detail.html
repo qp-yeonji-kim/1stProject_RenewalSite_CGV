@@ -59,6 +59,10 @@
                 if (slider.getSlideCount() - newIndex >= 4) slider.goToSlide(newIndex);
                 else slider.goToSlide(slider.getSlideCount() - 4);
             }
+
+            $('#trailer_list').on('click', function () {
+                $(window).trigger('resize');
+            });
         });
     </script>
 </head>
@@ -291,7 +295,7 @@
                 </div>
             </div>
         </div>
-        <section id="cnt-d-tab">
+        <div id="cnt-d-tab">
             <div id="detailTab" class="area">
                 <ul role="tablist" class="tablist" aria-label="detail_list">
                     <li role="tab" class="tab first" id="keyinfo_list" aria-controls="keyinfo">주요정보</li>
@@ -478,7 +482,8 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tabpanel" id="stealcut" aria-labelledby="stealcut_list">
-                    <section data-featherlight-gallery data-featherlight-filter="a">
+                    <div data-featherlight-gallery data-featherlight-filter="a">
+                        <h2 class=""></h2>
                         <a href="../../images/detail/stealcut1.jpg"><img
                                 src="../../images/detail/min-stealcut1.jpg" alt="테넷포스터1"></a>
                         <a href="../../images/detail/stealcut2.jpg"><img
@@ -525,7 +530,7 @@
                                 src="../../images/detail/min-stealcut22.jpg" alt="테넷스틸컷7"></a>
                         <a href="../../images/detail/stealcut23.jpg"><img
                                 src="../../images/detail/min-stealcut23.jpg" alt="테넷스틸컷8"></a>
-                    </section>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
                     <ul>
@@ -706,7 +711,7 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     	 <footer id="footer">
