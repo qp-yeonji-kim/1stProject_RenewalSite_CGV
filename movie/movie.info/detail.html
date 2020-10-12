@@ -59,6 +59,10 @@
                 if (slider.getSlideCount() - newIndex >= 4) slider.goToSlide(newIndex);
                 else slider.goToSlide(slider.getSlideCount() - 4);
             }
+
+            $('#trailer_list').on('click', function () {
+                $(window).trigger('resize');
+            });
         });
     </script>
 </head>
@@ -316,23 +320,23 @@
                     </ul>
                     <ul class="area2 area" id="chart">
                         <li class="sex">
-                          <strong>성별 예매 분포</strong>
-                          <ul>
-                              <div class="st p_r">
+                            <strong>성별 예매 분포</strong>
+                            <ul>
+                                <div class="st p_r">
                                     <li class="person p_r">
-                                      <div class="manper">
-                                          <img src="../../images/detail/icon/man.png" alt="남자">
-                                          <p>59%</p>
-                                      </div>
+                                        <div class="manper">
+                                            <img src="../../images/detail/icon/man.png" alt="남자">
+                                            <p>59%</p>
+                                        </div>
                                     </li>
-                                  <li class="person p_r">
-                                      <div class="womanper">
-                                          <img src="../../images/detail/icon/woman.png" alt="여자">
-                                          <p> 41%</p>
-                                      </div>
+                                    <li class="person p_r">
+                                        <div class="womanper">
+                                            <img src="../../images/detail/icon/woman.png" alt="여자">
+                                            <p> 41%</p>
+                                        </div>
                                     </li>
-                                 </div>
-                          </ul>
+                                </div>
+                            </ul>
                         </li>
                         <li class="graph p_r">
                             <strong>연령별 예매 분포</strong>
@@ -348,33 +352,33 @@
                         <li class="charm">
                             <strong>매력포인트</strong>
                             <div class="pentagon p_r">
-                              <!-- 점수별 -->
-                              <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
-                              <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
-                              <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
-                              <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
-                              <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
-                      
-                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                              <svg>
-                                <polygon points="98,0 181,79 151,174 55,165 44,85" />
-                              </svg>
-                              </div>
+                                <!-- 점수별 -->
+                                <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
+                                <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
+                                <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
+                                <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
+                                <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
+
+                                <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                                <svg>
+                                    <polygon points="98,0 181,79 151,174 55,165 44,85" />
+                                </svg>
+                            </div>
                         </li>
                         <li class="emotion">
                             <strong>감정포인트</strong>
                             <div class="pentagon p_r">
-                              <!-- 점수별 -->
-                              <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
-                              <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
-                              <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
-                              <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
-                              <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
-                      
-                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                              <svg>
-                                <polygon points="98,49 145,90 151,174 37,187 80,85" />
-                              </svg>
+                                <!-- 점수별 -->
+                                <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
+                                <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
+                                <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
+                                <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
+                                <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
+
+                                <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                                <svg>
+                                    <polygon points="98,49 145,90 151,174 37,187 80,85" />
+                                </svg>
                             </div>
                         </li>
                     </ul>
@@ -479,52 +483,52 @@
                 </div>
                 <div role="tabpanel" class="tabpanel" id="stealcut" aria-labelledby="stealcut_list">
                     <section data-featherlight-gallery data-featherlight-filter="a">
-                        <a href="../../images/detail/stealcut1.jpg"><img
-                                src="../../images/detail/min-stealcut1.jpg" alt="테넷포스터1"></a>
-                        <a href="../../images/detail/stealcut2.jpg"><img
-                                src="../../images/detail/min-stealcut2.jpg" alt="테넷포스터2"></a>
-                        <a href="../../images/detail/stealcut3.jpg"><img
-                                src="../../images/detail/min-stealcut3.jpg" alt="테넷포스터3"></a>
-                        <a href="../../images/detail/stealcut4.jpg"><img
-                                src="../../images/detail/min-stealcut4.jpg" alt="테넷포스터4"></a>
-                        <a href="../../images/detail/stealcut5.jpg"><img
-                                src="../../images/detail/min-stealcut5.jpg" alt="테넷포스터5"></a>
-                        <a href="../../images/detail/stealcut6.jpg"><img
-                                src="../../images/detail/min-stealcut6.jpg" alt="테넷포스터6"></a>
-                        <a href="../../images/detail/stealcut7.jpg"><img
-                                src="../../images/detail/min-stealcut7.jpg" alt="테넷포스터7"></a>
-                        <a href="../../images/detail/stealcut8.jpg"><img
-                                src="../../images/detail/min-stealcut8.jpg" alt="테넷포스터8"></a>
-                        <a href="../../images/detail/stealcut9.jpg"><img
-                                src="../../images/detail/min-stealcut9.jpg" alt="테넷포스터9"></a>
-                        <a href="../../images/detail/stealcut10.jpg"><img
-                                src="../../images/detail/min-stealcut10.jpg" alt="테넷포스터10"></a>
-                        <a href="../../images/detail/stealcut11.jpg"><img
-                                src="../../images/detail/min-stealcut11.jpg" alt="테넷포스터11"></a>
-                        <a href="../../images/detail/stealcut12.jpg"><img
-                                src="../../images/detail/min-stealcut12.jpg" alt="테넷포스터12"></a>
-                        <a href="../../images/detail/stealcut13.jpg"><img
-                                src="../../images/detail/min-stealcut13.jpg" alt="테넷포스터13"></a>
-                        <a href="../../images/detail/stealcut14.jpg"><img
-                                src="../../images/detail/min-stealcut14.jpg" alt="테넷포스터14"></a>
-                        <a href="../../images/detail/stealcut15.jpg"><img
-                                src="../../images/detail/min-stealcut15.jpg" alt="테넷포스터15"></a>
-                        <a href="../../images/detail/stealcut16.jpg"><img
-                                src="../../images/detail/min-stealcut16.jpg" alt="테넷스틸컷1"></a>
-                        <a href="../../images/detail/stealcut17.jpg"><img
-                                src="../../images/detail/min-stealcut17.jpg" alt="테넷스틸컷2"></a>
-                        <a href="../../images/detail/stealcut18.jpg"><img
-                                src="../../images/detail/min-stealcut18.jpg" alt="테넷스틸컷3"></a>
-                        <a href="../../images/detail/stealcut19.jpg"><img
-                                src="../../images/detail/min-stealcut19.jpg" alt="테넷스틸컷4"></a>
-                        <a href="../../images/detail/stealcut20.jpg"><img
-                                src="../../images/detail/min-stealcut20.jpg" alt="테넷스틸컷5"></a>
-                        <a href="../../images/detail/stealcut21.jpg"><img
-                                src="../../images/detail/min-stealcut21.jpg" alt="테넷스틸컷6"></a>
-                        <a href="../../images/detail/stealcut22.jpg"><img
-                                src="../../images/detail/min-stealcut22.jpg" alt="테넷스틸컷7"></a>
-                        <a href="../../images/detail/stealcut23.jpg"><img
-                                src="../../images/detail/min-stealcut23.jpg" alt="테넷스틸컷8"></a>
+                        <a href="../../images/detail/stealcut1.jpg"><img src="../../images/detail/min-stealcut1.jpg"
+                                alt="테넷포스터1"></a>
+                        <a href="../../images/detail/stealcut2.jpg"><img src="../../images/detail/min-stealcut2.jpg"
+                                alt="테넷포스터2"></a>
+                        <a href="../../images/detail/stealcut3.jpg"><img src="../../images/detail/min-stealcut3.jpg"
+                                alt="테넷포스터3"></a>
+                        <a href="../../images/detail/stealcut4.jpg"><img src="../../images/detail/min-stealcut4.jpg"
+                                alt="테넷포스터4"></a>
+                        <a href="../../images/detail/stealcut5.jpg"><img src="../../images/detail/min-stealcut5.jpg"
+                                alt="테넷포스터5"></a>
+                        <a href="../../images/detail/stealcut6.jpg"><img src="../../images/detail/min-stealcut6.jpg"
+                                alt="테넷포스터6"></a>
+                        <a href="../../images/detail/stealcut7.jpg"><img src="../../images/detail/min-stealcut7.jpg"
+                                alt="테넷포스터7"></a>
+                        <a href="../../images/detail/stealcut8.jpg"><img src="../../images/detail/min-stealcut8.jpg"
+                                alt="테넷포스터8"></a>
+                        <a href="../../images/detail/stealcut9.jpg"><img src="../../images/detail/min-stealcut9.jpg"
+                                alt="테넷포스터9"></a>
+                        <a href="../../images/detail/stealcut10.jpg"><img src="../../images/detail/min-stealcut10.jpg"
+                                alt="테넷포스터10"></a>
+                        <a href="../../images/detail/stealcut11.jpg"><img src="../../images/detail/min-stealcut11.jpg"
+                                alt="테넷포스터11"></a>
+                        <a href="../../images/detail/stealcut12.jpg"><img src="../../images/detail/min-stealcut12.jpg"
+                                alt="테넷포스터12"></a>
+                        <a href="../../images/detail/stealcut13.jpg"><img src="../../images/detail/min-stealcut13.jpg"
+                                alt="테넷포스터13"></a>
+                        <a href="../../images/detail/stealcut14.jpg"><img src="../../images/detail/min-stealcut14.jpg"
+                                alt="테넷포스터14"></a>
+                        <a href="../../images/detail/stealcut15.jpg"><img src="../../images/detail/min-stealcut15.jpg"
+                                alt="테넷포스터15"></a>
+                        <a href="../../images/detail/stealcut16.jpg"><img src="../../images/detail/min-stealcut16.jpg"
+                                alt="테넷스틸컷1"></a>
+                        <a href="../../images/detail/stealcut17.jpg"><img src="../../images/detail/min-stealcut17.jpg"
+                                alt="테넷스틸컷2"></a>
+                        <a href="../../images/detail/stealcut18.jpg"><img src="../../images/detail/min-stealcut18.jpg"
+                                alt="테넷스틸컷3"></a>
+                        <a href="../../images/detail/stealcut19.jpg"><img src="../../images/detail/min-stealcut19.jpg"
+                                alt="테넷스틸컷4"></a>
+                        <a href="../../images/detail/stealcut20.jpg"><img src="../../images/detail/min-stealcut20.jpg"
+                                alt="테넷스틸컷5"></a>
+                        <a href="../../images/detail/stealcut21.jpg"><img src="../../images/detail/min-stealcut21.jpg"
+                                alt="테넷스틸컷6"></a>
+                        <a href="../../images/detail/stealcut22.jpg"><img src="../../images/detail/min-stealcut22.jpg"
+                                alt="테넷스틸컷7"></a>
+                        <a href="../../images/detail/stealcut23.jpg"><img src="../../images/detail/min-stealcut23.jpg"
+                                alt="테넷스틸컷8"></a>
                     </section>
                 </div>
                 <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
@@ -713,144 +717,141 @@
         </section>
     </section>
 
-    	 <footer id="footer">
-		<div class="foot-top">
-			<ul class="special_theater area">
-				<li><a href=""><img src="../../images/common/i1-gray4dx.png" alt="4DX"></a></li>
-				<li><a href=""><img src="../../images/common/i2-imax.png" alt="IMAX"></a></li>
-				<li><a href=""><img src="../../images/common/i3-whitescreenx.png" alt="SCREEN X"></a></li>
-				<li><a href=""><img src="../../images/common/i4-spherex.png" alt="SPHERE X"></a></li>
-				<li><a href=""><img src="../../images/common/i5-whitetempur.png" alt="TEMPUR CINEMA"></a></li>
-				<li><a href=""><img src="../../images/common/i6-whitegoldclass.png" alt="GOLD CLASS"></a></li>
-				<li><a href=""><img src="../../images/common/i7-whitecinedechef.png" alt="CNIE de CHEF"></a></li>
-				<li><a href=""><img src="../../images/common/i8-private.png" alt="PRIVATE CINEMA"></a></li>
-				<li><a href=""><img src="../../images/common/i9-cinekids.png" alt="CINE KIDS"></a></li>
-				<li><a href=""><img src="../../images/common/i10-whitecineforet.png" alt="CINE &amp; FORET"></a></li>
-			</ul>
-		</div>
-		<div class="cgv-info area clearfix">
-			<ul class="big-info clearfix">
-				<li><a href="">회사소개</a></li>
-				<li><a href="">IR</a></li>
-				<li><a href="">채용정보</a></li>
-				<li><a href="">광고/프로모션문의</a></li>
-				<li><a href="">제휴문의</a></li>
-				<li><a href="">출점문의</a></li>
-				<li><a href="">이용약관</a></li>
-				<li><a href="">편성기준</a></li>
-				<li><a href="">개인정보처리방침</a></li>
-				<li><a href="">법적고지</a></li>
-				<li><a href="">이메일주소무단수집거부</a></li>
-				<li><a href="">상생경영</a></li>
-				<li><a href="">사이트맵</a></li>
-			</ul>
-			<address class="address">
-				<p><img src="../../images/common/cgv_logo_b.png" alt="cgv"></p>
-				<div>
-					<p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
-					<div>
-						<span>대표이사 : 최병환</span>
-						<span>사업자등록번호 : 104-81-45690</span>
-						<span>통신판매업신고번호 : 2017-서울용산-0662</span>
-						<a href="" role="button" target="_blank">사업자 정보 확인</a>
-					</div>
-					<span>호스팅사업자 : CJ올리브네트웍스</span>
-					<span>개인정보보호 책임자 : 이동현</span>
-					<span>대표이메일 : cjcgvmaster@cj.net</span>
-					<span>CGV고객센터 : 1544-1122</span>
-				</div>
-			</address>
-			<div class="foot-right">
-				<div class="family">
-					<a href="" class="fsite">계열사 바로가기</a>
-					<ul id="familysite">
-						<li>
-							<strong>CJ그룹</strong>
-							<ul>
-								<li><a href="">CJ주식회사</a></li>
-							</ul>
-						</li>
-						<li>
-							<strong>엔터테인먼트 &amp; 미디어</strong>
-							<ul>
-								<li><a href="">CJ ENM (E&amp;M)</a></li>
-								<li><a href="">CJ CGV</a></li>
-								<li><a href="">CJ파워캐스트</a></li>
-							</ul>
-						</li>
-						<li>
-							<strong>식품 &amp; 식품서비스</strong>
-							<ul>
-								<li><a href="">CJ제일제당 (식품)</a></li>
-								<li><a href="">CJ프레시웨이</a></li>
-								<li><a href="">CJ푸드빌</a></li>
-								<li><a href="">CJ엠디원</a></li>
-							</ul>
-						</li>
-						<li>
-							<strong>생명공학</strong>
-							<ul>
-								<li><a href="">CJ제일제당 (바이오)</a></li>
-							</ul>
-						</li>
-						<li>
-							<strong>신유통</strong>
-							<ul>
-								<li><a href="">CJ ENM (오쇼핑)</a></li>
-								<li><a href="">CJ대한통운</a></li>
-								<li><a href="">CJ텔레닉스</a></li>
-								<li><a href="">CJ올리브영</a></li>
-							</ul>
-						</li>
-						<li>
-							<strong>인프라</strong>
-							<ul>
-								<li><a href="">CJ대한통운 (건설)</a></li>
-								<li><a href="">CJ올리브네트웍스</a></li>
-							</ul>
-						</li>
-					</ul>
-					<a href="" target="_blank" class="btn_submit" title="새창열기">GO</a>
-				</div>
-				<p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
-				<ul class="sns_list">
-					<li><a href="https://www.facebook.com/CJCGV" target="_blank" title="페이스북 새창열기"><svg
-								aria-hidden="true" focusable="false" data-prefix="fab"
-								data-icon="facebook-square"
-								class="sns_i svg-inline--fa fa-facebook-square fa-w-14" role="img"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-								<path fill="currentColor"
-									d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
-								</path>
-							</svg>
-						</a>
-					</li>
-					<li><a href="https://twitter.com/cj_cgv" target="_blank" title="트위터 새창열기"><svg
-								aria-hidden="true" focusable="false" data-prefix="fab"
-								data-icon="twitter-square"
-								class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-								<path fill="currentColor"
-									d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
-								</path>
-							</svg>
-						</a>
-					</li>
-					<li><a href="https://www.instagram.com/cgv_korea/" target="_blank" title="인스타그램 새창열기"><svg
-								aria-hidden="true" focusable="false" data-prefix="fab"
-								data-icon="instagram-square"
-								class="sns_i svg-inline--fa fa-instagram-square fa-w-14" role="img"
-								xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-								<path fill="currentColor"
-									d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
-								</path>
-							</svg>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</footer>
+    <footer id="footer">
+        <div class="foot-top">
+            <ul class="special_theater area">
+                <li><a href=""><img src="../../images/common/i1-gray4dx.png" alt="4DX"></a></li>
+                <li><a href=""><img src="../../images/common/i2-imax.png" alt="IMAX"></a></li>
+                <li><a href=""><img src="../../images/common/i3-whitescreenx.png" alt="SCREEN X"></a></li>
+                <li><a href=""><img src="../../images/common/i4-spherex.png" alt="SPHERE X"></a></li>
+                <li><a href=""><img src="../../images/common/i5-whitetempur.png" alt="TEMPUR CINEMA"></a></li>
+                <li><a href=""><img src="../../images/common/i6-whitegoldclass.png" alt="GOLD CLASS"></a></li>
+                <li><a href=""><img src="../../images/common/i7-whitecinedechef.png" alt="CNIE de CHEF"></a></li>
+                <li><a href=""><img src="../../images/common/i8-private.png" alt="PRIVATE CINEMA"></a></li>
+                <li><a href=""><img src="../../images/common/i9-cinekids.png" alt="CINE KIDS"></a></li>
+                <li><a href=""><img src="../../images/common/i10-whitecineforet.png" alt="CINE &amp; FORET"></a></li>
+            </ul>
+        </div>
+        <div class="cgv-info area clearfix">
+            <ul class="big-info clearfix">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">IR</a></li>
+                <li><a href="">채용정보</a></li>
+                <li><a href="">광고/프로모션문의</a></li>
+                <li><a href="">제휴문의</a></li>
+                <li><a href="">출점문의</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">편성기준</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">법적고지</a></li>
+                <li><a href="">이메일주소무단수집거부</a></li>
+                <li><a href="">상생경영</a></li>
+                <li><a href="">사이트맵</a></li>
+            </ul>
+            <address class="address">
+                <p><img src="../../images/common/cgv_logo_b.png" alt="cgv"></p>
+                <div>
+                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+                    <div>
+                        <span>대표이사 : 최병환</span>
+                        <span>사업자등록번호 : 104-81-45690</span>
+                        <span>통신판매업신고번호 : 2017-서울용산-0662</span>
+                        <a href="" role="button" target="_blank">사업자 정보 확인</a>
+                    </div>
+                    <span>호스팅사업자 : CJ올리브네트웍스</span>
+                    <span>개인정보보호 책임자 : 이동현</span>
+                    <span>대표이메일 : cjcgvmaster@cj.net</span>
+                    <span>CGV고객센터 : 1544-1122</span>
+                </div>
+            </address>
+            <div class="foot-right">
+                <div class="family">
+                    <a href="" class="fsite">계열사 바로가기</a>
+                    <ul id="familysite">
+                        <li>
+                            <strong>CJ그룹</strong>
+                            <ul>
+                                <li><a href="">CJ주식회사</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>엔터테인먼트 &amp; 미디어</strong>
+                            <ul>
+                                <li><a href="">CJ ENM (E&amp;M)</a></li>
+                                <li><a href="">CJ CGV</a></li>
+                                <li><a href="">CJ파워캐스트</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>식품 &amp; 식품서비스</strong>
+                            <ul>
+                                <li><a href="">CJ제일제당 (식품)</a></li>
+                                <li><a href="">CJ프레시웨이</a></li>
+                                <li><a href="">CJ푸드빌</a></li>
+                                <li><a href="">CJ엠디원</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>생명공학</strong>
+                            <ul>
+                                <li><a href="">CJ제일제당 (바이오)</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>신유통</strong>
+                            <ul>
+                                <li><a href="">CJ ENM (오쇼핑)</a></li>
+                                <li><a href="">CJ대한통운</a></li>
+                                <li><a href="">CJ텔레닉스</a></li>
+                                <li><a href="">CJ올리브영</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>인프라</strong>
+                            <ul>
+                                <li><a href="">CJ대한통운 (건설)</a></li>
+                                <li><a href="">CJ올리브네트웍스</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="" target="_blank" class="btn_submit" title="새창열기">GO</a>
+                </div>
+                <p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
+                <ul class="sns_list">
+                    <li><a href="https://www.facebook.com/CJCGV" target="_blank" title="페이스북 새창열기"><svg
+                                aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square"
+                                class="sns_i svg-inline--fa fa-facebook-square fa-w-14" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://twitter.com/cj_cgv" target="_blank" title="트위터 새창열기"><svg aria-hidden="true"
+                                focusable="false" data-prefix="fab" data-icon="twitter-square"
+                                class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li><a href="https://www.instagram.com/cgv_korea/" target="_blank" title="인스타그램 새창열기"><svg
+                                aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square"
+                                class="sns_i svg-inline--fa fa-instagram-square fa-w-14" role="img"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path fill="currentColor"
+                                    d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -127,10 +127,10 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #review .paging li:nth-child(2){margin-left: 0;}
 #review .paging li a{padding-bottom: 2px;border-bottom: 1px solid transparent;transition: all 0.2s;}
 #review .paging li a:hover, #review .paging li a:focus, #review .paging li:nth-child(2) a{color: #ed1c24;border-bottom: 1px solid #ed1c24;}
-#review .paging li:first-child, #review .paging li:last-child{width: 10px;height: 21px;margin-bottom: 0;background-position: cover;}
-#review .paging li:first-child a, #review .paging li:last-child a{display: inline-block;width: 11px;height: 23px;}
-#review .paging li:first-child{margin-right: 38px;background: url("../images/detail/btn_prev_x.png") center;}
-#review .paging li:last-child{margin-left: 38px;background: url("../images/detail/btn_next.png") center;}
+#review .paging li:first-child, #review .paging li:last-child{width: 10px;height: 21px;margin-bottom: 0;margin-top: 3.5px;background-position: cover;}
+#review .paging li:first-child a, #review .paging li:last-child a{display: inline-block;width: 8px;height: 17px;}
+#review .paging li:first-child{margin-right: 46px;background: url("../images/detail/btn_prev_x.png") center;}
+#review .paging li:last-child{margin-left: 42px;background: url("../images/detail/btn_next.png") center;}
 
 /* blackfooter */
 #footer{color: #fff;background: #000;}
