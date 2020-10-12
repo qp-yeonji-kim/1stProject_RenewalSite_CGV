@@ -60,7 +60,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #chart .person{display: inline-block;height: 51px;padding-top: 10px;}
 #chart .person .manper, #chart .person .womanper{position: absolute;left: 62px;}
 #chart .person .manper{top: 60px;}
-#chart .person .womanper{top: 180px;}
+#chart .person .womanper{top: 125px;}
 #chart .person p{line-height: 73px; margin-left: 30px;display: inline-block;}
 #chart .person .manper p{color:  #ed1c24; font-size: 36px;font-weight: 600;}
 #chart .person .womanper p{font-size: 28px;font-weight: 400;}
@@ -93,6 +93,8 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 /* #trailer */
 /* 메인 슬라이더 */
 #trailerSlider{width: 1200px;height: 830px;}
+#bxslider>li {margin-bottom: 50px;}
+#bxslider>li video{width: 1200px;}
 
 /* 썸네일 슬라이더 */
 #trailerSlider #bxslider-pager img{width: 206px;}

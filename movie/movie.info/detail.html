@@ -295,7 +295,7 @@
                 </div>
             </div>
         </div>
-        <section id="cnt-d-tab">
+        <div id="cnt-d-tab">
             <div id="detailTab" class="area">
                 <ul role="tablist" class="tablist" aria-label="detail_list">
                     <li role="tab" class="tab first" id="keyinfo_list" aria-controls="keyinfo">주요정보</li>
@@ -320,23 +320,23 @@
                     </ul>
                     <ul class="area2 area" id="chart">
                         <li class="sex">
-                            <strong>성별 예매 분포</strong>
-                            <ul>
-                                <div class="st p_r">
-                                    <li class="person p_r">
-                                        <div class="manper">
-                                            <img src="../../images/detail/icon/man.png" alt="남자">
-                                            <p>59%</p>
-                                        </div>
-                                    </li>
-                                    <li class="person p_r">
-                                        <div class="womanper">
-                                            <img src="../../images/detail/icon/woman.png" alt="여자">
-                                            <p> 41%</p>
-                                        </div>
-                                    </li>
-                                </div>
-                            </ul>
+                          <strong>성별 예매 분포</strong>
+                          <div>
+                              <div class="st p_r">
+                                    <div class="person p_r">
+                                      <div class="manper">
+                                          <img src="../../images/detail/icon/man.png" alt="남자">
+                                          <p>59%</p>
+                                      </div>
+                                    </div>
+                                  <div class="person p_r">
+                                      <div class="womanper">
+                                          <img src="../../images/detail/icon/woman.png" alt="여자">
+                                          <p> 41%</p>
+                                      </div>
+                                    </div>
+                                 </div>
+                          </div>
                         </li>
                         <li class="graph p_r">
                             <strong>연령별 예매 분포</strong>
@@ -352,33 +352,33 @@
                         <li class="charm">
                             <strong>매력포인트</strong>
                             <div class="pentagon p_r">
-                                <!-- 점수별 -->
-                                <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
-                                <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
-                                <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
-                                <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
-                                <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
-
-                                <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                                <svg>
-                                    <polygon points="98,0 181,79 151,174 55,165 44,85" />
-                                </svg>
-                            </div>
+                              <!-- 점수별 -->
+                              <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
+                              <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
+                              <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
+                              <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
+                              <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
+                      
+                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                              <svg>
+                                <polygon points="98,0 181,79 151,174 55,165 44,85" />
+                              </svg>
+                              </div>
                         </li>
                         <li class="emotion">
                             <strong>감정포인트</strong>
                             <div class="pentagon p_r">
-                                <!-- 점수별 -->
-                                <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
-                                <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
-                                <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
-                                <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
-                                <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
-
-                                <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                                <svg>
-                                    <polygon points="98,49 145,90 151,174 37,187 80,85" />
-                                </svg>
+                              <!-- 점수별 -->
+                              <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
+                              <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
+                              <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
+                              <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
+                              <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
+                      
+                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+                              <svg>
+                                <polygon points="98,49 145,90 151,174 37,187 80,85" />
+                              </svg>
                             </div>
                         </li>
                     </ul>
@@ -482,7 +482,7 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tabpanel" id="stealcut" aria-labelledby="stealcut_list">
-                    <section data-featherlight-gallery data-featherlight-filter="a">
+                    <div data-featherlight-gallery data-featherlight-filter="a">
                         <a href="../../images/detail/stealcut1.jpg"><img src="../../images/detail/min-stealcut1.jpg"
                                 alt="우측을 보고 있다."></a>
                         <a href="../../images/detail/stealcut2.jpg"><img src="../../images/detail/min-stealcut2.jpg"
@@ -529,7 +529,7 @@
                                 alt="테넷스틸컷7"></a>
                         <a href="../../images/detail/stealcut23.jpg"><img src="../../images/detail/min-stealcut23.jpg"
                                 alt="테넷스틸컷8"></a>
-                    </section>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
                     <ul>
@@ -662,11 +662,7 @@
                             </div>
                         </li>
                     </ul>
-                    <ul class="paging">
-                        <li>
-                            <a href="" aria-hidden="true"></a>
-                            <span class="blind-i">이전 페이지</span>
-                        </li>
+                    <ul class="paging clearfix">
                         <li>
                             <a href="" aria-hidden="true">1</a>
                             <span class="blind-i">첫번째 페이지</span>
@@ -709,12 +705,12 @@
                         </li>
                         <li>
                             <a href="" aria-hidden="true"></a>
-                            <span class="blind-i">다음 페이지</span>
+                            <span class="blind-i">다음페이지</span>
                         </li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 
     <footer id="footer">
