@@ -52,7 +52,7 @@ header, nav, section, footer, address{display: block;}
 
 body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #skip a{position: fixed;left: -9999px;top: 0;width: 0;height: 0;z-index: 1000;}
-#skip a:focus{left: 0;width: 100%;height: 33px;text-align: center;line-height: 33px;font-size: 16px;color: #ed1c24;background-color: #bcbcbc;}
+#skip a:focus{left: 0;width: 100%;height: 33px;text-align: center;line-height: 33px;font-size: 16px;color: #ed1c24;background-color: #adadad;}
 
 /* common class */
 .blind-i, .blind-b{width: 1px;height: 1px;overflow: hidden;border: 0px;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
@@ -110,7 +110,6 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 #header .all_menu li > ul > li > a::after{content: "";position: absolute;right: -8px;top: -3px;}
 #header .all_menu li > ul > li > a:hover::after, #header .all_menu li > ul > li > a:focus::after{width: 4px;height: 4px;border-radius: 50%;background: #ed1c24;}
 
-
 /* footer */
 #fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;position: absolute;border: none;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 
@@ -124,6 +123,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .big-info li::after{content: "";position: absolute;right: -9px;top: 1px;width: 1px;height: 14px;background: #adadad;}
 .big-info li:last-child::after{display: none;}
 .big-info li a{text-align: center;}
+.big-info li a:hover, .big-info li a:focus{color: #5e5e5e;}
 
 .cgv-info{height: 70px;}
 .cgv-info .address{float: left;margin-top: 6px;width: 950px;height: 200px;font-size: 14px;line-height: 22px;}

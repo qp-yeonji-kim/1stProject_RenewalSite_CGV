@@ -98,5 +98,14 @@ $(document).ready(function () {
 
 			$btn.text(tgTxt).focus().next().stop().show();
 		});
+
+		//3) 확인버튼 눌러 페이지 이동시키기
+		$btnSubmit.on("click",function (e) {
+			e.preventDefault();
+			if ($btn.text()=="Family Site") return false;
+	
+			//window.open("열려질 새창의 경로명","팝업창 이름","옵션");
+			window.open(tgHref, "popup");
+		});
 	});
 });
