@@ -89,13 +89,8 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 
 #chart .emotion .pentagon svg{width: 199px;height: 189px;}
 #chart .emotion .pentagon svg polygon{fill: rgba(255,0,0,.5);stroke: none;}
+
 /* #trailer */
-*{margin: 0;padding: 0;}
-body{background: #000;}
-
-.blind-b{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
-
-/* #trailerSlider */
 /* 메인 슬라이더 */
 #trailerSlider{width: 1200px;height: 830px;}
 
