@@ -123,7 +123,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .big-info li::after{content: "";position: absolute;right: -9px;top: 1px;width: 1px;height: 14px;background: #adadad;}
 .big-info li:last-child::after{display: none;}
 .big-info li a{text-align: center;}
-.big-info li a:hover, .big-info li a:focus{color: #5e5e5e;}
+.big-info li a:hover, .big-info li a:focus{color: #5e5e5e;} 
 
 .cgv-info{height: 70px;}
 .cgv-info .address{float: left;margin-top: 6px;width: 950px;height: 200px;font-size: 14px;line-height: 22px;}
@@ -134,6 +134,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
 .address div a{display: inline-block;box-sizing: border-box;padding: 2px;border: 1px solid #adadad;border-radius: 4px;}
 .address > div > div{margin-bottom: 6px;}
+.address a:hover, .address a:focus{background: #5e5e5e;}
 
 /* foot-right */
 .foot-right{float: right;width: 250px;}
@@ -143,8 +144,10 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .family .fsite{width: 185px;height: 36px;margin-right: 10px;}
 .family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
 .family #familysite a{display: block;padding-left: 10px;}
+.family > .btn_submit:hover, .family > a.btn_submit:focus{background: #5e5e5e;}
 
 .foot-right .copyright{clear: both;padding-top: 10px;padding-left: 40px;font-size: 14px;}
 
 .sns_list{width: 90px;float: right;}
 .sns_list .sns_i{float: left;width: 27px;height: 27px;margin-top: 8px;}
+.sns_list a:hover .sns_i, .sns_list a:focus .sns_i{color: #5e5e5e;}

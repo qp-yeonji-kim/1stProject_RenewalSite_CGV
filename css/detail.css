@@ -80,6 +80,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #chart .pentagon{width: 300px;height: 300px;padding: 55.5px 50.5px;box-sizing: border-box;background: url("../images/detail/icon/pentagon.gif") no-repeat center;}
 #chart .pentagon p{position: absolute;}
 #chart .pentagon .value1{top: 34px;left: 121px;}
+#chart .emotion .pentagon .value1{top: 34px;left: 108px;}
 #chart .pentagon .value2{top: 123px;left: 253px;}
 #chart .pentagon .value3{top: 240px;left: 220px;}
 #chart .pentagon .value4{top: 240px;left: 17px;}
