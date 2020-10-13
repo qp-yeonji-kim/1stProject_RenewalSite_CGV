@@ -2,7 +2,7 @@
 
 body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #header, #header.active::before{background-color:rgba(0, 0, 0, 1);}
-#cnt-d-main {position: relative;height: 950px;background: url("../images/movie/tenet_wide.jpg") no-repeat;text-align: right;background-size: cover;}
+#cnt-d-main {position: relative;height: 950px;background: url("../images/detail/tenet_wide.jpg") no-repeat;text-align: right;background-size: cover;}
 #detail_op {position: absolute;top: 0;left: 50%;height: 950px;width: 50%;background: rgba(0, 0, 0, 0.5);}
 
 /* #cnt-d-main */
