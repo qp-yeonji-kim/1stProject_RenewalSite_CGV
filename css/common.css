@@ -141,9 +141,11 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .family{position: relative;width: 300px;height: 36px;margin: 0px auto;font-size: 16px;}
 .family > a, .family #familysite{border: 1px solid #adadad;background: #fff;padding: 3px 5px;line-height: 27px;box-sizing: border-box;border-radius: 4px;}
 .family > a{float: left;width: 36px;height: 36px;}
+.family span{display: block;cursor: pointer;}
 .family .fsite{width: 185px;height: 36px;margin-right: 10px;}
 .family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
 .family #familysite a{display: block;padding-left: 10px;}
+.family #familysite a:hover, .family #familysite a:focus{background: #5e5e5e;}
 .family > .btn_submit:hover, .family > a.btn_submit:focus{background: #5e5e5e;}
 
 .foot-right .copyright{clear: both;padding-top: 10px;padding-left: 40px;font-size: 14px;}
