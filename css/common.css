@@ -134,7 +134,7 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .address div span:nth-of-type(3)::after, .address span:last-child::after{display: none;}
 .address div a{display: inline-block;box-sizing: border-box;padding: 2px;border: 1px solid #adadad;border-radius: 4px;}
 .address > div > div{margin-bottom: 6px;}
-.address a:hover, .address a:focus{background: #5e5e5e;}
+.address a:hover, .address a:focus{background: #adadad;color: #fff;}
 
 /* foot-right */
 .foot-right{float: right;width: 250px;}
@@ -145,8 +145,8 @@ body{font-family: "NtSansKR";font-size: 16px;color: inherit;}
 .family .fsite{width: 185px;height: 36px;margin-right: 10px;}
 .family #familysite{display: none;position: absolute;bottom: 34px;left: 0;width: 185px;}
 .family #familysite a{display: block;padding-left: 10px;}
-.family #familysite a:hover, .family #familysite a:focus{background: #5e5e5e;}
-.family > .btn_submit:hover, .family > a.btn_submit:focus{background: #5e5e5e;}
+.family #familysite a:hover, .family #familysite a:focus{background: #adadad;color: #fff;}
+.family > .btn_submit:hover, .family > a.btn_submit:focus{background: #adadad;color: #fff;}
 
 .foot-right .copyright{clear: both;padding-top: 10px;padding-left: 40px;font-size: 14px;}
 
