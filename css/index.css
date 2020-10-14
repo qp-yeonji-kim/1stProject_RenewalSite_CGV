@@ -91,7 +91,7 @@ h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 .article a:hover, .article a:focus{text-decoration: underline;}
 
 /* #fp-nav */
-#fp-nav.fp-right{left: 95%;}
+#fp-nav.fp-right{left: 97%;}
 #fp-nav ul li, .fp-slidesNav ul li{margin: 0 62px 62px 0;width: 10px;height: 10px;}
 
 #fp-nav > ul > li > a{left: 5px;top: 5px;}
