@@ -63,6 +63,8 @@
 .bxslider .visual > li > a{position: absolute;left: 3.5px;top: 0;width: 210px;height: 295px;line-height: 299px;padding-bottom: 4px;font-weight: 700;font-size: 14px;color: transparent;text-decoration: none;background: transparent left top;transition: all 0.5s;}
 .bxslider .visual > li > a:hover, .bxslider .visual > li > a:focus{color: #fff;text-decoration: underline;background-color: rgba(0, 0, 0, 0.6);}
 
+#reserve .bx-viewport, #grade .bx-viewport{height: 394px !important;}
+
 /* #event */
 h2{font-family: "JGothic";font-size: 36px;width: 1200px;}
 #event h2{margin: 0 auto 72px;}

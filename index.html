@@ -57,11 +57,15 @@
 				nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
 			});
 
-			$('#s_moviechart #ranking_grade').on('click', function () {
-				setTimeout(function () {
+			$('#s_moviechart #ranking_grade').on('click', gradeReload);
+			$('#s_moviechart #ranking_grade').on('keydown', function (e) {
+				if (e.keyCode == 13 || e.keyCode == 32) gradeReload();
+			});
+			function gradeReload(){
+				setTimeout(function (){
 					grade.reloadSlider();
 				}, 10);
-			})
+			}
 		});
 	</script>
 </head>
