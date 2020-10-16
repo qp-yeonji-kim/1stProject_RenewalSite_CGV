@@ -62,9 +62,11 @@
             }
 
             $('#trailer_list').on('click', function () {
-                $(window).trigger('resize');
+                realSlider.reloadSlider();
+                realThumSlider.reloadSlider();
             });
         });
+        
     </script>
 </head>
 

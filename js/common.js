@@ -90,7 +90,7 @@ $(document).ready(function () {
 		});
 
 		//2) ul li a를 클릭하면 자신의 텍스트와 href를 변수에 담아 $btn에 글자를 강제로 바꾼다=> ul 태그 닫아주기
-		$family.find(">ul>li>a").on("click", function (e) {
+		$family.find("ul li a").on("click", function (e) {
 			e.preventDefault();
 			var tgTxt = $(this).text();
 			tgHref = $(this).attr("href");
