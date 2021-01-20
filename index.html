@@ -43,6 +43,7 @@
 				slideWidth: 1085,
 				pager: false,
 				shrinkItems: true,
+				infiniteLoop: false,
 				prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
 				nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
 			});
@@ -53,6 +54,7 @@
 				slideWidth: 1085,
 				pager: false,
 				shrinkItems: true,
+				infiniteLoop: false,
 				prevText: '<span class="blind-b">이전 슬라이드 페이지</span>',
 				nextText: '<span class="blind-b">다음 슬라이드 페이지</span>'
 			});
@@ -61,8 +63,9 @@
 			$('#s_moviechart #ranking_grade').on('keydown', function (e) {
 				if (e.keyCode == 13 || e.keyCode == 32) gradeReload();
 			});
-			function gradeReload(){
-				setTimeout(function (){
+
+			function gradeReload() {
+				setTimeout(function () {
 					grade.reloadSlider();
 				}, 10);
 			}
@@ -641,16 +644,16 @@
 			<h2>이벤트</h2>
 			<ul>
 				<li>
-					<a href=""><img src="images/index/evnet-1.jpg" alt="VIP 온라인 쿠폰"></a>
+					<a href=""><img src="images/index/event1.png" alt="VIP 온라인 쿠폰"></a>
 				</li>
 				<li>
-					<a href=""><img src="images/index/evnet-2.jpg" alt="군장병 온라인 할인오픈"></a>
+					<a href=""><img src="images/index/event2.png" alt="군장병 온라인 할인오픈"></a>
 				</li>
 				<li>
-					<a href=""><img src="images/index/evnet-3.jpg" alt="스마트 스토어 OPEN"></a>
+					<a href=""><img src="images/index/event3.png" alt="스마트 스토어 OPEN"></a>
 				</li>
 				<li>
-					<a href=""><img src="images/index/evnet-4.jpg" alt="포인트 반값 할인"></a>
+					<a href=""><img src="images/index/event4.png" alt="포인트 반값 할인"></a>
 				</li>
 			</ul>
 		</section>
