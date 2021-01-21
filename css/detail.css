@@ -106,9 +106,55 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #trailerSlider .bx-controls-direction .bx-prev{left: -50px;background: url("../images/detail/btn_prev.png");}
 #trailerSlider .bx-controls-direction .bx-next{right: -50px;background: url("../images/detail/btn_next.png");}
 
-/* #stealcut*/
-#stealcut{height: 5300px;}
-#stealcut a img{display: inline-block;padding-bottom: 4px;}
+/* #stealcut */
+#stealcut ul li{float: left;}
+#stealcut img{
+  cursor: pointer;
+}
+#dim, .md_cnt{position: fixed;z-index: 900;}
+#dim{left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);}
+
+#modal_stealcut{
+  /* 모달을 만들 땐 가로 길이를 꼭 정해줘야 한다는데..  */
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 0;
+  line-height: 0;
+}
+
+#modal_stealcut img{
+  display: block;
+  max-height: 100vh;
+  margin-bottom: -2px;
+}
+
+#modal_stealcut .prev_next{
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  font-size: 30px;
+  text-align: center;
+  color: #000;
+  background: rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+#modal_stealcut .prev{
+  left: -60px;
+}
+
+#modal_stealcut .next{
+  right: -60px;
+}
+
+#modal_stealcut .prev_next:focus, #modal_stealcut .prev_next:hover{
+  color: #fff;
+  text-shadow: 0 0 20px #fff;
+  background: rgba(255,0,0,.8);
+  box-shadow: 0 0 20px #000;
+}
 
 /* #review */
 #review ul{width: 1200px;height: 850px;}

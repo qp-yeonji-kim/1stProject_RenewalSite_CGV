@@ -413,7 +413,6 @@ h2 {
 	text-decoration: underline;
 }
 
-/* #fp-nav */
 #fp-nav.fp-right {
 	left: 97%;
 }
@@ -439,7 +438,6 @@ h2 {
 	border: 2px solid #fff;
 }
 
-/* 가상요소 */
 #fp-nav>ul>li>a::after {
 	content: "";
 	position: absolute;
@@ -455,7 +453,6 @@ h2 {
 	display: none;
 }
 
-/* .active 툴팁 */
 #fp-nav ul li .fp-tooltip.fp-right {
 	right: -9px;
 	top: 0;
@@ -474,7 +471,6 @@ h2 {
 	opacity: 1;
 }
 
-/* hover, active 상태 */
 #fp-nav ul li a.active span:nth-child(2),
 .fp-slidesNav ul li a.active span:nth-child(2),
 #fp-nav ul li:hover a.active span:nth-child(2),

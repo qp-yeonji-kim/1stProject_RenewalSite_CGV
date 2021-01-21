@@ -44,9 +44,10 @@
 body, ul, h1, h2, h3, h4, h5, h6, p, strong, figure, img{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
 ul, nav{list-style: none;}
-img{border: none;vertical-align: middle;}
+img{border: none;vertical-align: top;}
 select{font-family: inherit;font-size: inherit;color: inherit;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+button{font-family: inherit;background: none;border: none;}
 address{font-style: normal;}
 header, nav, section, footer, address{display: block;}
 

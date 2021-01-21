@@ -2,863 +2,867 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>영화정보 > 영화상세: 영화 : 영화 그 이상의 감동, CGV</title>
-    <link rel="icon" href="images/common/cj_logo.ico">
-    <link rel="stylesheet" href="../../css/common.css">
-    <link rel="stylesheet" href="../../css/detail.css">
-    <link rel="stylesheet" href="../../css/featherlight.css">
-    <link rel="stylesheet" href="../../css/featherlight.gallery.css">
-    <script src="../../js/jquery-1.12.4.min.js"></script>
-    <script src="../../js/common.js"></script>
-    <script src="../../js/tab.js"></script>
-    <script src="../../js/featherlight.min.js"></script>
-    <script src="../../js/featherlight.gallery.min.js"></script>
-    <script src="../../js/jquery.bxslider.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            var realSlider = $("#bxslider").bxSlider({
-                speed: 1000,
-                pager: false,
-                controls: false,
-                infiniteLoop: false,
-                //각 슬라이드 전환 직전
-                onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-                    changeRealThumb(realThumbSlider, newIndex);
-                }
-            });
+	<meta charset="UTF-8">
+	<title>영화정보 > 영화상세: 영화 : 영화 그 이상의 감동, CGV</title>
+	<link rel="icon" href="images/common/cj_logo.ico">
+	<link rel="stylesheet" href="../../css/common.css">
+	<link rel="stylesheet" href="../../css/detail.css">
+	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script src="../../js/tab.js"></script>
+	<script src="../../js/detail.js"></script>
+	<script src="../../js/jquery.bxslider.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			var realSlider = $("#bxslider").bxSlider({
+				speed: 1000,
+				pager: false,
+				controls: false,
+				infiniteLoop: false,
+				//각 슬라이드 전환 직전
+				onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+					changeRealThumb(realThumbSlider, newIndex);
+				}
+			});
 
-            var realThumbSlider = $("#bxslider-pager").bxSlider({
-                minSlides: 5,
-                maxSlides: 5,
-                slideWidth: 206,
-                slideMargin: 0,
-                moveSlides: 1,
-                pager: false,
-                speed: 1000,
-                infiniteLoop: false,
-                hideControlOnEnd: true,
-                prevText: '<span class="blind-b">이전 목록 보기</span>',
-                nextText: '<span class="blind-b">다음 목록 보기</span>'
-            });
+			var realThumbSlider = $("#bxslider-pager").bxSlider({
+				minSlides: 5,
+				maxSlides: 5,
+				slideWidth: 206,
+				slideMargin: 0,
+				moveSlides: 1,
+				pager: false,
+				speed: 1000,
+				infiniteLoop: false,
+				hideControlOnEnd: true,
+				prevText: '<span class="blind-b">이전 목록 보기</span>',
+				nextText: '<span class="blind-b">다음 목록 보기</span>'
+			});
 
-            linkRealSliders(realSlider, realThumbSlider);
+			linkRealSliders(realSlider, realThumbSlider);
 
-            function linkRealSliders(bigS, thumbS) {
-                $("#bxslider-pager").on("click", "a", function (e) {
-                    e.preventDefault();
-                    var newIndex = $(this).parent().attr("data-slideIndex");
-                    bigS.goToSlide(newIndex);
-                });
-            }
+			function linkRealSliders(bigS, thumbS) {
+				$("#bxslider-pager").on("click", "a", function (e) {
+					e.preventDefault();
+					var newIndex = $(this).parent().attr("data-slideIndex");
+					bigS.goToSlide(newIndex);
+				});
+			}
 
-            function changeRealThumb(slider, newIndex) {
-                var $thumbS = $("#bxslider-pager");
-                $thumbS.find('.active').removeClass("active");
-                $thumbS.find('li[data-slideIndex="' + newIndex + '"]').addClass("active");
+			function changeRealThumb(slider, newIndex) {
+				var $thumbS = $("#bxslider-pager");
+				$thumbS.find('.active').removeClass("active");
+				$thumbS.find('li[data-slideIndex="' + newIndex + '"]').addClass("active");
 
-                if (slider.getSlideCount() - newIndex >= 4) slider.goToSlide(newIndex);
-                else slider.goToSlide(slider.getSlideCount() - 4);
-            }
+				if (slider.getSlideCount() - newIndex >= 4) slider.goToSlide(newIndex);
+				else slider.goToSlide(slider.getSlideCount() - 4);
+			}
 
-            $('#trailer_list').on('click', function () {
-                realSlider.reloadSlider();
-                realThumSlider.reloadSlider();
-            });
-        });
-        
-    </script>
+/* 			$('#trailer_list').on('click', function () {
+				realSlider.reloadSlider();
+				realThumSlider.reloadSlider();
+			}); */
+		});
+	</script>
 </head>
 
 <body>
-    <div id="skip">
-        <a href="#content">본문 바로가기</a>
-    </div>
-    <div id="headerwrap">
-        <header id="header">
-            <div class="area p_r clearfix">
-                <h1 class="logo">
-                    <a href="../../index.html"><img src="../../images/common/cgv_logo.png" alt="CGV"></a>
-                </h1>
-                <nav class="nav" id="gnb">
-                    <span class="blind-b">중요메뉴</span>
-                    <ul class="main_menu">
-                        <li>
-                            <a href="../../movie/chart.html">영화</a>
-                            <ul>
-                                <li><a href="../../movie/chart.html">무비차트</a></li>
-                                <li><a href="">HD 트레일러</a></li>
-                                <li><a href="">무비파인더</a></li>
-                                <li><a href="">CGV아트하우스</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">예매</a>
-                            <ul>
-                                <li><a href="">빠른예매</a></li>
-                                <li><a href="">상영시간표</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="../../theater/theater.html">극장</a>
-                            <ul>
-                                <li><a href="../../theater/theater.html">CGV 극장</a></li>
-                                <li><a href="">특별관</a></li>
-                                <li><a href="">CLUB 서비스</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="../../culture/cgvshop.html">이벤트&amp;컬쳐</a>
-                            <ul>
-                                <li><a href="">이벤트</a></li>
-                                <li><a href="../../culture/cgvshop.html">CGV샵</a></li>
-                                <li><a href="">매거진</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">고객센터</a>
-                            <ul>
-                                <li><a href="">자주 찾는 질문</a></li>
-                                <li><a href="">CGV공지/뉴스</a></li>
-                                <li><a href="">문의하기</a></li>
-                                <li><a href="">서비스가이드</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <a href="" class="all_menu_btn" role="button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </a>
-                <nav class="all_menu">
-                    <span class="blind-b">전체메뉴</span>
-                    <ul>
-                        <li>
-                            <strong>영화</strong>
-                            <ul>
-                                <li><a href="../../movie/chart.html">무비차트</a></li>
-                                <li><a href="">HD 트레일러</a></li>
-                                <li><a href="">무비파인더</a></li>
-                                <li><a href="">CGV아트하우스</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>예매</strong>
-                            <ul>
-                                <li><a href="">빠른예매</a></li>
-                                <li><a href="">상영시간표</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>극장</strong>
-                            <ul>
-                                <li><a href="../../theater/theater.html">CGV 극장</a></li>
-                                <li><a href="">특별관</a></li>
-                                <li><a href="">CLUB 서비스</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>이벤트&amp;컬쳐</strong>
-                            <ul>
-                                <li><a href="">이벤트</a></li>
-                                <li><a href="../../culture/cgvshop.html">CGV샵</a></li>
-                                <li><a href="">매거진</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>고객센터</strong>
-                            <ul>
-                                <li><a href="">자주 찾는 질문</a></li>
-                                <li><a href="">CGV공지/뉴스</a></li>
-                                <li><a href="">문의하기</a></li>
-                                <li><a href="">서비스가이드</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>무비로그</strong>
-                            <ul>
-                                <li><a href="">위시리스트</a></li>
-                                <li><a href="">내가 본 영화</a></li>
-                                <li><a href="">무비다이어리</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>MY CGV</strong>
-                            <ul>
-                                <li><a href="">예매내역/취소</a></li>
-                                <li><a href="">관람권/할인쿠폰 관리</a></li>
-                                <li><a href="">CJ ONE 포인트</a></li>
-                                <li><a href="">내가꾸민포토티켓</a></li>
-                                <li><a href="">기프트샵</a></li>
-                                <li><a href="">나의 정보</a></li>
-                                <li><a href="">나의 문의내역</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>회사소개</strong>
-                            <ul>
-                                <li><a href="">회사소개</a></li>
-                                <li><a href="">CGV소개</a></li>
-                                <li><a href="">투자정보</a></li>
-                                <li><a href="">채용정보</a></li>
-                                <li><a href="">사이버감사실</a></li>
-                                <li><a href="">광고 제휴문의</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>회원서비스</strong>
-                            <ul>
-                                <li><a href="">로그인</a></li>
-                                <li><a href="">회원가입</a></li>
-                                <li><a href="">CJ ONE 멤버십</a></li>
-                                <li><a href="">사이트맵</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>VIP LOUNGE</strong>
-                            <ul>
-                                <li><a href="">VIP이벤트</a></li>
-                                <li><a href="">VIP전용레터</a></li>
-                                <li><a href="">나의 VIP쿠폰</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>알뜰한영화관람법</strong>
-                            <ul>
-                                <li><a href="">할인카드</a></li>
-                                <li><a href="">기타 상품권 안내</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>ENGLISH TICKETING</strong>
-                            <ul>
-                                <li><a href="">ENGLISH TICKETING</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>CGV정책</strong>
-                            <ul>
-                                <li><a href="">이용약관</a></li>
-                                <li><a href="">편성기준</a></li>
-                                <li><a href="">개인정보취급방침</a></li>
-                                <li><a href="">법적고지</a></li>
-                                <li><a href="">이메일주소무단수집거부</a></li>
-                                <li><a href="">상생경영</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </div>
-    <section id="content">
-        <div id="cnt-d-main">
-            <div id="detail_op">
-                <div id="tt_g">
-                    <div id="title">
-                        <span class="Ellipse">
-                            12
-                            <span class="blind-b">세 이상 관람가</span>
-                        </span>
-                        <h2 class="title">테넷</h2>
-                        <p aria-hidden="true">Tenet</p>
-                    </div>
-                    <div id="sub1">
-                        <p>예매율 29.0% 93%</p>
-                        <p>
-                            감독 : 크리스토퍼 놀란<br>
-                            배우 : 존 데이비드 워싱턴, 로버트 패틴슨, 엘리자베스 데비키, 에런 존슨<br>
-                            장르 : 액션, SF / 기본 : 12세 이상, 150분, 미국, 영국<br>
-                            개봉 : 2020.08.26
-                        </p>
-                    </div>
-                    <div id="sub2">
-                        <p>줄거리</p>
-                        <div id="scroll" class="scrollSt">
-                            <p>
-                                당신에게 줄 건 한 단어 ‘테넷’<br>
-                                이해하지 말고 느껴라!<br>
-                                <br>
-                                시간의 흐름을 뒤집는 인버전을 통해 현재와 미래를 오가며<br>
-                                세상을 파괴하려는 사토르(케네스 브래너)를 막기 위해 투입된<br>
-                                작전의 주도자(존 데이비드 워싱턴). 인버전에 대한 정보를<br>
-                                가진 닐(로버트 패틴슨)과 미술품 감정사이자 사토르에 대한<br>
-                                복수심이 가득한 그의 아내 캣(엘리자베스 데비키)과 협력해<br>
-                                미래의 공격에 맞서 제3차 세계대전을 막아야 한다!<br>
-                                <br>
-                                [KEY POINT]<br>
-                                인버전: 사물의 엔트로피를 반전시켜 시간을 거스를 수 있는<br>
-                                미래 기술. 미래에서 인버전된 무기를 현재로 보내 과거를<br>
-                                파괴할 수 있다.
-                            </p>
-                        </div>
-                    </div>
-                    <a href="">예매</a>
-                </div>
-            </div>
-        </div>
-        <div id="cnt-d-tab">
-            <div id="detailTab" class="area">
-                <ul role="tablist" class="tablist" aria-label="detail_list">
-                    <li role="tab" class="tab first" id="keyinfo_list" aria-controls="keyinfo">주요정보</li>
-                    <li role="tab" class="tab" id="trailer_list" aria-controls="trailer">트레일러</li>
-                    <li role="tab" class="tab" id="stealcut_list" aria-controls="stealcut">스틸컷</li>
-                    <li role="tab" class="tab last" id="review_list" aria-controls="review">리뷰</li>
-                </ul>
-                <div role="tabpanel" class="tabpanel" id="keyinfo" aria-labelledby="keyinfo_list">
-                    <ul class="area1 area">
-                        <li class="describe">
-                            감독연출이 훌륭하고<br>
-                            몰입하여 보게 되는 영화
-                        </li>
-                        <li class="percent">
-                            <p>사전기대지수</p>
-                            <strong>99%</strong>
-                        </li>
-                        <li class="percent">
-                            <p>실관람평지수</p>
-                            <strong>93%</strong>
-                        </li>
-                    </ul>
-                    <ul class="area2 area" id="chart">
-                        <li class="sex">
-                          <strong>성별 예매 분포</strong>
-                          <div>
-                              <div class="st p_r">
-                                    <div class="person p_r">
-                                      <div class="manper">
-                                          <img src="../../images/detail/icon/man.png" alt="남자">
-                                          <p>59%</p>
-                                      </div>
-                                    </div>
-                                  <div class="person p_r">
-                                      <div class="womanper">
-                                          <img src="../../images/detail/icon/woman.png" alt="여자">
-                                          <p> 41%</p>
-                                      </div>
-                                    </div>
-                                 </div>
-                          </div>
-                        </li>
-                        <li class="graph p_r">
-                            <strong>연령별 예매 분포</strong>
-                            <div class="ages">
-                                <img src="../../images/detail/icon/graph.png" alt="연령별 예매 분포 그래프">
-                                <p class="age1">10대<span class="blind-b"> 2.2%</span></p>
-                                <p class="age2">20대<span class="blind-b"> 35.9%</span></p>
-                                <p class="age3">30대<span class="blind-b"> 35.2%</span></p>
-                                <p class="age4">40대<span class="blind-b"> 17.1%</span></p>
-                                <p class="age5">50대<span class="blind-b"> 9.6%</span></p>
-                            </div>
-                        </li>
-                        <li class="charm">
-                            <strong>매력포인트</strong>
-                            <div class="pentagon p_r">
-                              <!-- 점수별 -->
-                              <p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
-                              <p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
-                              <p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
-                              <p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
-                              <p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
-                      
-                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                              <svg>
-                                <polygon points="99,1 180,78 149,172 55,165 44,85" />
-                              </svg>
-                              </div>
-                        </li>
-                        <li class="emotion">
-                            <strong>감정포인트</strong>
-                            <div class="pentagon p_r">
-                              <!-- 점수별 -->
-                              <p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
-                              <p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
-                              <p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
-                              <p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
-                              <p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
-                      
-                              <!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
-                              <svg>
-                                <polygon points="100,49 143,90 149,172 39,188 80,85" />
-                              </svg>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div role="tabpanel" class="tabpanel" id="trailer" aria-labelledby="trailer_list">
-                    <div id="trailerSlider">
-                        <ul id="bxslider">
-                            <li>
-                                <video poster="../../images/detail/min-mov1.JPG" controls>
-                                    <source src="../../video/tenet_spot.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_spot.webm" type="video/webm">
-                                    <source src="../../video/tenet_spot.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov2.JPG" controls>
-                                    <source src="../../video/tenet_last.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_last.webm" type="video/webm">
-                                    <source src="../../video/tenet_last.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov3.JPG" controls>
-                                    <source src="../../video/tenet_action.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_action.webm" type="video/webm">
-                                    <source src="../../video/tenet_action.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov4.JPG" controls>
-                                    <source src="../../video/tenet_inversion.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_inversion.webm" type="video/webm">
-                                    <source src="../../video/tenet_inversion.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov5.JPG" controls>
-                                    <source src="../../video/tenet_time.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_time.webm" type="video/webm">
-                                    <source src="../../video/tenet_time.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov6.JPG" controls>
-                                    <source src="../../video/tenet_acent.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_acent.webm" type="video/webm">
-                                    <source src="../../video/tenet_acent.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov7.JPG" controls>
-                                    <source src="../../video/tenet_new.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_new.webm" type="video/webm">
-                                    <source src="../../video/tenet_new.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                            <li>
-                                <video poster="../../images/detail/min-mov8.JPG" controls>
-                                    <source src="../../video/tenet_offical.mp4" type="video/mp4">
-                                    <source src="../../video/tenet_offical.webm" type="video/webm">
-                                    <source src="../../video/tenet_offical.ogg" type="video/ogg">
-                                    현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
-                                </video>
-                            </li>
-                        </ul>
+	<div id="skip">
+		<a href="#content">본문 바로가기</a>
+	</div>
+	<div id="headerwrap">
+		<header id="header">
+			<div class="area p_r clearfix">
+				<h1 class="logo">
+					<a href="../../index.html"><img src="../../images/common/cgv_logo.png" alt="CGV"></a>
+				</h1>
+				<nav class="nav" id="gnb">
+					<span class="blind-b">중요메뉴</span>
+					<ul class="main_menu">
+						<li>
+							<a href="../../movie/chart.html">영화</a>
+							<ul>
+								<li><a href="../../movie/chart.html">무비차트</a></li>
+								<li><a href="">HD 트레일러</a></li>
+								<li><a href="">무비파인더</a></li>
+								<li><a href="">CGV아트하우스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">예매</a>
+							<ul>
+								<li><a href="">빠른예매</a></li>
+								<li><a href="">상영시간표</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="../../theater/theater.html">극장</a>
+							<ul>
+								<li><a href="../../theater/theater.html">CGV 극장</a></li>
+								<li><a href="">특별관</a></li>
+								<li><a href="">CLUB 서비스</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="../../culture/cgvshop.html">이벤트&amp;컬쳐</a>
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="../../culture/cgvshop.html">CGV샵</a></li>
+								<li><a href="">매거진</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="">고객센터</a>
+							<ul>
+								<li><a href="">자주 찾는 질문</a></li>
+								<li><a href="">CGV공지/뉴스</a></li>
+								<li><a href="">문의하기</a></li>
+								<li><a href="">서비스가이드</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<a href="" class="all_menu_btn" role="button">
+					<span></span>
+					<span></span>
+					<span></span>
+				</a>
+				<nav class="all_menu">
+					<span class="blind-b">전체메뉴</span>
+					<ul>
+						<li>
+							<strong>영화</strong>
+							<ul>
+								<li><a href="../../movie/chart.html">무비차트</a></li>
+								<li><a href="">HD 트레일러</a></li>
+								<li><a href="">무비파인더</a></li>
+								<li><a href="">CGV아트하우스</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>예매</strong>
+							<ul>
+								<li><a href="">빠른예매</a></li>
+								<li><a href="">상영시간표</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>극장</strong>
+							<ul>
+								<li><a href="../../theater/theater.html">CGV 극장</a></li>
+								<li><a href="">특별관</a></li>
+								<li><a href="">CLUB 서비스</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>이벤트&amp;컬쳐</strong>
+							<ul>
+								<li><a href="">이벤트</a></li>
+								<li><a href="../../culture/cgvshop.html">CGV샵</a></li>
+								<li><a href="">매거진</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>고객센터</strong>
+							<ul>
+								<li><a href="">자주 찾는 질문</a></li>
+								<li><a href="">CGV공지/뉴스</a></li>
+								<li><a href="">문의하기</a></li>
+								<li><a href="">서비스가이드</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>무비로그</strong>
+							<ul>
+								<li><a href="">위시리스트</a></li>
+								<li><a href="">내가 본 영화</a></li>
+								<li><a href="">무비다이어리</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>MY CGV</strong>
+							<ul>
+								<li><a href="">예매내역/취소</a></li>
+								<li><a href="">관람권/할인쿠폰 관리</a></li>
+								<li><a href="">CJ ONE 포인트</a></li>
+								<li><a href="">내가꾸민포토티켓</a></li>
+								<li><a href="">기프트샵</a></li>
+								<li><a href="">나의 정보</a></li>
+								<li><a href="">나의 문의내역</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>회사소개</strong>
+							<ul>
+								<li><a href="">회사소개</a></li>
+								<li><a href="">CGV소개</a></li>
+								<li><a href="">투자정보</a></li>
+								<li><a href="">채용정보</a></li>
+								<li><a href="">사이버감사실</a></li>
+								<li><a href="">광고 제휴문의</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>회원서비스</strong>
+							<ul>
+								<li><a href="">로그인</a></li>
+								<li><a href="">회원가입</a></li>
+								<li><a href="">CJ ONE 멤버십</a></li>
+								<li><a href="">사이트맵</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>VIP LOUNGE</strong>
+							<ul>
+								<li><a href="">VIP이벤트</a></li>
+								<li><a href="">VIP전용레터</a></li>
+								<li><a href="">나의 VIP쿠폰</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>알뜰한영화관람법</strong>
+							<ul>
+								<li><a href="">할인카드</a></li>
+								<li><a href="">기타 상품권 안내</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>ENGLISH TICKETING</strong>
+							<ul>
+								<li><a href="">ENGLISH TICKETING</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>CGV정책</strong>
+							<ul>
+								<li><a href="">이용약관</a></li>
+								<li><a href="">편성기준</a></li>
+								<li><a href="">개인정보취급방침</a></li>
+								<li><a href="">법적고지</a></li>
+								<li><a href="">이메일주소무단수집거부</a></li>
+								<li><a href="">상생경영</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+	</div>
+	<section id="content">
+		<div id="cnt-d-main">
+			<div id="detail_op">
+				<div id="tt_g">
+					<div id="title">
+						<span class="Ellipse">
+							12
+							<span class="blind-b">세 이상 관람가</span>
+						</span>
+						<h2 class="title">테넷</h2>
+						<p aria-hidden="true">Tenet</p>
+					</div>
+					<div id="sub1">
+						<p>예매율 29.0% 93%</p>
+						<p>
+							감독 : 크리스토퍼 놀란<br>
+							배우 : 존 데이비드 워싱턴, 로버트 패틴슨, 엘리자베스 데비키, 에런 존슨<br>
+							장르 : 액션, SF / 기본 : 12세 이상, 150분, 미국, 영국<br>
+							개봉 : 2020.08.26
+						</p>
+					</div>
+					<div id="sub2">
+						<p>줄거리</p>
+						<div id="scroll" class="scrollSt">
+							<p>
+								당신에게 줄 건 한 단어 ‘테넷’<br>
+								이해하지 말고 느껴라!<br>
+								<br>
+								시간의 흐름을 뒤집는 인버전을 통해 현재와 미래를 오가며<br>
+								세상을 파괴하려는 사토르(케네스 브래너)를 막기 위해 투입된<br>
+								작전의 주도자(존 데이비드 워싱턴). 인버전에 대한 정보를<br>
+								가진 닐(로버트 패틴슨)과 미술품 감정사이자 사토르에 대한<br>
+								복수심이 가득한 그의 아내 캣(엘리자베스 데비키)과 협력해<br>
+								미래의 공격에 맞서 제3차 세계대전을 막아야 한다!<br>
+								<br>
+								[KEY POINT]<br>
+								인버전: 사물의 엔트로피를 반전시켜 시간을 거스를 수 있는<br>
+								미래 기술. 미래에서 인버전된 무기를 현재로 보내 과거를<br>
+								파괴할 수 있다.
+							</p>
+						</div>
+					</div>
+					<a href="">예매</a>
+				</div>
+			</div>
+		</div>
+		<div id="cnt-d-tab">
+			<div id="detailTab" class="area">
+				<ul role="tablist" class="tablist" aria-label="detail_list">
+					<li role="tab" class="tab first" id="keyinfo_list" aria-controls="keyinfo">주요정보</li>
+					<li role="tab" class="tab" id="trailer_list" aria-controls="trailer">트레일러</li>
+					<li role="tab" class="tab" id="stealcut_list" aria-controls="stealcut">스틸컷</li>
+					<li role="tab" class="tab last" id="review_list" aria-controls="review">리뷰</li>
+				</ul>
+				<div role="tabpanel" class="tabpanel" id="keyinfo" aria-labelledby="keyinfo_list">
+					<ul class="area1 area">
+						<li class="describe">
+							감독연출이 훌륭하고<br>
+							몰입하여 보게 되는 영화
+						</li>
+						<li class="percent">
+							<p>사전기대지수</p>
+							<strong>99%</strong>
+						</li>
+						<li class="percent">
+							<p>실관람평지수</p>
+							<strong>93%</strong>
+						</li>
+					</ul>
+					<ul class="area2 area" id="chart">
+						<li class="sex">
+							<strong>성별 예매 분포</strong>
+							<div>
+								<div class="st p_r">
+									<div class="person p_r">
+										<div class="manper">
+											<img src="../../images/detail/icon/man.png" alt="남자">
+											<p>59%</p>
+										</div>
+									</div>
+									<div class="person p_r">
+										<div class="womanper">
+											<img src="../../images/detail/icon/woman.png" alt="여자">
+											<p> 41%</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="graph p_r">
+							<strong>연령별 예매 분포</strong>
+							<div class="ages">
+								<img src="../../images/detail/icon/graph.png" alt="연령별 예매 분포 그래프">
+								<p class="age1">10대<span class="blind-b"> 2.2%</span></p>
+								<p class="age2">20대<span class="blind-b"> 35.9%</span></p>
+								<p class="age3">30대<span class="blind-b"> 35.2%</span></p>
+								<p class="age4">40대<span class="blind-b"> 17.1%</span></p>
+								<p class="age5">50대<span class="blind-b"> 9.6%</span></p>
+							</div>
+						</li>
+						<li class="charm">
+							<strong>매력포인트</strong>
+							<div class="pentagon p_r">
+								<!-- 점수별 -->
+								<p class="value1">감독연출<span class="blind-b"> 5점 만점 중 4</span></p>
+								<p class="value2">스토리<span class="blind-b"> 5점 만점 중 3.7</span></p>
+								<p class="value3">영상미<span class="blind-b"> 5점 만점 중 4.5</span></p>
+								<p class="value4">배우연기<span class="blind-b"> 5점 만점 중 5</span></p>
+								<p class="value5">OST<span class="blind-b"> 5점 만점 중 3</span></p>
 
-                        <!-- The thumbnails -->
-                        <ul id="bxslider-pager">
-                            <li data-slideIndex="0">
-                                <a href=""><img src="../../images/detail/tumb-mov1.jpg" alt="테넷 극찬 리뷰 스팟"></a>
-                            </li>
-                            <li data-slideIndex="1">
-                                <a href=""><img src="../../images/detail/tumb-mov2.JPG" alt="테넷 최종 예고편"></a>
-                            </li>
-                            <li data-slideIndex="2">
-                                <a href=""><img src="../../images/detail/tumb-mov3.JPG" alt="테넷 추격 액션 예고편"></a>
-                            </li>
-                            <li data-slideIndex="3">
-                                <a href=""><img src="../../images/detail/tumb-mov4.JPG" alt="테넷 인버전 예고편"></a>
-                            </li>
-                            <li data-slideIndex="4">
-                                <a href=""><img src="../../images/detail/tumb-mov5.JPG" alt="테넷 시간 첩보 액션 예고편"></a>
-                            </li>
-                            <li data-slideIndex="5">
-                                <a href=""><img src="../../images/detail/tumb-mov6.JPG" alt="테넷 에이전트 예고편"></a>
-                            </li>
-                            <li data-slideIndex="6">
-                                <a href=""><img src="../../images/detail/tumb-mov7.JPG" alt="테넷 새로운 예고편"></a>
-                            </li>
-                            <li data-slideIndex="7">
-                                <a href=""><img src="../../images/detail/tumb-mov8.JPG" alt="테넷 공식 예고편"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tabpanel" id="stealcut" aria-labelledby="stealcut_list">
-                    <div data-featherlight-gallery data-featherlight-filter="a">
-                        <a href="../../images/detail/stealcut1.jpg"><img src="../../images/detail/min-stealcut1.jpg"
-                                alt="부주인공 닐이 우측을 보는 모습"></a>
-                        <a href="../../images/detail/stealcut2.jpg"><img src="../../images/detail/min-stealcut2.jpg"
-                                alt="방독면을 쓴 주도자가 앞을 바라보는 모습의 측면 모습"></a>
-                        <a href="../../images/detail/stealcut3.jpg"><img src="../../images/detail/min-stealcut3.jpg"
-                                alt="주도자가 차를 몰고 앞으로 가고 있는 긴급해보이는 모습"></a>
-                        <a href="../../images/detail/stealcut4.jpg"><img src="../../images/detail/min-stealcut4.jpg"
-                                alt="주도자와 닐이 기울어진 벽면을 줄을 잡고 올라가는 모습"></a>
-                        <a href="../../images/detail/stealcut5.jpg"><img src="../../images/detail/min-stealcut5.jpg"
-                                alt="주도자와 닐이 와이어가 있는 기기를 몸에 착용한 뒤 누워 버튼을 누르려는 모습"></a>
-                        <a href="../../images/detail/stealcut6.jpg"><img src="../../images/detail/min-stealcut6.jpg"
-                                alt="닐이 장비를 갖추고 어디론가 향하는 모습"></a>
-                        <a href="../../images/detail/stealcut7.jpg"><img src="../../images/detail/min-stealcut7.jpg"
-                                alt="호흡기를 낀 주도자가 폭발을 피해 앞으로 달려가는 모습""></a>
-                        <a href="../../images/detail/stealcut8.jpg"><img src="../../images/detail/min-stealcut8.jpg"
-                                alt="호흡기를 낀 사토르가 우측을 보며 총을 들고 달리는 모습"></a>
-                        <a href="../../images/detail/stealcut9.jpg"><img src="../../images/detail/min-stealcut9.jpg"
-                                alt="배 안에 있는 캣이 정면을 바라보는 모습"></a>
-                        <a href="../../images/detail/stealcut10.jpg"><img src="../../images/detail/min-stealcut10.jpg"
-                                alt="주도자의 앞쪽 공간에 박혀있는 총알을 향해 손을 뻗는 닐"></a>
-                        <a href="../../images/detail/stealcut11.jpg"><img src="../../images/detail/min-stealcut11.jpg"
-                                alt="배를 운전하며 우측을 바라보는 주도자와 같은 방향을 바라보고 있는 캣"></a>
-                        <a href="../../images/detail/stealcut12.jpg"><img src="../../images/detail/min-stealcut12.jpg"
-                                alt="정면을 향해 걸어가고 있는 주도자의 모습으로 사진의 좌측을 수평방향으로 대칭되어 있다."></a>
-                        <a href="../../images/detail/stealcut13.jpg"><img src="../../images/detail/min-stealcut13.jpg"
-                                alt="정면을 향해 총구를 겨누는 주도자의 좌측모습"></a>
-                        <a href="../../images/detail/stealcut14.jpg"><img src="../../images/detail/min-stealcut14.jpg"
-                                alt="총을 들고 앞을 바라보는 주도자 뒤에 호흡기를 끼고 총을 든 주도자가 서있는 모습"></a>
-                        <a href="../../images/detail/stealcut15.jpg"><img src="../../images/detail/min-stealcut15.jpg"
-                                alt="크리스토퍼 놀란 감독이 배우 존과 이야기를 나누고 있다."></a>
-                        <a href="../../images/detail/stealcut16.jpg"><img src="../../images/detail/min-stealcut16.jpg"
-                                alt="장비를 갖춰입은 존과 크리스토퍼 놀란이 대화를 나누고 있다."></a>
-                        <a href="../../images/detail/stealcut17.jpg"><img src="../../images/detail/min-stealcut17.jpg"
-                                alt="크리스토퍼 놀란과 존이 건물 내부에서 손을 뻗는 자세를 취하며 대화하고 있다."></a>
-                        <a href="../../images/detail/stealcut18.jpg"><img src="../../images/detail/min-stealcut18.jpg"
-                                alt="붉은 조명이 비치는 건물의 창가에서 주도자가 닐과 긴장한채 대화를 하고 있다."></a>
-                        <a href="../../images/detail/stealcut19.jpg"><img src="../../images/detail/min-stealcut19.jpg"
-                                alt="양복을 입은 닐과 주도자가 건물 밖에서 얘기를 하고 있다."></a>
-                        <a href="../../images/detail/stealcut20.jpg"><img src="../../images/detail/min-stealcut20.jpg"
-                                alt="배를 운전하며 우측을 바라보는 주도자와 같은 방향을 바라보고 있는 캣"></a>
-                        <a href="../../images/detail/stealcut21.jpg"><img src="../../images/detail/min-stealcut21.jpg"
-                                alt="유리창에 총알이 박힌 자국을 진지한 표정으로 보는 주도자"></a>
-                        <a href="../../images/detail/stealcut22.jpg"><img src="../../images/detail/min-stealcut22.jpg"
-                                alt="건물에 큰 폭발이 일어나 장비를 갖춘 사람과 양복을 입은 사람이 도망치고 있다."></a>
-                        <a href="../../images/detail/stealcut23.jpg"><img src="../../images/detail/min-stealcut23.jpg"
-                                alt="작품들이 모여있는 창고를 서류 가방과 식기를 든 주도자가 닐과 금발의 다른 남성과 걸어가고 있다."></a>
-                    </div>
-                </div>
-                <div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
-                    <ul>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>al****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>재밌게 잘 봤어요! 너무 재미있었습니다!!</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>uj****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>처음부터 눈을 뗄 수 없었습니다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>gu****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>한 번 봐서는 이해가 안되어서 나중에 한 번 더 봐야지</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                                <span>MOVIE MANIA</span>
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>루이****</strong>
-                                    <img src="../../images/common/i1-gray4dx.png" alt="4DX감상자">
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>영화내용 이해하기 힘들지만 재밌어요. 또 보고 싶습니다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>맹고****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>눈이 가는대로 따라보다보니 재밌고 대애충 그런가보다~~
-                                    하고 보니 즐거웠음. 또 보려고 예매함.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                                <span>MOVIE MANIA</span>
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>초구****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>이해를 포기하면 괜찮았던거 같아요! 대신 영화끝나고 친구
-                                    에게 많이 물어보게 되더라구요
-                                </p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>윤****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>역시 늘 새로운 감동을 주는 놀란감독이다.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>us****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>걱정했는데 무난하게 잘봤습니다...</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                                <span>MOVIE MANIA</span>
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>강****</strong>
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>미래가 어떨지 궁금해지는 영화.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="reviewer">
-                                <img src="../../images/detail/i-profile.png" alt="프로필 사진">
-                            </div>
-                            <div class="review_cnt">
-                                <div>
-                                    <strong>sh****</strong>
-                                    <img src="../../images/common/i2-imax.png" alt="IMAX감상자">
-                                    <span>2020.09.20</span>
-                                </div>
-                                <p>정말 ㅠ 인셉션 이후 정말 재밋게 봤어요..!!!</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <ul class="paging clearfix">
-                        <li>
-                            <a href="" aria-hidden="true"></a>
-                            <span class="blind-i">이전 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">1</a>
-                            <span class="blind-i">첫번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">2</a>
-                            <span class="blind-i">두번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">3</a>
-                            <span class="blind-i">세번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">4</a>
-                            <span class="blind-i">네번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">5</a>
-                            <span class="blind-i">다섯번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">6</a>
-                            <span class="blind-i">여섯번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">7</a>
-                            <span class="blind-i">일곱번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">8</a>
-                            <span class="blind-i">여덟번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">9</a>
-                            <span class="blind-i">아홉번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true">10</a>
-                            <span class="blind-i">열번째 페이지로 가기</span>
-                        </li>
-                        <li>
-                            <a href="" aria-hidden="true"></a>
-                            <span class="blind-i">다음페이지로 가기</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+								<!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+								<svg>
+									<polygon points="99,1 180,78 149,172 55,165 44,85" />
+								</svg>
+							</div>
+						</li>
+						<li class="emotion">
+							<strong>감정포인트</strong>
+							<div class="pentagon p_r">
+								<!-- 점수별 -->
+								<p class="value1 ">스트레스해소<span class="blind-b"> 5점 만점 중 1.5</span></p>
+								<p class="value2">즐거움<span class="blind-b"> 5점 만점 중 1</span></p>
+								<p class="value3">긴장감<span class="blind-b"> 5점 만점 중 4</span></p>
+								<p class="value4">몰입감<span class="blind-b"> 5점 만점 중 5</span></p>
+								<p class="value5">감동<span class="blind-b"> 5점 만점 중 0.8</span></p>
 
-    <footer id="footer">
-        <div class="foot-top">
-            <ul class="special_theater area">
-                <li><a href=""><img src="../../images/common/i1-gray4dx.png" alt="4DX"></a></li>
-                <li><a href=""><img src="../../images/common/i2-imax.png" alt="IMAX"></a></li>
-                <li><a href=""><img src="../../images/common/i3-whitescreenx.png" alt="SCREEN X"></a></li>
-                <li><a href=""><img src="../../images/common/i4-spherex.png" alt="SPHERE X"></a></li>
-                <li><a href=""><img src="../../images/common/i5-whitetempur.png" alt="TEMPUR CINEMA"></a></li>
-                <li><a href=""><img src="../../images/common/i6-whitegoldclass.png" alt="GOLD CLASS"></a></li>
-                <li><a href=""><img src="../../images/common/i7-whitecinedechef.png" alt="CNIE de CHEF"></a></li>
-                <li><a href=""><img src="../../images/common/i8-private.png" alt="PRIVATE CINEMA"></a></li>
-                <li><a href=""><img src="../../images/common/i9-cinekids.png" alt="CINE KIDS"></a></li>
-                <li><a href=""><img src="../../images/common/i10-whitecineforet.png" alt="CINE &amp; FORET"></a></li>
-            </ul>
-        </div>
-        <div class="cgv-info area clearfix">
-            <ul class="big-info clearfix">
-                <li><a href="">회사소개</a></li>
-                <li><a href="">IR</a></li>
-                <li><a href="">채용정보</a></li>
-                <li><a href="">광고/프로모션문의</a></li>
-                <li><a href="">제휴문의</a></li>
-                <li><a href="">출점문의</a></li>
-                <li><a href="">이용약관</a></li>
-                <li><a href="">편성기준</a></li>
-                <li><a href="">개인정보처리방침</a></li>
-                <li><a href="">법적고지</a></li>
-                <li><a href="">이메일주소무단수집거부</a></li>
-                <li><a href="">상생경영</a></li>
-                <li><a href="">사이트맵</a></li>
-            </ul>
-            <address class="address">
-                <p><img src="../../images/common/cgv_logo_b.png" alt="cgv"></p>
-                <div>
-                    <p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
-                    <div>
-                        <span>대표이사 : 최병환</span>
-                        <span>사업자등록번호 : 104-81-45690</span>
-                        <span>통신판매업신고번호 : 2017-서울용산-0662</span>
-                        <a href="" role="button" target="_blank">사업자 정보 확인</a>
-                    </div>
-                    <span>호스팅사업자 : CJ올리브네트웍스</span>
-                    <span>개인정보보호 책임자 : 이동현</span>
-                    <span>대표이메일 : cjcgvmaster@cj.net</span>
-                    <span>CGV고객센터 : 1544-1122</span>
-                </div>
-            </address>
-            <div class="foot-right">
-                <div class="family">
-                    <a href="" class="fsite">계열사 바로가기</a>
-                    <ul id="familysite">
-                        <li>
-                            <span>계열사 바로가기</span>
-                            <strong>CJ그룹</strong>
-                            <ul>
-                                <li><a href="https://www.cj.net/">CJ주식회사</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>엔터테인먼트 &amp; 미디어</strong>
-                            <ul>
-                                <li><a href="https://www.cjenm.com:9003/index.html">CJ ENM (E&amp;M)</a></li>
-                                <li><a href="http://www.cgv.co.kr/">CJ CGV</a></li>
-                                <li><a href="http://www.cjpowercast.com/">CJ파워캐스트</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>식품 &amp; 식품서비스</strong>
-                            <ul>
-                                <li><a href="https://www.cj.co.kr">CJ제일제당 (식품)</a></li>
-                                <li><a href="http://www.cjfreshway.com/">CJ프레시웨이</a></li>
-                                <li><a href="http://www.cjfoodville.co.kr/">CJ푸드빌</a></li>
-                                <li><a href="http://www.md1.co.kr/">CJ엠디원</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>생명공학</strong>
-                            <ul>
-                                <li><a href="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 (바이오)</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>신유통</strong>
-                            <ul>
-                                <li><a href="http://display.cjmall.com">CJ ENM (오쇼핑)</a></li>
-                                <li><a href="http://www.cjlogistics.com">CJ대한통운</a></li>
-                                <li><a href="http://www.cjtelenix.com/">CJ텔레닉스</a></li>
-                                <li><a href="http://www.oliveyoung.co.kr/store/main/main.do">CJ올리브영</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>인프라</strong>
-                            <ul>
-                                <li><a href="http://www.cjenc.co.kr/">CJ대한통운 (건설)</a></li>
-                                <li><a href="http://www.cjolivenetworks.co.kr/itbusiness/">CJ올리브네트웍스</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <a href="" target="_blank" class="btn_submit" title="새창열기">GO</a>
-                </div>
-                <p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
-                <ul class="sns_list">
-                    <li><a href="https://www.facebook.com/CJCGV" target="_blank" title="새창열기">
-                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square"
-                                class="sns_i svg-inline--fa fa-facebook-square fa-w-14" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <title>페이스북</title>
-                                <path fill="currentColor"
-                                    d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li><a href="https://twitter.com/cj_cgv" target="_blank" title="새창열기"><svg aria-hidden="true"
-                                focusable="false" data-prefix="fab" data-icon="twitter-square"
-                                class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <title>트위터</title>
-                                <path fill="currentColor"
-                                    d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li><a href="https://www.instagram.com/cgv_korea/" target="_blank" title="새창열기"><svg
-                                aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram-square"
-                                class="sns_i svg-inline--fa fa-instagram-square fa-w-14" role="img"
-                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                <title>인스타그램</title>
-                                <path fill="currentColor"
-                                    d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
-                                </path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+								<!-- svg polygon 타입 그리기 : 감독연출부터 시계방향 회전함 -->
+								<svg>
+									<polygon points="100,49 143,90 149,172 39,188 80,85" />
+								</svg>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div role="tabpanel" class="tabpanel" id="trailer" aria-labelledby="trailer_list">
+					<div id="trailerSlider">
+						<ul id="bxslider">
+							<li>
+								<video poster="../../images/detail/min-mov1.JPG" controls>
+									<source src="../../video/tenet_spot.mp4" type="video/mp4">
+									<source src="../../video/tenet_spot.webm" type="video/webm">
+									<source src="../../video/tenet_spot.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov2.JPG" controls>
+									<source src="../../video/tenet_last.mp4" type="video/mp4">
+									<source src="../../video/tenet_last.webm" type="video/webm">
+									<source src="../../video/tenet_last.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov3.JPG" controls>
+									<source src="../../video/tenet_action.mp4" type="video/mp4">
+									<source src="../../video/tenet_action.webm" type="video/webm">
+									<source src="../../video/tenet_action.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov4.JPG" controls>
+									<source src="../../video/tenet_inversion.mp4" type="video/mp4">
+									<source src="../../video/tenet_inversion.webm" type="video/webm">
+									<source src="../../video/tenet_inversion.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov5.JPG" controls>
+									<source src="../../video/tenet_time.mp4" type="video/mp4">
+									<source src="../../video/tenet_time.webm" type="video/webm">
+									<source src="../../video/tenet_time.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov6.JPG" controls>
+									<source src="../../video/tenet_acent.mp4" type="video/mp4">
+									<source src="../../video/tenet_acent.webm" type="video/webm">
+									<source src="../../video/tenet_acent.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov7.JPG" controls>
+									<source src="../../video/tenet_new.mp4" type="video/mp4">
+									<source src="../../video/tenet_new.webm" type="video/webm">
+									<source src="../../video/tenet_new.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+							<li>
+								<video poster="../../images/detail/min-mov8.JPG" controls>
+									<source src="../../video/tenet_offical.mp4" type="video/mp4">
+									<source src="../../video/tenet_offical.webm" type="video/webm">
+									<source src="../../video/tenet_offical.ogg" type="video/ogg">
+									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+								</video>
+							</li>
+						</ul>
+
+						<!-- The thumbnails -->
+						<ul id="bxslider-pager">
+							<li data-slideIndex="0">
+								<a href=""><img src="../../images/detail/tumb-mov1.jpg" alt="테넷 극찬 리뷰 스팟"></a>
+							</li>
+							<li data-slideIndex="1">
+								<a href=""><img src="../../images/detail/tumb-mov2.JPG" alt="테넷 최종 예고편"></a>
+							</li>
+							<li data-slideIndex="2">
+								<a href=""><img src="../../images/detail/tumb-mov3.JPG" alt="테넷 추격 액션 예고편"></a>
+							</li>
+							<li data-slideIndex="3">
+								<a href=""><img src="../../images/detail/tumb-mov4.JPG" alt="테넷 인버전 예고편"></a>
+							</li>
+							<li data-slideIndex="4">
+								<a href=""><img src="../../images/detail/tumb-mov5.JPG" alt="테넷 시간 첩보 액션 예고편"></a>
+							</li>
+							<li data-slideIndex="5">
+								<a href=""><img src="../../images/detail/tumb-mov6.JPG" alt="테넷 에이전트 예고편"></a>
+							</li>
+							<li data-slideIndex="6">
+								<a href=""><img src="../../images/detail/tumb-mov7.JPG" alt="테넷 새로운 예고편"></a>
+							</li>
+							<li data-slideIndex="7">
+								<a href=""><img src="../../images/detail/tumb-mov8.JPG" alt="테넷 공식 예고편"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div role="tabpanel" class="tabpanel clearfix" id="stealcut" aria-labelledby="stealcut_list">
+					<ul class="stealcut_tanet">
+						<li><img src="../../images/detail/min-stealcut1.jpg" alt="서브주인공 닐이 우측을 보는 모습" aria-haspopup="dialog"
+								title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut2.jpg" alt="방독면을 쓴 주도자가 앞을 바라보는 모습의 측면 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut3.jpg" alt="주도자가 차를 몰고 앞으로 가고 있는 긴급해보이는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut4.jpg" alt="주도자와 닐이 기울어진 벽면을 줄을 잡고 올라가는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut5.jpg" alt="주도자와 닐이 와이어가 있는 기기를 몸에 착용한 뒤 누워 버튼을 누르려는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut6.jpg" alt="닐이 장비를 갖추고 어디론가 향하는 모습" aria-haspopup="dialog"
+								title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut7.jpg" alt="호흡기를 낀 주도자가 폭발을 피해 앞으로 달려가는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut8.jpg" alt="호흡기를 낀 사토르가 우측을 보며 총을 들고 달리는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut9.jpg" alt="배 안에 있는 캣이 정면을 바라보는 모습" aria-haspopup="dialog"
+								title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut10.jpg" alt="주도자의 앞쪽 공간에 박혀있는 총알을 향해 손을 뻗는 닐"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut11.jpg" alt="배를 운전하며 우측을 바라보는 주도자와 같은 방향을 바라보고 있는 캣"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut12.jpg" alt="정면을 향해 걸어가고 있는 주도자의 모습으로 사진의 좌측을 수평방향으로 대칭되어 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut13.jpg" alt="정면을 향해 총구를 겨누는 주도자의 좌측모습" aria-haspopup="dialog"
+								title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut14.jpg" alt="총을 들고 앞을 바라보는 주도자 뒤에 호흡기를 끼고 총을 든 주도자가 서있는 모습"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut15.jpg" alt="크리스토퍼 놀란 감독이 배우 존과 이야기를 나누고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut16.jpg" alt="장비를 갖춰입은 존과 크리스토퍼 놀란이 대화를 나누고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut17.jpg" alt="크리스토퍼 놀란과 존이 건물 내부에서 손을 뻗는 자세를 취하며 대화하고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut18.jpg" alt="붉은 조명이 비치는 건물의 창가에서 주도자가 닐과 긴장한채 대화를 하고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut19.jpg" alt="양복을 입은 닐과 주도자가 건물 밖에서 얘기를 하고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut20.jpg" alt="배를 운전하며 우측을 바라보는 주도자와 같은 방향을 바라보고 있는 캣"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut21.jpg" alt="유리창에 총알이 박힌 자국을 진지한 표정으로 보는 주도자"
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut22.jpg" alt="건물에 큰 폭발이 일어나 장비를 갖춘 사람과 양복을 입은 사람이 도망치고 있다."
+								aria-haspopup="dialog" title="대화상자" data-targetmodal="#modal_stealcut"></li>
+						<li><img src="../../images/detail/min-stealcut23.jpg"
+								alt="작품들이 모여있는 창고를 서류 가방과 식기를 든 주도자가 닐과 금발의 다른 남성과 걸어가고 있다." aria-haspopup="dialog" title="대화상자"
+								data-targetmodal="#modal_stealcut"></li>
+					</ul>
+				</div>
+				<div role="tabpanel" class="tabpanel" id="review" aria-labelledby="review_list">
+					<ul>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>al****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>재밌게 잘 봤어요! 너무 재미있었습니다!!</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>uj****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>처음부터 눈을 뗄 수 없었습니다.</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>gu****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>한 번 봐서는 이해가 안되어서 나중에 한 번 더 봐야지</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+								<span>MOVIE MANIA</span>
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>루이****</strong>
+									<img src="../../images/common/i1-gray4dx.png" alt="4DX감상자">
+									<span>2020.09.20</span>
+								</div>
+								<p>영화내용 이해하기 힘들지만 재밌어요. 또 보고 싶습니다.</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>맹고****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>눈이 가는대로 따라보다보니 재밌고 대애충 그런가보다~~
+									하고 보니 즐거웠음. 또 보려고 예매함.</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+								<span>MOVIE MANIA</span>
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>초구****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>이해를 포기하면 괜찮았던거 같아요! 대신 영화끝나고 친구
+									에게 많이 물어보게 되더라구요
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>윤****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>역시 늘 새로운 감동을 주는 놀란감독이다.</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>us****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>걱정했는데 무난하게 잘봤습니다...</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+								<span>MOVIE MANIA</span>
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>강****</strong>
+									<span>2020.09.20</span>
+								</div>
+								<p>미래가 어떨지 궁금해지는 영화.</p>
+							</div>
+						</li>
+						<li>
+							<div class="reviewer">
+								<img src="../../images/detail/i-profile.png" alt="프로필 사진">
+							</div>
+							<div class="review_cnt">
+								<div>
+									<strong>sh****</strong>
+									<img src="../../images/common/i2-imax.png" alt="IMAX감상자">
+									<span>2020.09.20</span>
+								</div>
+								<p>정말 ㅠ 인셉션 이후 정말 재밋게 봤어요..!!!</p>
+							</div>
+						</li>
+					</ul>
+					<ul class="paging clearfix">
+						<li>
+							<a href="" aria-hidden="true"></a>
+							<span class="blind-i">이전 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">1</a>
+							<span class="blind-i">첫번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">2</a>
+							<span class="blind-i">두번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">3</a>
+							<span class="blind-i">세번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">4</a>
+							<span class="blind-i">네번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">5</a>
+							<span class="blind-i">다섯번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">6</a>
+							<span class="blind-i">여섯번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">7</a>
+							<span class="blind-i">일곱번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">8</a>
+							<span class="blind-i">여덟번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">9</a>
+							<span class="blind-i">아홉번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true">10</a>
+							<span class="blind-i">열번째 페이지로 가기</span>
+						</li>
+						<li>
+							<a href="" aria-hidden="true"></a>
+							<span class="blind-i">다음페이지로 가기</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="foot-top">
+			<ul class="special_theater area">
+				<li><a href=""><img src="../../images/common/i1-gray4dx.png" alt="4DX"></a></li>
+				<li><a href=""><img src="../../images/common/i2-imax.png" alt="IMAX"></a></li>
+				<li><a href=""><img src="../../images/common/i3-whitescreenx.png" alt="SCREEN X"></a></li>
+				<li><a href=""><img src="../../images/common/i4-spherex.png" alt="SPHERE X"></a></li>
+				<li><a href=""><img src="../../images/common/i5-whitetempur.png" alt="TEMPUR CINEMA"></a></li>
+				<li><a href=""><img src="../../images/common/i6-whitegoldclass.png" alt="GOLD CLASS"></a></li>
+				<li><a href=""><img src="../../images/common/i7-whitecinedechef.png" alt="CNIE de CHEF"></a></li>
+				<li><a href=""><img src="../../images/common/i8-private.png" alt="PRIVATE CINEMA"></a></li>
+				<li><a href=""><img src="../../images/common/i9-cinekids.png" alt="CINE KIDS"></a></li>
+				<li><a href=""><img src="../../images/common/i10-whitecineforet.png" alt="CINE &amp; FORET"></a></li>
+			</ul>
+		</div>
+		<div class="cgv-info area clearfix">
+			<ul class="big-info clearfix">
+				<li><a href="">회사소개</a></li>
+				<li><a href="">IR</a></li>
+				<li><a href="">채용정보</a></li>
+				<li><a href="">광고/프로모션문의</a></li>
+				<li><a href="">제휴문의</a></li>
+				<li><a href="">출점문의</a></li>
+				<li><a href="">이용약관</a></li>
+				<li><a href="">편성기준</a></li>
+				<li><a href="">개인정보처리방침</a></li>
+				<li><a href="">법적고지</a></li>
+				<li><a href="">이메일주소무단수집거부</a></li>
+				<li><a href="">상생경영</a></li>
+				<li><a href="">사이트맵</a></li>
+			</ul>
+			<address class="address">
+				<p><img src="../../images/common/cgv_logo_b.png" alt="cgv"></p>
+				<div>
+					<p>(04377)서울특별시 용산구 한강대로 23길 55, 아이파크몰 6층(한강로동)</p>
+					<div>
+						<span>대표이사 : 최병환</span>
+						<span>사업자등록번호 : 104-81-45690</span>
+						<span>통신판매업신고번호 : 2017-서울용산-0662</span>
+						<a href="" role="button" target="_blank">사업자 정보 확인</a>
+					</div>
+					<span>호스팅사업자 : CJ올리브네트웍스</span>
+					<span>개인정보보호 책임자 : 이동현</span>
+					<span>대표이메일 : cjcgvmaster@cj.net</span>
+					<span>CGV고객센터 : 1544-1122</span>
+				</div>
+			</address>
+			<div class="foot-right">
+				<div class="family">
+					<a href="" class="fsite">계열사 바로가기</a>
+					<ul id="familysite">
+						<li>
+							<span>계열사 바로가기</span>
+							<strong>CJ그룹</strong>
+							<ul>
+								<li><a href="https://www.cj.net/">CJ주식회사</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>엔터테인먼트 &amp; 미디어</strong>
+							<ul>
+								<li><a href="https://www.cjenm.com:9003/index.html">CJ ENM (E&amp;M)</a></li>
+								<li><a href="http://www.cgv.co.kr/">CJ CGV</a></li>
+								<li><a href="http://www.cjpowercast.com/">CJ파워캐스트</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>식품 &amp; 식품서비스</strong>
+							<ul>
+								<li><a href="https://www.cj.co.kr">CJ제일제당 (식품)</a></li>
+								<li><a href="http://www.cjfreshway.com/">CJ프레시웨이</a></li>
+								<li><a href="http://www.cjfoodville.co.kr/">CJ푸드빌</a></li>
+								<li><a href="http://www.md1.co.kr/">CJ엠디원</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>생명공학</strong>
+							<ul>
+								<li><a href="https://www.cj.co.kr/kr/about/business/bio">CJ제일제당 (바이오)</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>신유통</strong>
+							<ul>
+								<li><a href="http://display.cjmall.com">CJ ENM (오쇼핑)</a></li>
+								<li><a href="http://www.cjlogistics.com">CJ대한통운</a></li>
+								<li><a href="http://www.cjtelenix.com/">CJ텔레닉스</a></li>
+								<li><a href="http://www.oliveyoung.co.kr/store/main/main.do">CJ올리브영</a></li>
+							</ul>
+						</li>
+						<li>
+							<strong>인프라</strong>
+							<ul>
+								<li><a href="http://www.cjenc.co.kr/">CJ대한통운 (건설)</a></li>
+								<li><a href="http://www.cjolivenetworks.co.kr/itbusiness/">CJ올리브네트웍스</a></li>
+							</ul>
+						</li>
+					</ul>
+					<a href="" target="_blank" class="btn_submit" title="새창열기">GO</a>
+				</div>
+				<p class="copyright">&copy; CJ CGV. All Rights Reserved</p>
+				<ul class="sns_list">
+					<li><a href="https://www.facebook.com/CJCGV" target="_blank" title="새창열기">
+							<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-square"
+								class="sns_i svg-inline--fa fa-facebook-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 448 512">
+								<title>페이스북</title>
+								<path fill="currentColor"
+									d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z">
+								</path>
+							</svg>
+						</a>
+					</li>
+					<li><a href="https://twitter.com/cj_cgv" target="_blank" title="새창열기"><svg aria-hidden="true"
+								focusable="false" data-prefix="fab" data-icon="twitter-square"
+								class="sns_i svg-inline--fa fa-twitter-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 448 512">
+								<title>트위터</title>
+								<path fill="currentColor"
+									d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
+								</path>
+							</svg>
+						</a>
+					</li>
+					<li><a href="https://www.instagram.com/cgv_korea/" target="_blank" title="새창열기"><svg aria-hidden="true"
+								focusable="false" data-prefix="fab" data-icon="instagram-square"
+								class="sns_i svg-inline--fa fa-instagram-square fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 448 512">
+								<title>인스타그램</title>
+								<path fill="currentColor"
+									d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z">
+								</path>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<div id="modal_stealcut" class="md_cnt" role="dialog" aria-modal="true" aria-labelledby="mdtit">
+		<h3 id="mdtit" class="blind-b">테넷 확대 스틸컷 둘러보기</h3>
+		<img src="../../images/detail/stealcut1.jpg" alt="테넷 확대 스틸컷">
+		<button type="button" class="prev_next prev first"><span class="blind-b">이전 스틸컷 보기</span>◀</button>
+		<button type="button" class="prev_next next"><span class="blind-b">다음 스틸컷 보기</span>▶</button>
+		<button type="button" class="md_close_btn last"><span class="blind-b">스틸컷 모달창 닫기</span></button>
+	</div>
 </body>
 
 </html>

@@ -43,7 +43,7 @@ $(document).ready(function() {
 
   function activeOn($target) {
     $target.addClass('active').attr({'aria-selected': true, tabIndex: 0}).siblings().removeClass('active').attr({'aria-selected': false, tabIndex: -1});
-    $('#' + $target.attr('aria-controls')).addClass('active').attr({'aria-hidden': false, tabIndex: 0}).focus().siblings('.tabpanel').removeClass('active').attr({'aria-hidden': true, tabIndex: -1});
+    $('#' + $target.attr('aria-controls')).addClass('active').attr({'aria-hidden': false, tabIndex: 0}).siblings('.tabpanel').removeClass('active').attr({'aria-hidden': true, tabIndex: -1});
   }
   
 });
