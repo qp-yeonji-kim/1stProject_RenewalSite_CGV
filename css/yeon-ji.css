@@ -264,11 +264,6 @@
 }
 
 /* #event */
-h2 {
-  font-family: "JGothic";
-  font-size: 36px;
-}
-
 #event h2 {
   width: 1200px;
   margin: 0 auto 72px;
@@ -314,6 +309,7 @@ h2 {
 }
 
 #s_shop h2 {
+  width: 1200px;
   margin: 37px auto 0;
 }
 
@@ -483,6 +479,14 @@ h2 {
 
 
 /* chart.html */
+#header.cnt_chart {
+	background: #000;
+}
+
+#header.cnt_chart.active::before {
+	background: #000;
+}
+
 #content.cnt_chart {
   padding-top: 168px;
 }

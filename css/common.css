@@ -164,6 +164,11 @@ body {
 	clear: both;
 }
 
+h2 {
+  font-family: "JGothic";
+  font-size: 36px;
+}
+
 /* header */
 #headerwrap {
 	position: fixed;
