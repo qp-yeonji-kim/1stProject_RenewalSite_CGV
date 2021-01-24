@@ -91,7 +91,61 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
 #chart .emotion .pentagon svg{width: 199px;height: 189px;}
 #chart .emotion .pentagon svg polygon{fill: rgba(255,0,0,.5);stroke: none;}
 
+
 /* #trailer */
+#trailer .swiepr-container{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}  
+
+#trailer .swiper-slide{
+  background: no-repeat center / cover; 
+  text-align: center;
+}
+
+#trailer .gallery-thumbs{
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+#trailer .gallery-thumbs .swiper-slide{
+  opacity: 0.4;
+  width: 206px !important;
+  height: 116px !important;
+  margin-right: 42.5px !important;
+}
+
+#trailer .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+#trailer .gallery-thumbs .swiper-slide:nth-child(1){
+    background-image: url("../images/detail/tumb-mov1.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(2){
+    background-image: url("../images/detail/tumb-mov2.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(3){
+    background-image: url("../images/detail/tumb-mov3.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(4){
+    background-image: url("../images/detail/tumb-mov4.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(5){
+    background-image: url("../images/detail/tumb-mov5.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(6){
+    background-image: url("../images/detail/tumb-mov6.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(7){
+    background-image: url("../images/detail/tumb-mov7.jpg");
+  }
+#trailer .gallery-thumbs .swiper-slide:nth-child(8){
+    background-image: url("../images/detail/tumb-mov8.jpg");
+  }
+
+
 /* 메인 슬라이더 */
 #trailerSlider{width: 1200px;height: 830px;}
 #bxslider>li {margin-bottom: 50px;}
@@ -112,7 +166,7 @@ body{font-family: JGothic;color: #fff;font-weight: 400;background: #000;}
   cursor: pointer;
 }
 #dim, .md_cnt{position: fixed;z-index: 900;}
-#dim{left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .5);}
+#dim{left: 0;top: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .7);}
 
 #modal_stealcut{
   visibility: hidden; 

@@ -4,66 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>영화정보 > 영화상세: 영화 : 영화 그 이상의 감동, CGV</title>
-	<link rel="icon" href="images/common/cj_logo.ico">
+	<link rel="icon" href="../../images/common/cj_logo.ico">
+	<link rel="stylesheet" href="../../css/swiper-bundle.css">
 	<link rel="stylesheet" href="../../css/common.css">
 	<link rel="stylesheet" href="../../css/detail.css">
 	<script src="../../js/jquery-1.12.4.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
 	<script src="../../js/common.js"></script>
-	<script src="../../js/tab.js"></script>
 	<script src="../../js/detail.js"></script>
-	<script src="../../js/jquery.bxslider.min.js"></script>
-	<script>
-		$(document).ready(function () {
-			var realSlider = $("#bxslider").bxSlider({
-				speed: 1000,
-				pager: false,
-				controls: false,
-				infiniteLoop: false,
-				//각 슬라이드 전환 직전
-				onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-					changeRealThumb(realThumbSlider, newIndex);
-				}
-			});
-
-			var realThumbSlider = $("#bxslider-pager").bxSlider({
-				minSlides: 5,
-				maxSlides: 5,
-				slideWidth: 206,
-				slideMargin: 0,
-				moveSlides: 1,
-				pager: false,
-				speed: 1000,
-				infiniteLoop: false,
-				hideControlOnEnd: true,
-				prevText: '<span class="blind-b">이전 목록 보기</span>',
-				nextText: '<span class="blind-b">다음 목록 보기</span>'
-			});
-
-			linkRealSliders(realSlider, realThumbSlider);
-
-			function linkRealSliders(bigS, thumbS) {
-				$("#bxslider-pager").on("click", "a", function (e) {
-					e.preventDefault();
-					var newIndex = $(this).parent().attr("data-slideIndex");
-					bigS.goToSlide(newIndex);
-				});
-			}
-
-			function changeRealThumb(slider, newIndex) {
-				var $thumbS = $("#bxslider-pager");
-				$thumbS.find('.active').removeClass("active");
-				$thumbS.find('li[data-slideIndex="' + newIndex + '"]').addClass("active");
-
-				if (slider.getSlideCount() - newIndex >= 4) slider.goToSlide(newIndex);
-				else slider.goToSlide(slider.getSlideCount() - 4);
-			}
-
-/* 			$('#trailer_list').on('click', function () {
-				realSlider.reloadSlider();
-				realThumSlider.reloadSlider();
-			}); */
-		});
-	</script>
 </head>
 
 <body>
@@ -383,101 +331,87 @@
 					</ul>
 				</div>
 				<div role="tabpanel" class="tabpanel" id="trailer" aria-labelledby="trailer_list">
-					<div id="trailerSlider">
-						<ul id="bxslider">
-							<li>
+					<div class="swiper-container gallery-top">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov1.JPG" controls>
 									<source src="../../video/tenet_spot.mp4" type="video/mp4">
 									<source src="../../video/tenet_spot.webm" type="video/webm">
 									<source src="../../video/tenet_spot.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov2.JPG" controls>
 									<source src="../../video/tenet_last.mp4" type="video/mp4">
 									<source src="../../video/tenet_last.webm" type="video/webm">
 									<source src="../../video/tenet_last.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov3.JPG" controls>
 									<source src="../../video/tenet_action.mp4" type="video/mp4">
 									<source src="../../video/tenet_action.webm" type="video/webm">
 									<source src="../../video/tenet_action.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov4.JPG" controls>
 									<source src="../../video/tenet_inversion.mp4" type="video/mp4">
 									<source src="../../video/tenet_inversion.webm" type="video/webm">
 									<source src="../../video/tenet_inversion.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov5.JPG" controls>
 									<source src="../../video/tenet_time.mp4" type="video/mp4">
 									<source src="../../video/tenet_time.webm" type="video/webm">
 									<source src="../../video/tenet_time.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov6.JPG" controls>
 									<source src="../../video/tenet_acent.mp4" type="video/mp4">
 									<source src="../../video/tenet_acent.webm" type="video/webm">
 									<source src="../../video/tenet_acent.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov7.JPG" controls>
 									<source src="../../video/tenet_new.mp4" type="video/mp4">
 									<source src="../../video/tenet_new.webm" type="video/webm">
 									<source src="../../video/tenet_new.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-							<li>
+							</div>
+							<div class="swiper-slide">
 								<video poster="../../images/detail/min-mov8.JPG" controls>
 									<source src="../../video/tenet_offical.mp4" type="video/mp4">
 									<source src="../../video/tenet_offical.webm" type="video/webm">
 									<source src="../../video/tenet_offical.ogg" type="video/ogg">
 									현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
 								</video>
-							</li>
-						</ul>
-
-						<!-- The thumbnails -->
-						<ul id="bxslider-pager">
-							<li data-slideIndex="0">
-								<a href=""><img src="../../images/detail/tumb-mov1.jpg" alt="테넷 극찬 리뷰 스팟"></a>
-							</li>
-							<li data-slideIndex="1">
-								<a href=""><img src="../../images/detail/tumb-mov2.JPG" alt="테넷 최종 예고편"></a>
-							</li>
-							<li data-slideIndex="2">
-								<a href=""><img src="../../images/detail/tumb-mov3.JPG" alt="테넷 추격 액션 예고편"></a>
-							</li>
-							<li data-slideIndex="3">
-								<a href=""><img src="../../images/detail/tumb-mov4.JPG" alt="테넷 인버전 예고편"></a>
-							</li>
-							<li data-slideIndex="4">
-								<a href=""><img src="../../images/detail/tumb-mov5.JPG" alt="테넷 시간 첩보 액션 예고편"></a>
-							</li>
-							<li data-slideIndex="5">
-								<a href=""><img src="../../images/detail/tumb-mov6.JPG" alt="테넷 에이전트 예고편"></a>
-							</li>
-							<li data-slideIndex="6">
-								<a href=""><img src="../../images/detail/tumb-mov7.JPG" alt="테넷 새로운 예고편"></a>
-							</li>
-							<li data-slideIndex="7">
-								<a href=""><img src="../../images/detail/tumb-mov8.JPG" alt="테넷 공식 예고편"></a>
-							</li>
-						</ul>
+							</div>
+						</div>
+						<div class="swiper-button-next swiper-button-white"></div>
+						<div class="swiper-button-prev swiper-button-white"></div>
+					</div>
+					<div class="swiper-container gallery-thumbs">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+							<div class="swiper-slide"></div>
+						</div>
 					</div>
 				</div>
 				<div role="tabpanel" class="tabpanel clearfix" id="stealcut" aria-labelledby="stealcut_list">
@@ -861,7 +795,8 @@
 		<img src="../../images/detail/stealcut1.jpg" alt="테넷 확대 스틸컷">
 		<button type="button" class="prev_next prev first"><span class="blind-b">이전 스틸컷 보기</span>◀</button>
 		<button type="button" class="prev_next next"><span class="blind-b">다음 스틸컷 보기</span>▶</button>
-		<button type="button" class="md_close_btn last"><span class="blind-b">스틸컷 모달창 닫기</span><span class="x-btn"></span><span class="x-btn"></span></button>
+		<button type="button" class="md_close_btn last"><span class="blind-b">스틸컷 모달창 닫기</span><span
+				class="x-btn"></span><span class="x-btn"></span></button>
 	</div>
 </body>
 
