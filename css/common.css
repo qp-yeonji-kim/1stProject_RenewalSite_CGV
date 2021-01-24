@@ -9,6 +9,16 @@
     url("../font/JejuGothic.woff2") format("woff2"),
     url("../font/JejuGothic.otf") format("opentype");
 }
+@font-face {
+	font-family: NtSansKR;
+	font-weight: 200;
+	font-style: normal;
+	src: url("../font/NotoSansKR-Light.eot");
+	src: url("../font/NotoSansKR-Light.eot#iefix") format("embedded-opentype"),
+		url("../font/NotoSansKR-Light.woff") format("woff"),
+		url("../font/NotoSansKR-Light.woff2") format("woff2"),
+		url("../font/NotoSansKR-Light.otf") format("opentype");
+}
 @font-face{
     font-family: NtSansKR;
     font-weight: 300;
