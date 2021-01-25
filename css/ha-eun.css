@@ -276,11 +276,11 @@ body#cnt_cgvshop{font-family: JGothic;background-color: #000;color: #fff;}
 .oo .p_r > a{position: absolute; top: 4px;right: 0;}
 .half{width: 583px;}
 #moviepass{overflow: hidden;border-radius: 10px;background-color: #fff;width: 583px;height: 236px;}
-.ff:first-child .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 87px;left: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
-.ff:first-child .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 87px;right: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
+.ff:first-child .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 87px;left: 24px;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
+.ff:first-child .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 87px;right: 24px;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
 
 #card{overflow: hidden;border-radius: 10px;background-color: #fff;width: 583px;height: 236px;}
-.ff:nth-child(2) .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 213px;left: 24px;;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
+.ff:nth-child(2) .bx-controls-direction .bx-prev{display: inline-block;position: absolute;top: 213px;left: 24px;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/prev.png");}
 .ff:nth-child(2) .bx-controls-direction .bx-next{display: inline-block;position: absolute;top: 213px;right: 35px;width: 30px;height: 64px;background-image: url("../images/culture/gift/icon/next.png");}
 
 /* #footer */
