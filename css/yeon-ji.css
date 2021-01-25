@@ -634,6 +634,7 @@
   width: 206px !important;
   height: 116px !important;
   margin-right: 42.5px !important;
+  background: no-repeat center / cover;
   cursor: pointer;
 }
 
