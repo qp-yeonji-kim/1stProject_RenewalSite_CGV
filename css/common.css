@@ -100,7 +100,7 @@ header, nav, section, footer, address {
 }
 
 body {
-	font-family: "NtSansKR";
+	font-family: "NtSansKR", "맑은 고딕", "Malgun Gothic", sans-serif;
 	font-size: 16px;
 	color: inherit;
 }
